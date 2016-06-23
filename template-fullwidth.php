@@ -4,7 +4,7 @@
  *
  * Description: A custom page template for displaying a fullwidth page with no sidebar.
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 get_header(); ?>

@@ -4,11 +4,11 @@
  *
  * Queries posts by selected featured posts category and displays featured content area
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 // Get Theme Options from Database.
-$theme_options = gridbox_theme_options();
+$theme_options = palm_beach_theme_options();
 
 // Get latest posts from database.
 $query_arguments = array(

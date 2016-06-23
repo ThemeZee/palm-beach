@@ -4,13 +4,13 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 get_header();
 
 // Get Theme Options from Database.
-$theme_options = gridbox_theme_options();
+$theme_options = palm_beach_theme_options();
 
 // Display Featured Posts.
 if ( true === $theme_options['featured_blog'] ) :
@@ -47,7 +47,7 @@ if ( '' !== $theme_options['blog_title'] ) : ?>
 
 				</div>
 
-				<?php gridbox_pagination(); ?>
+				<?php palm_beach_pagination(); ?>
 
 			<?php
 			else :

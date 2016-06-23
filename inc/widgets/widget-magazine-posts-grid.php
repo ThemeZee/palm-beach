@@ -5,13 +5,13 @@
  * Display the latest posts from a selected category in a grid layout.
  * Intented to be used in the Magazine Homepage widget area to built a magazine layouted page.
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 /**
  * Magazine Widget Class
  */
-class Gridbox_Magazine_Posts_Grid_Widget extends WP_Widget {
+class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 	/**
 	 * Widget Constructor
@@ -20,11 +20,11 @@ class Gridbox_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 		// Setup Widget.
 		parent::__construct(
-			'gridbox-magazine-posts-grid', // ID.
-			sprintf( esc_html__( 'Magazine Posts: Grid (%s)', 'gridbox' ), wp_get_theme()->Name ), // Name.
+			'palm-beach-magazine-posts-grid', // ID.
+			sprintf( esc_html__( 'Magazine Posts: Grid (%s)', 'palm-beach' ), wp_get_theme()->Name ), // Name.
 			array(
-				'classname' => 'gridbox_magazine_posts_grid',
-				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'gridbox' ),
+				'classname' => 'palm_beach_magazine_posts_grid',
+				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'palm-beach' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
@@ -72,7 +72,7 @@ class Gridbox_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 		// Get Widget Object Cache.
 		if ( ! $this->is_preview() ) {
-			$cache = wp_cache_get( 'widget_gridbox_magazine_posts_grid', 'widget' );
+			$cache = wp_cache_get( 'widget_palm_beach_magazine_posts_grid', 'widget' );
 		}
 		if ( ! is_array( $cache ) ) {
 			$cache = array();
@@ -116,7 +116,7 @@ class Gridbox_Magazine_Posts_Grid_Widget extends WP_Widget {
 		// Set Cache.
 		if ( ! $this->is_preview() ) {
 			$cache[ $this->id ] = ob_get_flush();
-			wp_cache_set( 'widget_gridbox_magazine_posts_grid', $cache, 'widget' );
+			wp_cache_set( 'widget_palm_beach_magazine_posts_grid', $cache, 'widget' );
 		} else {
 			ob_end_flush();
 		}
@@ -161,7 +161,7 @@ class Gridbox_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-							<?php gridbox_post_image(); ?>
+							<?php palm_beach_post_image(); ?>
 
 							<header class="entry-header">
 
@@ -177,7 +177,7 @@ class Gridbox_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 									<?php the_excerpt(); ?>
 
-									<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php esc_html_e( 'Read more', 'gridbox' ); ?></a>
+									<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php esc_html_e( 'Read more', 'palm-beach' ); ?></a>
 
 								</div><!-- .entry-content -->
 
@@ -214,19 +214,19 @@ class Gridbox_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 		if ( true === $settings['meta_date'] ) {
 
-			$postmeta .= gridbox_meta_date();
+			$postmeta .= palm_beach_meta_date();
 
 		}
 
 		if ( true === $settings['meta_author'] ) {
 
-			$postmeta .= gridbox_meta_author();
+			$postmeta .= palm_beach_meta_author();
 
 		}
 
 		if ( true === $settings['meta_category'] ) {
 
-			$postmeta .= gridbox_meta_category();
+			$postmeta .= palm_beach_meta_category();
 
 		}
 
@@ -267,7 +267,7 @@ class Gridbox_Magazine_Posts_Grid_Widget extends WP_Widget {
 			if ( $settings['category'] > 0 ) :
 
 				// Set Link URL and Title for Category.
-				$link_title = sprintf( esc_html__( 'View all posts from category %s', 'gridbox' ), get_cat_name( $settings['category'] ) );
+				$link_title = sprintf( esc_html__( 'View all posts from category %s', 'palm-beach' ), get_cat_name( $settings['category'] ) );
 				$link_url = esc_url( get_category_link( $settings['category'] ) );
 
 				// Display Widget Title with link to category archive.
@@ -325,16 +325,16 @@ class Gridbox_Magazine_Posts_Grid_Widget extends WP_Widget {
 		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'gridbox' ); ?>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'palm-beach' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $settings['title']; ?>" />
 			</label>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php esc_html_e( 'Category:', 'gridbox' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php esc_html_e( 'Category:', 'palm-beach' ); ?></label><br/>
 			<?php // Display Category Select.
 				$args = array(
-					'show_option_all'    => esc_html__( 'All Categories', 'gridbox' ),
+					'show_option_all'    => esc_html__( 'All Categories', 'palm-beach' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $settings['category'],
@@ -346,22 +346,22 @@ class Gridbox_Magazine_Posts_Grid_Widget extends WP_Widget {
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'layout' ); ?>"><?php esc_html_e( 'Grid Layout:', 'gridbox' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id( 'layout' ); ?>"><?php esc_html_e( 'Grid Layout:', 'palm-beach' ); ?></label><br/>
 			<select id="<?php echo $this->get_field_id( 'layout' ); ?>" name="<?php echo $this->get_field_name( 'layout' ); ?>">
-				<option <?php selected( $settings['layout'], 'two-columns-grid' ); ?> value="two-columns-grid" ><?php esc_html_e( 'Two Columns', 'gridbox' ); ?></option>
-				<option <?php selected( $settings['layout'], 'three-columns-grid' ); ?> value="three-columns-grid" ><?php esc_html_e( 'Three Columns', 'gridbox' ); ?></option>
-				<option <?php selected( $settings['layout'], 'four-columns-grid' ); ?> value="four-columns-grid" ><?php esc_html_e( 'Four Columns', 'gridbox' ); ?></option>
+				<option <?php selected( $settings['layout'], 'two-columns-grid' ); ?> value="two-columns-grid" ><?php esc_html_e( 'Two Columns', 'palm-beach' ); ?></option>
+				<option <?php selected( $settings['layout'], 'three-columns-grid' ); ?> value="three-columns-grid" ><?php esc_html_e( 'Three Columns', 'palm-beach' ); ?></option>
+				<option <?php selected( $settings['layout'], 'four-columns-grid' ); ?> value="four-columns-grid" ><?php esc_html_e( 'Four Columns', 'palm-beach' ); ?></option>
 			</select>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts:', 'gridbox' ); ?>
+			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts:', 'palm-beach' ); ?>
 				<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $settings['number']; ?>" size="3" />
 			</label>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'excerpt_length' ); ?>"><?php esc_html_e( 'Excerpt Length:', 'gridbox' ); ?>
+			<label for="<?php echo $this->get_field_id( 'excerpt_length' ); ?>"><?php esc_html_e( 'Excerpt Length:', 'palm-beach' ); ?>
 				<input id="<?php echo $this->get_field_id( 'excerpt_length' ); ?>" name="<?php echo $this->get_field_name( 'excerpt_length' ); ?>" type="text" value="<?php echo $settings['excerpt_length']; ?>" size="6" />
 			</label>
 		</p>
@@ -369,21 +369,21 @@ class Gridbox_Magazine_Posts_Grid_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id( 'meta_date' ); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_date'] ); ?> id="<?php echo $this->get_field_id( 'meta_date' ); ?>" name="<?php echo $this->get_field_name( 'meta_date' ); ?>" />
-				<?php esc_html_e( 'Display post date', 'gridbox' ); ?>
+				<?php esc_html_e( 'Display post date', 'palm-beach' ); ?>
 			</label>
 		</p>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'meta_author' ); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_author'] ); ?> id="<?php echo $this->get_field_id( 'meta_author' ); ?>" name="<?php echo $this->get_field_name( 'meta_author' ); ?>" />
-				<?php esc_html_e( 'Display post author', 'gridbox' ); ?>
+				<?php esc_html_e( 'Display post author', 'palm-beach' ); ?>
 			</label>
 		</p>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'meta_category' ); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_category'] ); ?> id="<?php echo $this->get_field_id( 'meta_category' ); ?>" name="<?php echo $this->get_field_name( 'meta_category' ); ?>" />
-				<?php esc_html_e( 'Display post categories', 'gridbox' ); ?>
+				<?php esc_html_e( 'Display post categories', 'palm-beach' ); ?>
 			</label>
 		</p>
 
@@ -397,7 +397,7 @@ class Gridbox_Magazine_Posts_Grid_Widget extends WP_Widget {
 	 */
 	public function delete_widget_cache() {
 
-		wp_cache_delete( 'widget_gridbox_magazine_posts_grid', 'widget' );
+		wp_cache_delete( 'widget_palm_beach_magazine_posts_grid', 'widget' );
 
 	}
 }
@@ -405,9 +405,9 @@ class Gridbox_Magazine_Posts_Grid_Widget extends WP_Widget {
 /**
  * Register Widget
  */
-function gridbox_register_magazine_posts_grid_widget() {
+function palm_beach_register_magazine_posts_grid_widget() {
 
-	register_widget( 'Gridbox_Magazine_Posts_Grid_Widget' );
+	register_widget( 'Palm_Beach_Magazine_Posts_Grid_Widget' );
 
 }
-add_action( 'widgets_init', 'gridbox_register_magazine_posts_grid_widget' );
+add_action( 'widgets_init', 'palm_beach_register_magazine_posts_grid_widget' );

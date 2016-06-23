@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 get_header(); ?>
@@ -14,7 +14,7 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'single' );
 
-			gridbox_related_posts();
+			palm_beach_related_posts();
 
 			comments_template();
 

@@ -2,7 +2,7 @@
 /**
  * The template for displaying articles in the search loop
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 ?>
@@ -23,7 +23,7 @@
 
 		<div class="entry-content entry-excerpt clearfix">
 			<?php the_excerpt(); ?>
-			<?php gridbox_more_link(); ?>
+			<?php palm_beach_more_link(); ?>
 		</div><!-- .entry-content -->
 
 	</article>

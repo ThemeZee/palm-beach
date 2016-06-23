@@ -1,5 +1,5 @@
 ===================================
-Gridbox Changelog
+Palm Beach Changelog
 ===================================
 
 Version 1.0.2

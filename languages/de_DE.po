@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes + Pro Versions + Add-ons package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gridbox\n"
+"Project-Id-Version: Palm Beach\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
 "POT-Creation-Date: 2016-05-06 15:25+0100\n"
 "PO-Revision-Date: 2016-05-06 15:31+0100\n"
@@ -164,8 +164,8 @@ msgid "Theme Links"
 msgstr "Theme Links"
 
 #: inc/theme-info.php:50 inc/customizer/customizer.php:119
-msgid "https://themezee.com/themes/gridbox/"
-msgstr "https://themezee.com/de/themes/gridbox/"
+msgid "https://themezee.com/themes/palm-beach/"
+msgstr "https://themezee.com/de/themes/palm-beach/"
 
 #: inc/theme-info.php:50 inc/customizer/customizer.php:120
 msgid "Theme Page"
@@ -181,8 +181,8 @@ msgstr "Theme Demo"
 
 #: inc/theme-info.php:53 inc/theme-info.php:74
 #: inc/customizer/customizer.php:121
-msgid "https://themezee.com/docs/gridbox-documentation/"
-msgstr "https://themezee.com/de/docs/gridbox-dokumentation/"
+msgid "https://themezee.com/docs/palm-beach-documentation/"
+msgstr "https://themezee.com/de/docs/palm-beach-dokumentation/"
 
 #: inc/theme-info.php:53 inc/theme-info.php:68
 #: inc/customizer/customizer.php:122
@@ -246,8 +246,8 @@ msgstr ""
 "erweiterte Anpassungsmöglichkeiten."
 
 #: inc/theme-info.php:120 inc/customizer/functions/custom-controls.php:101
-msgid "https://themezee.com/addons/gridbox-pro/"
-msgstr "https://themezee.com/de/addons/gridbox-pro/"
+msgid "https://themezee.com/addons/palm-beach-pro/"
+msgstr "https://themezee.com/de/addons/palm-beach-pro/"
 
 #: inc/theme-info.php:121 inc/customizer/functions/custom-controls.php:102
 #, php-format

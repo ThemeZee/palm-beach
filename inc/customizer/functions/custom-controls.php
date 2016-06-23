@@ -2,7 +2,7 @@
 /**
  * Custom Controls for the Customizer
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 /**
@@ -13,7 +13,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	/**
 	 * Displays a bold label text. Used to create headlines for radio buttons and description sections.
 	 */
-	class Gridbox_Customize_Header_Control extends WP_Customize_Control {
+	class Palm_Beach_Customize_Header_Control extends WP_Customize_Control {
 		/**
 		 * Render Control
 		 */
@@ -31,7 +31,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	/**
 	 * Displays a description text in gray italic font
 	 */
-	class Gridbox_Customize_Description_Control extends WP_Customize_Control {
+	class Palm_Beach_Customize_Description_Control extends WP_Customize_Control {
 		/**
 		 * Render Control
 		 */
@@ -47,7 +47,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	/**
 	 * Creates a category dropdown control for the Customizer
 	 */
-	class Gridbox_Customize_Category_Dropdown_Control extends WP_Customize_Control {
+	class Palm_Beach_Customize_Category_Dropdown_Control extends WP_Customize_Control {
 		/**
 		 * Render Control
 		 */
@@ -62,7 +62,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 						<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 
 						<select <?php $this->link(); ?>>
-							<option value="0"><?php esc_html_e( 'All Categories', 'gridbox' ); ?></option>
+							<option value="0"><?php esc_html_e( 'All Categories', 'palm-beach' ); ?></option>
 						<?php
 						foreach ( $categories as $category ) :
 
@@ -87,7 +87,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	/**
 	 * Displays the upgrade teasers in thhe Pro Version / More Features section.
 	 */
-	class Gridbox_Customize_Upgrade_Control extends WP_Customize_Control {
+	class Palm_Beach_Customize_Upgrade_Control extends WP_Customize_Control {
 		/**
 		 * Render Control
 		 */
@@ -96,15 +96,15 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			<div class="upgrade-pro-version">
 
-				<span class="customize-control-title"><?php esc_html_e( 'Pro Version', 'gridbox' ); ?></span>
+				<span class="customize-control-title"><?php esc_html_e( 'Pro Version', 'palm-beach' ); ?></span>
 
 				<span class="textfield">
-					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'gridbox' ), 'Gridbox' ); ?>
+					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'palm-beach' ), 'Palm Beach' ); ?>
 				</span>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://themezee.com/addons/gridbox-pro/', 'gridbox' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=gridbox&utm_content=pro-version" target="_blank" class="button button-secondary">
-						<?php printf( esc_html__( 'Learn more about %s Pro', 'gridbox' ), 'Gridbox' ); ?>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/addons/palm-beach-pro/', 'palm-beach' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=palm-beach&utm_content=pro-version" target="_blank" class="button button-secondary">
+						<?php printf( esc_html__( 'Learn more about %s Pro', 'palm-beach' ), 'Palm Beach' ); ?>
 					</a>
 				</p>
 
@@ -112,18 +112,18 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			<div class="upgrade-plugins">
 
-				<span class="customize-control-title"><?php esc_html_e( 'ThemeZee Plugins', 'gridbox' ); ?></span>
+				<span class="customize-control-title"><?php esc_html_e( 'ThemeZee Plugins', 'palm-beach' ); ?></span>
 
 				<span class="textfield">
-					<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized plugins.', 'gridbox' ); ?>
+					<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized plugins.', 'palm-beach' ); ?>
 				</span>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://themezee.com/plugins/', 'gridbox' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=gridbox&utm_content=plugins" target="_blank" class="button button-secondary">
-						<?php esc_html_e( 'Browse Plugins', 'gridbox' ); ?>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/plugins/', 'palm-beach' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=palm-beach&utm_content=plugins" target="_blank" class="button button-secondary">
+						<?php esc_html_e( 'Browse Plugins', 'palm-beach' ); ?>
 					</a>
 					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
-						<?php esc_html_e( 'Install now', 'gridbox' ); ?>
+						<?php esc_html_e( 'Install now', 'palm-beach' ); ?>
 					</a>
 				</p>
 

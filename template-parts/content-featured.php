@@ -2,7 +2,7 @@
 /**
  * The template for displaying articles in the featured content area
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 ?>

@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 get_header();
@@ -36,7 +36,7 @@ if ( have_posts() ) : ?>
 
 				</div>
 
-				<?php gridbox_pagination(); ?>
+				<?php palm_beach_pagination(); ?>
 
 			<?php
 			else :

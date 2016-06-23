@@ -4,7 +4,7 @@
  *
  * Uses sane defaults in case the user has not configured any theme options yet.
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 /**
@@ -12,10 +12,10 @@
  *
  * @return array
  */
-function gridbox_theme_options() {
+function palm_beach_theme_options() {
 
 	// Merge theme options array from database with default options array.
-	$theme_options = wp_parse_args( get_option( 'gridbox_theme_options', array() ), gridbox_default_options() );
+	$theme_options = wp_parse_args( get_option( 'palm_beach_theme_options', array() ), palm_beach_default_options() );
 
 	// Return theme options.
 	return $theme_options;
@@ -28,7 +28,7 @@ function gridbox_theme_options() {
  *
  * @return array
  */
-function gridbox_default_options() {
+function palm_beach_default_options() {
 
 	$default_options = array(
 		'site_title'						=> true,

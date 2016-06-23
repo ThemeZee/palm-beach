@@ -2,14 +2,14 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php gridbox_post_image_single(); ?>
+	<?php palm_beach_post_image_single(); ?>
 
 	<header class="entry-header">
 
@@ -22,7 +22,7 @@
 		<?php the_content(); ?>
 
 		<?php wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gridbox' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'palm-beach' ),
 			'after'  => '</div>',
 		) ); ?>
 

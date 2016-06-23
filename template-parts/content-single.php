@@ -2,20 +2,20 @@
 /**
  * The template for displaying single posts
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php gridbox_post_image_single(); ?>
+	<?php palm_beach_post_image_single(); ?>
 
 	<header class="entry-header">
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-		<?php gridbox_entry_meta(); ?>
+		<?php palm_beach_entry_meta(); ?>
 
 	</header><!-- .entry-header -->
 
@@ -24,7 +24,7 @@
 		<?php the_content(); ?>
 
 		<?php wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gridbox' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'palm-beach' ),
 			'after'  => '</div>',
 		) ); ?>
 
@@ -32,8 +32,8 @@
 
 	<footer class="entry-footer">
 
-		<?php gridbox_entry_tags(); ?>
-		<?php gridbox_post_navigation(); ?>
+		<?php palm_beach_entry_tags(); ?>
+		<?php palm_beach_post_navigation(); ?>
 
 	</footer><!-- .entry-footer -->
 

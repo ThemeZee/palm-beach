@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 // Check if Sidebar has widgets.

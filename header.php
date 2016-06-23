@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 ?><!DOCTYPE html>
@@ -23,9 +23,9 @@
 
 	<div id="page" class="hfeed site">
 
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gridbox' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'palm-beach' ); ?></a>
 
-		<div id="header-top" class="header-bar-wrap"><?php do_action( 'gridbox_header_bar' ); ?></div>
+		<div id="header-top" class="header-bar-wrap"><?php do_action( 'palm_beach_header_bar' ); ?></div>
 
 		<header id="masthead" class="site-header clearfix" role="banner">
 
@@ -33,8 +33,8 @@
 
 				<div id="logo" class="site-branding clearfix">
 
-					<?php gridbox_site_logo(); ?>
-					<?php gridbox_site_title(); ?>
+					<?php palm_beach_site_logo(); ?>
+					<?php palm_beach_site_title(); ?>
 
 				</div><!-- .site-branding -->
 
@@ -46,7 +46,7 @@
 							'container' => false,
 							'menu_class' => 'main-navigation-menu',
 							'echo' => true,
-							'fallback_cb' => 'gridbox_default_menu',
+							'fallback_cb' => 'palm_beach_default_menu',
 							)
 						);
 					?>
@@ -56,8 +56,8 @@
 
 		</header><!-- #masthead -->
 
-		<?php gridbox_header_image(); ?>
+		<?php palm_beach_header_image(); ?>
 
-		<?php gridbox_breadcrumbs(); ?>
+		<?php palm_beach_breadcrumbs(); ?>
 
 		<div id="content" class="site-content container clearfix">

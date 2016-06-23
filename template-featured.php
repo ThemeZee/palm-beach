@@ -4,7 +4,7 @@
  *
  * Description: A custom page template which displays the featured content area and page content
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 get_header();

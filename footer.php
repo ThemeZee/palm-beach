@@ -4,24 +4,24 @@
  *
  * Contains all content after the main content area and sidebar
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 ?>
 	
 	</div><!-- #content -->
 	
-	<?php do_action( 'gridbox_before_footer' ); ?>
+	<?php do_action( 'palm_beach_before_footer' ); ?>
 
 	<div id="footer" class="footer-wrap">
 	
 		<footer id="colophon" class="site-footer container clearfix" role="contentinfo">
 
 			<div id="footer-text" class="site-info">
-				<?php do_action( 'gridbox_footer_text' ); ?>
+				<?php do_action( 'palm_beach_footer_text' ); ?>
 			</div><!-- .site-info -->
 			
-			<?php do_action( 'gridbox_footer_menu' ); ?>
+			<?php do_action( 'palm_beach_footer_menu' ); ?>
 
 		</footer><!-- #colophon -->
 		

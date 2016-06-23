@@ -4,13 +4,13 @@
  *
  * Description: A custom page template for displaying the magazine homepage widgets.
  *
- * @package Gridbox
+ * @package Palm Beach
  */
 
 get_header();
 
 // Get Theme Options from Database.
-$theme_options = gridbox_theme_options();
+$theme_options = palm_beach_theme_options();
 
 // Display Featured Posts.
 if ( true == $theme_options['featured_magazine'] ) :
@@ -40,7 +40,7 @@ endif;
 			if ( current_user_can( 'edit_theme_options' ) ) : ?>
 
 				<p class="empty-widget-area">
-					<?php esc_html_e( 'Please go to Appearance &#8594; Widgets and add at least one widget to the "Magazine Homepage" widget area. You can use the Magazine Posts widgets to set up the theme like the demo website.', 'gridbox' ); ?>
+					<?php esc_html_e( 'Please go to Appearance &#8594; Widgets and add at least one widget to the "Magazine Homepage" widget area. You can use the Magazine Posts widgets to set up the theme like the demo website.', 'palm-beach' ); ?>
 				</p>
 
 			<?php endif;
