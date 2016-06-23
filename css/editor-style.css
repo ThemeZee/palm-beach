@@ -31,7 +31,7 @@ body {
 --------------------------------------------------------------*/
 body {
 	color: #222;
-	font-family: 'Roboto', Tahoma, Arial;
+	font-family: 'Hind', Tahoma, Arial;
 	font-size: 17px;
 	font-size: 1.0625rem;
 	line-height: 1.6;
@@ -204,19 +204,19 @@ td {
 }
 
 a {
-	color: #4477aa;
+	color: #57b7d7;
 	text-decoration: none;
 }
 
 a:link,
 a:visited {
-	color: #4477aa;
+	color: #57b7d7;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #111133;
+	color: #242424;
 }
 
 a:focus {

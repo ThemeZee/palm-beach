@@ -56,8 +56,12 @@
 
 		</header><!-- #masthead -->
 
-		<?php palm_beach_header_image(); ?>
+		<div class="header-background clearfix">
 
-		<?php palm_beach_breadcrumbs(); ?>
+			<?php palm_beach_header_image(); ?>
+
+		</div>
 
 		<div id="content" class="site-content container clearfix">
+
+			<?php palm_beach_breadcrumbs(); ?>

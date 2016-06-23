@@ -57,39 +57,69 @@ if ( ! function_exists( 'palm_beach_header_image' ) ) :
  * Displays the custom header image below the navigation menu
  */
 function palm_beach_header_image() {
+	global $post;
 
-	// Get theme options from database.
-	$theme_options = palm_beach_theme_options();
+	// Get featured image of single post or page.
+	if ( is_singular() && has_post_thumbnail() ) :
 
-	// Display default header image set on Appearance > Header.
-	if ( get_header_image() ) :
+		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'header-image' );
+		$image_url = $image[0];
 
-		// Hide header image on front page.
-		if ( true === $theme_options['custom_header_hide'] and is_front_page() ) {
-			return;
-		}
-		?>
+	// Get custom header image.
+	elseif ( get_header_image() ) :
 
-		<div id="headimg" class="header-image">
+		$image_url = get_header_image();
 
-		<?php // Check if custom header image is linked.
-		if ( '' !== $theme_options['custom_header_link'] ) : ?>
+	else :
 
-			<a href="<?php echo esc_url( $theme_options['custom_header_link'] ); ?>">
-				<img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id, 'full' ) ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-			</a>
+		$image_url = get_template_directory_uri() . '/images/default-header-image.png';
 
-		<?php else : ?>
+	endif;
+	?>
 
-			<img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id, 'full' ) ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+	<div id="headimg" class="header-image" style="background: url( '<?php echo esc_url( $image_url ); ?>' )">
 
-		<?php endif; ?>
+		<div class="header-image-container">
+
+			<header class="page-header clearfix">
+
+				<?php palm_beach_header_title(); ?>
+
+			</header>
 
 		</div>
 
+	</div>
+
 	<?php
-	endif;
 }
+endif;
+
+
+if ( ! function_exists( 'palm_beach_header_title' ) ) :
+/**
+ * Displays title in header area.
+ */
+function palm_beach_header_title() {
+
+	if( is_singular() ) :
+
+		// Display title of single posts and pages.
+		the_title( '<h1 class="page-title">', '</h1>' );
+
+	elseif( is_archive() ) :
+
+		// Display archive title.
+		the_archive_title( '<h1 class="page-title">', '</h1>' );
+		the_archive_description( '<div class="archive-description">', '</div>' );
+
+	elseif( is_404() ) :
+
+		echo '<h1 class="page-title">' . esc_html__( '404: Page not found', 'gridbox' ) . '</h1>';
+
+	endif;
+
+} // palm_beach_header_title()
 endif;
 
 
@@ -100,7 +130,7 @@ if ( ! function_exists( 'palm_beach_post_image' ) ) :
  * @param string $size Post thumbnail size.
  * @param array  $attr Post thumbnail attributes.
  */
-function palm_beach_post_image( $size = '', $attr = array() ) {
+function palm_beach_post_image( $size = 'post-thumbnail', $attr = array() ) {
 
 	// Display Post Thumbnail.
 	if ( has_post_thumbnail() ) : ?>
@@ -236,7 +266,7 @@ function palm_beach_entry_tags() {
 	$theme_options = palm_beach_theme_options();
 
 	// Get tags.
-	$tag_list = get_the_tag_list( '', '' );
+	$tag_list = get_the_tag_list( '<span class="tags-title">' . esc_html__( 'Tags', 'palm-beach' ) . '</span>', '' );
 
 	// Display tags.
 	if ( $tag_list && $theme_options['meta_tags'] ) : ?>

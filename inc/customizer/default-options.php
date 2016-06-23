@@ -32,14 +32,9 @@ function palm_beach_default_options() {
 
 	$default_options = array(
 		'site_title'						=> true,
-		'custom_header_link'				=> '',
-		'custom_header_hide'				=> false,
 		'layout' 							=> 'right-sidebar',
 		'sticky_header'						=> false,
-		'blog_title'					=> '',
-		'blog_description'				=> '',
-		'post_layout'						=> 'three-columns',
-		'excerpt_length' 					=> 25,
+		'excerpt_length' 					=> 20,
 		'meta_date'							=> true,
 		'meta_author'						=> true,
 		'meta_category'						=> true,

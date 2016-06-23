@@ -9,14 +9,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php palm_beach_post_image_single(); ?>
-
-	<header class="entry-header">
-
-		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
-
-	</header><!-- .entry-header -->
-
 	<div class="entry-content clearfix">
 
 		<?php the_content(); ?>

@@ -38,18 +38,11 @@ function palm_beach_body_classes( $classes ) {
 		$classes[] = 'sticky-header';
 	}
 
-	// Add post columns classes.
-	if ( 'two-columns' == $theme_options['post_layout'] ) {
+	// Add Post Columns classes.
+	if ( is_active_sidebar( 'sidebar' ) ) {
 		$classes[] = 'post-layout-two-columns post-layout-columns';
-	} elseif ( 'three-columns' == $theme_options['post_layout'] ) {
-		$classes[] = 'post-layout-three-columns post-layout-columns';
-	} elseif ( 'four-columns' == $theme_options['post_layout'] ) {
-		$classes[] = 'post-layout-four-columns post-layout-columns';
-	}
-
-	// Add no-sidebar class.
-	if ( ! is_active_sidebar( 'sidebar' ) ) {
-		$classes[] = 'no-sidebar';
+	} else {
+		$classes[] = 'post-layout-three-columns post-layout-columns no-sidebar';
 	}
 
 	return $classes;

@@ -18,18 +18,7 @@ if ( true === $theme_options['featured_blog'] ) :
 	get_template_part( 'template-parts/featured-content' );
 
 endif;
-
-// Display Blog Title.
-if ( '' !== $theme_options['blog_title'] ) : ?>
-
-	<header class="page-header clearfix">
-
-		<h1 class="blog-title page-title"><?php echo wp_kses_post( $theme_options['blog_title'] ); ?></h1>
-		<p class="blog-description"><?php echo wp_kses_post( $theme_options['blog_description'] ); ?></p>
-
-	</header>
-
-<?php endif; ?>
+?>
 
 	<section id="primary" class="content-archive content-area">
 		<main id="main" class="site-main" role="main">
@@ -58,5 +47,7 @@ if ( '' !== $theme_options['blog_title'] ) : ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
+
+	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

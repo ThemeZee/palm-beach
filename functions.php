@@ -165,7 +165,7 @@ add_action( 'wp_enqueue_scripts', 'palm_beach_scripts' );
 function palm_beach_google_fonts_url() {
 
 	// Set default Fonts.
-	$font_families = array( 'Roboto:400,400italic,700,700italic', 'Roboto Slab:400,400italic,700,700italic' );
+	$font_families = array( 'Hind:400,400italic,700,700italic', 'Montserrat:400,400italic,700,700italic' );
 
 	// Build Fonts URL.
 	$query_args = array(

@@ -84,11 +84,11 @@ F) Licenses of bundled resources
 	License: Distributed under the terms of the MIT License (http://opensource.org/licenses/MIT)
 	Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
 	
-	4. Roboto Font - https://www.google.com/fonts/specimen/Roboto
+	4. Hind Font - https://www.google.com/fonts/specimen/Hind
 	License: Distributed under the terms of the Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 	Copyright: 2015 Christian Robertson
 	
-	5. Roboto Slab Font - https://www.google.com/fonts/specimen/Roboto+Slab
+	5. Montserrat Font - https://www.google.com/fonts/specimen/Hind+Slab
 	License: Distributed under the terms of the Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 	Copyright: 2015 Christian Robertson
 	

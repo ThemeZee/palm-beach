@@ -56,4 +56,6 @@ if ( have_posts() ) : ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
+	<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

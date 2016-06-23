@@ -7,18 +7,7 @@
  * @package Palm Beach
  */
 
-get_header();
-
-if ( have_posts() ) : ?>
-
-	<header class="page-header clearfix">
-
-		<?php the_archive_title( '<h1 class="archive-title">', '</h1>' ); ?>
-		<?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
-
-	</header>
-
-<?php endif; ?>
+get_header(); ?>
 
 	<section id="primary" class="content-archive content-area">
 		<main id="main" class="site-main" role="main">
@@ -47,5 +36,7 @@ if ( have_posts() ) : ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
+
+	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

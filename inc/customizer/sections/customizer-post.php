@@ -22,31 +22,9 @@ function palm_beach_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 
-	// Add Post Layout Settings for archive posts.
-	$wp_customize->add_setting( 'palm_beach_theme_options[post_layout]', array(
-		'default'           => 'three-columns',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'palm_beach_sanitize_select',
-		)
-	);
-	$wp_customize->add_control( 'palm_beach_theme_options[post_layout]', array(
-		'label'    => esc_html__( 'Post Layout (archive pages)', 'palm-beach' ),
-		'section'  => 'palm_beach_section_post',
-		'settings' => 'palm_beach_theme_options[post_layout]',
-		'type'     => 'select',
-		'priority' => 1,
-		'choices'  => array(
-			'two-columns' => esc_html__( 'Two Columns', 'palm-beach' ),
-			'three-columns' => esc_html__( 'Three Columns', 'palm-beach' ),
-			'four-columns' => esc_html__( 'Four Columns', 'palm-beach' ),
-			),
-		)
-	);
-
 	// Add Setting and Control for Excerpt Length.
 	$wp_customize->add_setting( 'palm_beach_theme_options[excerpt_length]', array(
-		'default'           => 25,
+		'default'           => 20,
 		'type'           	=> 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'absint',

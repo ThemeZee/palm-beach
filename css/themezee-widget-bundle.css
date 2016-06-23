@@ -119,7 +119,7 @@
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #fff;
-	background: #111133;
+	background: #242424;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
@@ -131,12 +131,12 @@
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:hover,
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
-	background: #4477aa;
+	background: #57b7d7;
 	text-decoration: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
-	background: #4477aa;
+	background: #57b7d7;
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
@@ -159,7 +159,7 @@
 
 .tzwb-social-icons .social-icons-menu li a {
 	padding: 0.75em;
-	background: #4477aa;
+	background: #57b7d7;
 }
 
 .tzwb-social-icons .social-icons-menu li a:before {
@@ -168,7 +168,7 @@
 
 .tzwb-social-icons .social-icons-menu li a:hover {
 	text-decoration: none;
-	background: #111133;
+	background: #242424;
 }
 
 /*--------------------------------------------------------------
