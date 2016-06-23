@@ -1,0 +1,20 @@
+===================================
+Gridbox Changelog
+===================================
+
+Version 1.0.2
+-----------------------------------
+[added] Magazine Homepage template
+[added] Featured Posts area
+[added] Post layout settings
+[improved] widget title styling and typography
+
+Version 1.0.1
+-----------------------------------
+[added] support for custom logo feature
+[added] version numbers to wp_enqueue_style and wp_enqueue_script functions
+[updated] flexlider, html5shiv and Genericons
+
+Version 1.0
+-----------------------------------
+Final Version

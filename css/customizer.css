@@ -1,0 +1,34 @@
+/*
+ * Customizer CSS
+ *
+ * Adjusts styling for theme option controls in the Customizer
+ *
+ * @package Gridbox
+ */
+
+.customize-control-checkbox {
+	margin-bottom: 4px;
+}
+
+#customize-control-gridbox_theme_options-blog_title,
+#customize-control-gridbox_theme_options-blog_description,
+#customize-control-gridbox_theme_options-excerpt_length,
+#customize-control-gridbox_theme_options-postmeta_headline,
+#customize-control-gridbox_theme_options-single_post_headline,
+#customize-control-gridbox_theme_options-featured_category {
+	margin-top: 16px;
+}
+
+#customize-control-gridbox_theme_options-sticky_header_title,
+#customize-control-gridbox_theme_options-postmeta_headline,
+#customize-control-gridbox_theme_options-single_post_headline {
+	margin-bottom: 0;
+}
+
+#customize-control-gridbox_theme_options-upgrade div {
+	margin: 4px 0 32px;
+}
+
+#customize-control-gridbox_theme_options-upgrade div .customize-control-title {
+	margin-bottom: 4px;
+}
