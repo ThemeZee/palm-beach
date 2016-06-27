@@ -57,7 +57,7 @@
 		</header><!-- #masthead -->
 
 		<?php // Display slider or header image on homepage.
-		if ( is_home() or is_page_template( 'template-magazine.php' )  ) :
+		if ( is_home() or is_page_template( 'template-magazine.php' ) or is_page_template( 'template-slider.php' )   ) :
 
 			palm_beach_slider();
 			palm_beach_header_image();

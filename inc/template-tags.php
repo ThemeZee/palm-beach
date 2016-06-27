@@ -130,7 +130,7 @@ function palm_beach_page_title() {
 
 		// Display post title.
 		the_title( '<h1 class="post-title header-title">', '</h1>' );
-		palm_beach_entry_meta();
+		palm_beach_entry_meta( true );
 
 	elseif( is_page() ) :
 
@@ -177,31 +177,11 @@ function palm_beach_post_image( $size = 'post-thumbnail', $attr = array() ) {
 endif;
 
 
-if ( ! function_exists( 'palm_beach_post_image_single' ) ) :
-/**
- * Displays the featured image on single posts
- */
-function palm_beach_post_image_single() {
-
-	// Get theme options from database.
-	$theme_options = palm_beach_theme_options();
-
-	// Display Post Thumbnail if activated.
-	if ( true === $theme_options['featured_image'] ) {
-
-		the_post_thumbnail();
-
-	}
-
-} // palm_beach_post_image_single()
-endif;
-
-
 if ( ! function_exists( 'palm_beach_entry_meta' ) ) :
 /**
  * Displays the date, author and categories of a post
  */
-function palm_beach_entry_meta() {
+function palm_beach_entry_meta( $single_post = false ) {
 
 	// Get theme options from database.
 	$theme_options = palm_beach_theme_options();
@@ -222,10 +202,17 @@ function palm_beach_entry_meta() {
 
 	}
 
-	// Display categories unless user has deactivated it via settings.
-	if ( true === $theme_options['meta_category'] ) {
+	// Display categories on single posts unless user has deactivated it via settings.
+	if ( true === $theme_options['meta_category'] && $single_post ) {
 
 		$postmeta .= palm_beach_meta_category();
+
+	}
+
+	// Display comments on single posts unless user has deactivated it via settings.
+	if ( true === $theme_options['meta_comments'] && $single_post ) {
+
+		$postmeta .= palm_beach_meta_comments();
 
 	}
 
@@ -290,6 +277,23 @@ function palm_beach_meta_category() {
 endif;
 
 
+if ( ! function_exists( 'palm_beach_meta_comments' ) ) :
+/**
+ * Displays the post comments
+ */
+function palm_beach_meta_comments() {
+
+	ob_start();
+	comments_popup_link( esc_html__( 'No comments', 'palm-beach' ), esc_html__( 'One comment', 'palm-beach' ), esc_html__( '% comments', 'palm-beach' ) );
+	$comments_string = ob_get_contents();
+	ob_end_clean();
+
+	return '<span class="meta-comments"> ' . $comments_string . '</span>';
+
+}  // palm_beach_meta_comments()
+endif;
+
+
 if ( ! function_exists( 'palm_beach_entry_tags' ) ) :
 /**
  * Displays the post tags on single post view
@@ -351,8 +355,8 @@ function palm_beach_post_navigation() {
 	if ( true === $theme_options['post_navigation'] ) {
 
 		the_post_navigation( array(
-			'prev_text' => '<span class="screen-reader-text">' . esc_html_x( 'Previous Post:', 'post navigation', 'palm-beach' ) . '</span>%title',
-			'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Post:', 'post navigation', 'palm-beach' ) . '</span>%title',
+			'prev_text' => esc_html_x( 'Previous Post', 'post navigation', 'palm-beach' ),
+			'next_text' => esc_html_x( 'Next Post', 'post navigation', 'palm-beach' ),
 		) );
 
 	}

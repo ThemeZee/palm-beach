@@ -34,7 +34,7 @@
 
 						<?php the_title( sprintf( '<h2 class="header-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-						<?php palm_beach_entry_meta(); ?>
+						<?php palm_beach_entry_meta( true ); ?>
 
 					</header>
 

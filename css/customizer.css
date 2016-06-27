@@ -10,18 +10,20 @@
 	margin-bottom: 4px;
 }
 
-#customize-control-palm_beach_theme_options-blog_title,
-#customize-control-palm_beach_theme_options-blog_description,
 #customize-control-palm_beach_theme_options-excerpt_length,
-#customize-control-palm_beach_theme_options-postmeta_headline,
-#customize-control-palm_beach_theme_options-single_post_headline,
-#customize-control-palm_beach_theme_options-featured_category {
+#customize-control-palm_beach_theme_options-post_meta_headline,
+#customize-control-palm_beach_theme_options-single_post_meta_headline,
+#customize-control-palm_beach_theme_options-featured_category,
+#customize-control-palm_beach_theme_options-slider_category,
+#customize-control-palm_beach_theme_options-slider_limit,
+#customize-control-palm_beach_theme_options-slider_animation {
 	margin-top: 16px;
 }
 
 #customize-control-palm_beach_theme_options-sticky_header_title,
-#customize-control-palm_beach_theme_options-postmeta_headline,
-#customize-control-palm_beach_theme_options-single_post_headline {
+#customize-control-palm_beach_theme_options-post_meta_headline,
+#customize-control-palm_beach_theme_options-single_post_meta_headline,
+#customize-control-palm_beach_theme_options-slider_activate {
 	margin-bottom: 0;
 }
 

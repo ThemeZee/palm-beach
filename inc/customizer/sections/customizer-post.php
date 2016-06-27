@@ -22,25 +22,8 @@ function palm_beach_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 
-	// Add Setting and Control for Excerpt Length.
-	$wp_customize->add_setting( 'palm_beach_theme_options[excerpt_length]', array(
-		'default'           => 20,
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'absint',
-		)
-	);
-	$wp_customize->add_control( 'palm_beach_theme_options[excerpt_length]', array(
-		'label'    => esc_html__( 'Excerpt Length', 'palm-beach' ),
-		'section'  => 'palm_beach_section_post',
-		'settings' => 'palm_beach_theme_options[excerpt_length]',
-		'type'     => 'text',
-		'priority' => 2,
-		)
-	);
-
 	// Add Post Meta Settings.
-	$wp_customize->add_setting( 'palm_beach_theme_options[postmeta_headline]', array(
+	$wp_customize->add_setting( 'palm_beach_theme_options[post_meta_headline]', array(
 		'default'           => '',
 		'type'           	=> 'option',
 		'transport'         => 'refresh',
@@ -48,11 +31,11 @@ function palm_beach_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( new Palm_Beach_Customize_Header_Control(
-		$wp_customize, 'palm_beach_theme_options[postmeta_headline]', array(
+		$wp_customize, 'palm_beach_theme_options[post_meta_headline]', array(
 		'label' => esc_html__( 'Post Meta', 'palm-beach' ),
 		'section' => 'palm_beach_section_post',
-		'settings' => 'palm_beach_theme_options[postmeta_headline]',
-		'priority' => 4,
+		'settings' => 'palm_beach_theme_options[post_meta_headline]',
+		'priority' => 1,
 		)
 	) );
 
@@ -68,7 +51,7 @@ function palm_beach_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'palm_beach_section_post',
 		'settings' => 'palm_beach_theme_options[meta_date]',
 		'type'     => 'checkbox',
-		'priority' => 5,
+		'priority' => 2,
 		)
 	);
 
@@ -84,9 +67,43 @@ function palm_beach_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'palm_beach_section_post',
 		'settings' => 'palm_beach_theme_options[meta_author]',
 		'type'     => 'checkbox',
-		'priority' => 6,
+		'priority' => 3,
 		)
 	);
+
+	// Add Setting and Control for Excerpt Length.
+	$wp_customize->add_setting( 'palm_beach_theme_options[excerpt_length]', array(
+		'default'           => 20,
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'absint',
+		)
+	);
+	$wp_customize->add_control( 'palm_beach_theme_options[excerpt_length]', array(
+		'label'    => esc_html__( 'Excerpt Length', 'palm-beach' ),
+		'section'  => 'palm_beach_section_post',
+		'settings' => 'palm_beach_theme_options[excerpt_length]',
+		'type'     => 'text',
+		'priority' => 4,
+		)
+	);
+
+	// Add Single Post Meta Settings.
+	$wp_customize->add_setting( 'palm_beach_theme_options[single_post_meta_headline]', array(
+		'default'           => '',
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'esc_attr',
+		)
+	);
+	$wp_customize->add_control( new Palm_Beach_Customize_Header_Control(
+		$wp_customize, 'palm_beach_theme_options[single_post_meta_headline]', array(
+		'label' => esc_html__( 'Single Post Meta', 'palm-beach' ),
+		'section' => 'palm_beach_section_post',
+		'settings' => 'palm_beach_theme_options[single_post_meta_headline]',
+		'priority' => 5,
+		)
+	) );
 
 	$wp_customize->add_setting( 'palm_beach_theme_options[meta_category]', array(
 		'default'           => true,
@@ -96,45 +113,27 @@ function palm_beach_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( 'palm_beach_theme_options[meta_category]', array(
-		'label'    => esc_html__( 'Display post categories', 'palm-beach' ),
+		'label'    => esc_html__( 'Display post categories on single posts', 'palm-beach' ),
 		'section'  => 'palm_beach_section_post',
 		'settings' => 'palm_beach_theme_options[meta_category]',
 		'type'     => 'checkbox',
-		'priority' => 7,
+		'priority' => 6,
 		)
 	);
 
-	// Add Single Post Settings.
-	$wp_customize->add_setting( 'palm_beach_theme_options[single_post_headline]', array(
-		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'esc_attr',
-		)
-	);
-	$wp_customize->add_control( new Palm_Beach_Customize_Header_Control(
-		$wp_customize, 'palm_beach_theme_options[single_post_headline]', array(
-		'label' => esc_html__( 'Single Posts', 'palm-beach' ),
-		'section' => 'palm_beach_section_post',
-		'settings' => 'palm_beach_theme_options[single_post_headline]',
-		'priority' => 8,
-		)
-	) );
-
-	// Featured Image Setting.
-	$wp_customize->add_setting( 'palm_beach_theme_options[featured_image]', array(
+	$wp_customize->add_setting( 'palm_beach_theme_options[meta_comments]', array(
 		'default'           => true,
 		'type'           	=> 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'palm_beach_sanitize_checkbox',
 		)
 	);
-	$wp_customize->add_control( 'palm_beach_theme_options[featured_image]', array(
-		'label'    => esc_html__( 'Display featured image on single posts', 'palm-beach' ),
+	$wp_customize->add_control( 'palm_beach_theme_options[meta_comments]', array(
+		'label'    => esc_html__( 'Display post comments on single posts', 'palm-beach' ),
 		'section'  => 'palm_beach_section_post',
-		'settings' => 'palm_beach_theme_options[featured_image]',
+		'settings' => 'palm_beach_theme_options[meta_comments]',
 		'type'     => 'checkbox',
-		'priority' => 9,
+		'priority' => 6,
 		)
 	);
 
@@ -150,7 +149,7 @@ function palm_beach_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'palm_beach_section_post',
 		'settings' => 'palm_beach_theme_options[meta_tags]',
 		'type'     => 'checkbox',
-		'priority' => 10,
+		'priority' => 7,
 		)
 	);
 
@@ -166,7 +165,7 @@ function palm_beach_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'palm_beach_section_post',
 		'settings' => 'palm_beach_theme_options[post_navigation]',
 		'type'     => 'checkbox',
-		'priority' => 11,
+		'priority' => 8,
 		)
 	);
 

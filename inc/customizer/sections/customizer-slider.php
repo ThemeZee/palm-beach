@@ -61,7 +61,7 @@ function palm_beach_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( 'palm_beach_theme_options[slider_blog]', array(
-		'label'    => esc_html__( 'Show Slider on posts page', 'palm-beach' ),
+		'label'    => esc_html__( 'Show Slider on blog index', 'palm-beach' ),
 		'section'  => 'palm_beach_section_slider',
 		'settings' => 'palm_beach_theme_options[slider_blog]',
 		'type'     => 'checkbox',
