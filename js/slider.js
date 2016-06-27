@@ -16,7 +16,6 @@ jQuery( document ).ready(function($) {
 		selector: ".zeeslides > li",
 		smoothHeight: true,
 		pauseOnHover: true,
-		controlNav: false,
 		controlsContainer: ".post-slider-controls"
 	});
 
