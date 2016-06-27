@@ -38,6 +38,9 @@ function palm_beach_setup() {
 	// Set detfault Post Thumbnail size.
 	set_post_thumbnail_size( 800, 500, true );
 
+	// Add Header Image Size.
+	add_image_size( 'palm-beach-header-image', 1920, 720, true );
+
 	// Register Navigation Menu.
 	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'palm-beach' ) );
 
@@ -65,8 +68,7 @@ function palm_beach_setup() {
 	add_theme_support('custom-header', apply_filters( 'palm_beach_custom_header_args', array(
 		'header-text' => false,
 		'width'	=> 1920,
-		'height' => 480,
-		'flex-height' => true,
+		'height' => 360,
 	) ) );
 
 	// Add Theme Support for wooCommerce.
@@ -197,6 +199,9 @@ require get_template_directory() . '/inc/template-tags.php';
 
 // Include support functions for Theme Addons.
 require get_template_directory() . '/inc/addons.php';
+
+// Include Post Slider Setup.
+require get_template_directory() . '/inc/slider.php';
 
 // Include Widget Files.
 require get_template_directory() . '/inc/widgets/widget-magazine-posts-grid.php';

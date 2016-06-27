@@ -54,72 +54,104 @@ endif;
 
 if ( ! function_exists( 'palm_beach_header_image' ) ) :
 /**
- * Displays the custom header image below the navigation menu
+ * Displays the custom header image below the navigation menu.
  */
 function palm_beach_header_image() {
-	global $post;
 
-	// Get featured image of single post or page.
-	if ( is_singular() && has_post_thumbnail() ) :
+	// Display default header image set on Appearance > Header.
+	if ( get_header_image() ) : ?>
 
-		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'header-image' );
-		$image_url = $image[0];
+		<div id="headimg" class="header-image">
 
-	// Get custom header image.
-	elseif ( get_header_image() ) :
-
-		$image_url = get_header_image();
-
-	else :
-
-		$image_url = get_template_directory_uri() . '/images/default-header-image.png';
-
-	endif;
-	?>
-
-	<div id="headimg" class="header-image" style="background: url( '<?php echo esc_url( $image_url ); ?>' )">
-
-		<div class="header-image-container">
-
-			<header class="page-header clearfix">
-
-				<?php palm_beach_header_title(); ?>
-
-			</header>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id, 'full' ) ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+			</a>
 
 		</div>
 
-	</div>
-
 	<?php
+	endif;
+
 }
 endif;
 
 
 if ( ! function_exists( 'palm_beach_header_title' ) ) :
 /**
- * Displays title in header area.
+ * Displays the header title.
  */
 function palm_beach_header_title() {
+	global $post;
 
-	if( is_singular() ) :
+	// Check if we find an image to display in the header.
+	if( is_singular() && has_post_thumbnail() ) :
 
-		// Display title of single posts and pages.
-		the_title( '<h1 class="page-title">', '</h1>' );
+		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'palm-beach-header-image' );
+		?>
+
+		<div class="header-title-image" style="background-image: url( '<?php echo esc_url( $image[0] ); ?>' )">
+
+			<div class="header-title-image-container">
+
+				<div class="header-title-wrap">
+
+					<?php palm_beach_page_title(); ?>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	<?php else : ?>
+
+		<div class="header-title-background">
+
+			<?php palm_beach_page_title(); ?>
+
+		</div>
+
+	<?php
+	endif;
+
+}
+endif;
+
+
+if ( ! function_exists( 'palm_beach_page_title' ) ) :
+/**
+ * Displays title in header area.
+ */
+function palm_beach_page_title() {
+
+	echo '<header class="page-header container clearfix">';
+
+	if( is_single() ) :
+
+		// Display post title.
+		the_title( '<h1 class="post-title header-title">', '</h1>' );
+		palm_beach_entry_meta();
+
+	elseif( is_page() ) :
+
+		// Display page title.
+		the_title( '<h1 class="page-title header-title">', '</h1>' );
 
 	elseif( is_archive() ) :
 
 		// Display archive title.
-		the_archive_title( '<h1 class="page-title">', '</h1>' );
+		the_archive_title( '<h1 class="archive-title header-title">', '</h1>' );
 		the_archive_description( '<div class="archive-description">', '</div>' );
 
 	elseif( is_404() ) :
 
-		echo '<h1 class="page-title">' . esc_html__( '404: Page not found', 'gridbox' ) . '</h1>';
+		echo '<h1 class="page-title header-title">' . esc_html__( '404: Page not found', 'gridbox' ) . '</h1>';
 
 	endif;
 
-} // palm_beach_header_title()
+	echo '</header>';
+
+} // palm_beach_page_title()
 endif;
 
 
@@ -231,11 +263,13 @@ if ( ! function_exists( 'palm_beach_meta_author' ) ) :
  * Displays the post author
  */
 function palm_beach_meta_author() {
+	global $post;
+	$author_id = (int)$post->post_author;
 
 	$author_string = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
-		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( esc_html__( 'View all posts by %s', 'palm-beach' ), get_the_author() ) ),
-		esc_html( get_the_author() )
+		esc_url( get_author_posts_url( $author_id ) ),
+		esc_attr( sprintf( esc_html__( 'View all posts by %s', 'palm-beach' ), get_the_author_meta( 'display_name', $author_id ) ) ),
+		esc_html( get_the_author_meta( 'display_name', $author_id ) )
 	);
 
 	return '<span class="meta-author"> ' . $author_string . '</span>';

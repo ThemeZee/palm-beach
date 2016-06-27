@@ -75,5 +75,22 @@ function palm_beach_customize_register_general_settings( $wp_customize ) {
 		)
 	);
 
+	// Add Blog Title.
+	$wp_customize->add_setting( 'palm_beach_theme_options[blog_title]', array(
+		'default'           => '',
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'wp_kses_post',
+		)
+	);
+	$wp_customize->add_control( 'palm_beach_theme_options[blog_title]', array(
+		'label'    => esc_html__( 'Blog Title', 'palm-beach' ),
+		'section'  => 'palm_beach_section_general',
+		'settings' => 'palm_beach_theme_options[blog_title]',
+		'type'     => 'text',
+		'priority' => 4,
+		)
+	);
+
 }
 add_action( 'customize_register', 'palm_beach_customize_register_general_settings' );

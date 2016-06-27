@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/palm-beach/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Palm Beach is a clean and solid WordPress theme featuring a three-column grid-layout for posts. The theme works out of the box and does not require any complicated setup. It is perfectly suited for a simple magazine, blog or portfolio website.
-Version: 1.0.2
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: palm-beach
@@ -248,7 +248,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 fieldset {
-	border: 1px solid #c0c0c0;
+	border: 1px solid #e5e5e5;
 	margin: 0 2px;
 	padding: 0.35em 0.625em 0.75em;
 }
@@ -321,7 +321,7 @@ address {
 
 pre {
 	background: #fff;
-	border: 1px solid #ddd;
+	border: 1px solid #e5e5e5;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -409,7 +409,7 @@ blockquote > :last-child {
 }
 
 hr {
-	background-color: #ccc;
+	background-color: #e5e5e5;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -457,7 +457,7 @@ table {
 
 th,
 td {
-	border: 1px solid #ddd;
+	border: 1px solid #e5e5e5;
 	padding: 0.3em 0.6em;
 }
 
@@ -531,7 +531,7 @@ textarea {
 	max-width: 100%;
 	padding: 0.3em 0.6em;
 	color: #666;
-	border: 1px solid #ddd;
+	border: 1px solid #e5e5e5;
 }
 
 input[type="text"]:focus,
@@ -541,7 +541,7 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
 	color: #111;
-	border: 1px solid #ccc;
+	border: 1px solid #c5c5c5;
 }
 
 textarea {
@@ -676,7 +676,7 @@ textarea {
 --------------------------------------------------------------*/
 .site-header {
 	background: #fff;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #e5e5e5;
 }
 
 .site-branding {
@@ -726,17 +726,56 @@ textarea {
 	height: auto;
 }
 
-/* Custom Header Image */
-.header-image {
+/*  Header Title */
+.header-title-image {
+	margin: -1px 0 0;
 	text-align: center;
+	height: 720px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
-.header-image img {
-	max-width: 2500px;
-	max-height: 500px;
-	vertical-align: top;
+.header-title-image-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.3);
+	height: 720px;
+}
+
+.header-title-image-container .header-title-wrap {
 	width: 100%;
-	height: auto;
+}
+
+.header-title {
+	display: inline;
+	font-family: 'Montserrat', Verdana, Arial;
+	font-size: 64px;
+	font-size: 4rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 0;
+	margin: 0;
+	color: #fff;
+	text-shadow: 0 0 5px #333;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Page Header without image */
+.header-title-background {
+	background: #f5f5f5;
+	padding: 75px 0;
+	text-align: center;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.header-title-background .page-header .header-title {
+	color: #242424;
+	text-shadow: none;
+	font-size: 48px;
+	font-size: 3rem;
 }
 
 /*--------------------------------------------------------------
@@ -812,7 +851,7 @@ textarea {
 	list-style-type: none;
 	list-style-position: outside;
 	background: #f5f5f5;
-	border: 1px solid #ddd;
+	border: 1px solid #e5e5e5;
 }
 
 .main-navigation-menu ul li{
@@ -826,13 +865,8 @@ textarea {
 	float: left;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	border-bottom: 1px solid rgba(255,255,255,0.2);
 	-webkit-transition: none;
 	transition: none;
-}
-
-.main-navigation-menu ul li:last-child a {
-	border-bottom: none;
 }
 
 .main-navigation-menu ul .menu-item-has-children > a:after {
@@ -1182,13 +1216,11 @@ textarea {
 	max-width: 100%;
 }
 
-.archive-title,
-.page-title,
 .entry-title {
 	display: inline;
 	font-family: 'Montserrat', Verdana, Arial;
-	font-size: 40px;
-	font-size: 2.5rem;
+	font-size: 22px;
+	font-size: 1.375rem;
 	font-weight: bold;
 	text-transform: uppercase;
 	padding: 0;
@@ -1212,8 +1244,12 @@ textarea {
 }
 
 .entry-content {
-	font-size: 17px;
-	font-size: 1.0625rem;
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+.entry-content > p:first-child {
+	margin-top: 0;
 }
 
 .wp-post-image {
@@ -1234,7 +1270,7 @@ textarea {
 	text-decoration: none;
 	color: #242424;
 	background: #f5f5f5;
-	border: 1px solid #ddd;
+	border: 1px solid #e5e5e5;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
@@ -1262,19 +1298,76 @@ textarea {
 ## 12.2 - Entry Meta
 --------------------------------------------------------------*/
 .entry-meta {
-	margin: 0.25em 0 0;
-	color: #848484;
-	font-size: 16px;
-	font-size: 1rem;
+	margin: 0.5em 0 1.5em;
+	color: #646464;
+	font-size: 14px;
+	font-size: 0.875rem;
 }
 
-.entry-meta span:after {
-	content: "\002F \002F";
-	margin-left: 0.2em;
+.entry-meta .meta-date,
+.entry-meta .meta-author,
+.entry-meta .meta-category,
+.entry-meta .meta-comments {
+	margin-right: 1.5em;
 }
 
-.entry-meta span:last-child:after {
-	display: none;
+.entry-meta a:link,
+.entry-meta a:visited {
+	color: #646464;
+}
+
+.entry-meta a:hover,
+.entry-meta a:active {
+	color: #242424;
+}
+
+.entry-meta span:before {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px 'Genericons';
+	vertical-align: middle;
+	color: #646464;
+	margin-right: 0.2em;
+}
+
+.entry-meta .meta-date:before{
+	content: '\f307';
+}
+
+.entry-meta .meta-author:before{
+	content: '\f304';
+}
+
+.entry-meta .meta-category:before{
+	content: '\f301';
+}
+
+.entry-meta .meta-comments:before{
+	content: '\f300';
+}
+
+/* Entry Meta in Header area */
+.page-header .entry-meta {
+	margin: 0.5em 0 0;
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+.page-header .entry-meta span:before {
+	font-size: 24px;
+}
+
+.header-title-wrap .page-header .entry-meta,
+.header-title-wrap .page-header .entry-meta span:before,
+.header-title-wrap .page-header .entry-meta a:link,
+.header-title-wrap .page-header .entry-meta a:visited {
+	color: #fff;
+	text-shadow: 0 0 5px #000;
+}
+
+.header-title-wrap .page-header .entry-meta a:hover,
+.header-title-wrap .page-header .entry-meta a:active {
+	color: #ccc;
 }
 
 /* Entry Tags & Tagcloud Widget */
@@ -1326,7 +1419,7 @@ textarea {
 	text-transform: uppercase;
 	text-decoration: none;
 	background: #f5f5f5;
-	border: 1px solid #ddd;
+	border: 1px solid #e5e5e5;
 	font-size: 14px !important;
 	font-size: 0.875rem !important;
 }
@@ -1383,7 +1476,7 @@ textarea {
 	text-decoration: none;
 	color: #242424;
 	background: #f5f5f5;
-	border: 1px solid #ddd;
+	border: 1px solid #e5e5e5;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
@@ -1404,11 +1497,7 @@ textarea {
 ## 12.2 - Post Archives
 --------------------------------------------------------------*/
 
-/* Archive Title */
-.page-header {
-	margin-bottom: 2.5em;
-}
-
+/* Archive Description */
 .page-header .blog-description,
 .page-header .archive-description {
 	font-size: 20px;
@@ -1421,24 +1510,9 @@ textarea {
 }
 
 /* Archive Posts Styling */
-.post-wrapper .post-column article .entry-title {
-	font-size: 22px;
-	font-size: 1.375rem;
-}
-
-.post-wrapper .post-column article .entry-meta {
-	font-size: 14px;
-	font-size: 0.875rem;
-	margin-bottom: 0.5em;
-}
-
 .post-wrapper .post-column article .entry-content {
-	font-size: 16px;
-	font-size: 1rem;
-}
-
-.post-wrapper .post-column article .entry-excerpt p {
-	margin: 0.5em 0 1em;
+	font-size: 17px;
+	font-size: 1.0625rem;
 }
 
 /* Archive Posts Columns */
@@ -1725,7 +1799,7 @@ textarea {
 .comment {
 	margin: 0 0 1.5em;
 	padding: 0 0 1.5em;
-	border-bottom: 2px solid #eee;
+	border-bottom: 1px solid #e5e5e5;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -1771,7 +1845,7 @@ textarea {
 .comment ol.children .comment {
 	margin: 1.5em 0 0;
 	padding: 1.5em 0 0;
-	border-top: 2px solid #eee;
+	border-top: 1px solid #e5e5e5;
 	border-bottom: none;
 }
 
@@ -1783,8 +1857,8 @@ textarea {
 .comment-navigation {
 	margin: 0 0 1.5em;
 	padding: 0.5em 0;
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -1863,23 +1937,12 @@ textarea {
 # 15.0 - Footer
 --------------------------------------------------------------*/
 .footer-wrap {
-	background: #242424;
+	border-top: 1px solid #e5e5e5;
 }
 
 .site-footer {
 	font-size: 14px;
 	font-size: 0.875rem;
-	color: rgba(255,255,255,0.75);
-}
-
-.site-footer a:link,
-.site-footer a:visited {
-	color: #fff;
-}
-
-.site-footer a:hover,
-.site-footer a:active {
-	color: rgba(255,255,255,0.75);
 }
 
 .site-footer .site-info {
@@ -1988,10 +2051,6 @@ object {
 	.container {
 		padding-left: 2em;
 		padding-right: 2em;
-	}
-
-	.site-content {
-		padding-top: 2em;
 	}
 
 	.content-single {
@@ -2467,10 +2526,6 @@ object {
 	.container {
 		padding-left: 1.5em;
 		padding-right: 1.5em;
-	}
-
-	.site-content {
-		padding-top: 1.5em;
 	}
 
 	.widget,

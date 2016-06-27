@@ -56,12 +56,18 @@
 
 		</header><!-- #masthead -->
 
-		<div class="header-background clearfix">
+		<?php // Display slider or header image on homepage.
+		if ( is_home() or is_page_template( 'template-magazine.php' )  ) :
 
-			<?php palm_beach_header_image(); ?>
+			palm_beach_slider();
+			palm_beach_header_image();
 
-		</div>
+		else :
+
+			palm_beach_header_title();
+
+		endif; ?>
+
+		<?php palm_beach_breadcrumbs(); ?>
 
 		<div id="content" class="site-content container clearfix">
-
-			<?php palm_beach_breadcrumbs(); ?>

@@ -34,6 +34,7 @@ function palm_beach_default_options() {
 		'site_title'						=> true,
 		'layout' 							=> 'right-sidebar',
 		'sticky_header'						=> false,
+		'blog_title'						=> '',
 		'excerpt_length' 					=> 20,
 		'meta_date'							=> true,
 		'meta_author'						=> true,
@@ -41,9 +42,12 @@ function palm_beach_default_options() {
 		'featured_image'					=> true,
 		'meta_tags'							=> true,
 		'post_navigation'					=> true,
-		'featured_magazine' 				=> false,
-		'featured_blog' 					=> false,
-		'featured_category' 				=> 0,
+		'slider_magazine' 					=> false,
+		'slider_blog' 						=> false,
+		'slider_category' 					=> 0,
+		'slider_limit' 						=> 8,
+		'slider_animation' 					=> 'slide',
+		'slider_speed' 						=> 7000,
 	);
 
 	return $default_options;
