@@ -36,7 +36,7 @@ if ( $slider_query->have_posts() ) :
 
 				<?php while ( $slider_query->have_posts() ) : $slider_query->the_post();
 
-					get_template_part( 'template-parts/content', 'slider' );
+					get_template_part( 'template-parts/slider/content', 'slider' );
 
 				endwhile; ?>
 

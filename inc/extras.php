@@ -76,6 +76,17 @@ add_filter( 'excerpt_length', 'palm_beach_excerpt_length' );
 
 
 /**
+ * Function to change excerpt length for posts in category posts widgets
+ *
+ * @param int $length Length of excerpt in number of words.
+ * @return int
+ */
+function palm_beach_magazine_posts_excerpt_length( $length ) {
+	return 15;
+}
+
+
+/**
  * Change excerpt more text for posts
  *
  * @param String $more_text Excerpt More Text.

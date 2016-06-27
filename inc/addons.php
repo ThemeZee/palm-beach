@@ -67,10 +67,10 @@ add_action( 'wp_enqueue_scripts', 'palm_beach_theme_addons_scripts' );
 function palm_beach_theme_addons_image_sizes() {
 
 	// Add Widget Bundle thumbnail.
-	add_image_size( 'tzwb-thumbnail', 90, 65, true );
+	add_image_size( 'tzwb-thumbnail', 80, 60, true );
 
 	// Add Related Posts thumbnail.
-	add_image_size( 'themezee-related-posts', 480, 320, true );
+	add_image_size( 'themezee-related-posts', 480, 300, true );
 
 }
 add_action( 'after_setup_theme', 'palm_beach_theme_addons_image_sizes' );

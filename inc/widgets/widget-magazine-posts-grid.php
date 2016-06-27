@@ -45,12 +45,10 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 		$defaults = array(
 			'title'				=> '',
 			'category'			=> 0,
-			'layout'			=> 'three-columns-grid',
-			'number'			=> 3,
-			'excerpt_length'	=> 0,
-			'meta_date'			=> true,
-			'meta_author'		=> true,
-			'meta_category'		=> true,
+			'layout'			=> 'three-columns',
+			'number'			=> 6,
+			'excerpt'			=> false,
+			'post_meta'			=> true,
 		);
 
 		return $defaults;
@@ -90,8 +88,8 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 		// Get Widget Settings.
 		$settings = wp_parse_args( $instance, $this->default_settings() );
 
-		// Set Excerpt Length.
-		$this->excerpt_length = (int) $settings['excerpt_length'];
+		// Set Widget class.
+		$class = ( 'three-columns' === $settings['layout'] ) ? 'magazine-grid-three-columns' : 'magazine-grid-two-columns';
 
 		// Output.
 		echo $args['before_widget'];
@@ -102,7 +100,7 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 			<?php // Display Title.
 			$this->widget_title( $args, $settings ); ?>
 
-			<div class="widget-magazine-posts-content">
+			<div class="widget-magazine-posts-content <?php echo $class; ?> magazine-grid">
 
 				<?php $this->render( $settings ); ?>
 
@@ -145,55 +143,35 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 		$posts_query = new WP_Query( $query_arguments );
 		$i = 0;
 
+		// Set template.
+		$template = ( 'three-columns' === $settings['layout'] ) ? 'medium-post' : 'large-post';
+
 		// Check if there are posts.
 		if ( $posts_query->have_posts() ) :
 
 			// Limit the number of words for the excerpt.
-			add_filter( 'excerpt_length', array( $this, 'excerpt_length' ) ); ?>
+			add_filter( 'excerpt_length', 'palm_beach_magazine_posts_excerpt_length' );
 
-			<div class="magazine-grid magazine-<?php echo esc_attr( $settings['layout'] ); ?>">
+			// Display Posts.
+			while ( $posts_query->have_posts() ) :
+
+				$posts_query->the_post();
+
+				set_query_var( 'palm_beach_post_meta', (bool)$settings['post_meta'] );
+				set_query_var( 'palm_beach_post_excerpt', (bool)$settings['excerpt'] );
+				?>
+
+				<div class="post-column">
+
+					<?php get_template_part( 'template-parts/widgets/magazine-content', $template ); ?>
+
+				</div>
 
 				<?php
-				// Display Posts.
-				while ( $posts_query->have_posts() ) : $posts_query->the_post(); ?>
+			endwhile;
 
-					<div class="magazine-grid-post clearfix">
-
-						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-							<?php palm_beach_post_image(); ?>
-
-							<header class="entry-header">
-
-								<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-								<?php $this->entry_meta( $settings ); ?>
-
-							</header><!-- .entry-header -->
-
-							<?php if ( $settings['excerpt_length'] > 0 ) : ?>
-
-								<div class="entry-content entry-excerpt clearfix">
-
-									<?php the_excerpt(); ?>
-
-									<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php esc_html_e( 'Read more', 'palm-beach' ); ?></a>
-
-								</div><!-- .entry-content -->
-
-							<?php endif; ?>
-
-						</article>
-
-					</div>
-
-				<?php endwhile; ?>
-
-			</div>
-
-			<?php
 			// Remove excerpt filter.
-			remove_filter( 'excerpt_length', array( $this, 'excerpt_length' ) );
+			remove_filter( 'excerpt_length', 'palm_beach_magazine_posts_excerpt_length' );
 
 		endif;
 
@@ -201,53 +179,6 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 		wp_reset_postdata();
 
 	} // render()
-
-
-	/**
-	 * Displays Entry Meta of Posts
-	 *
-	 * @param array $settings / Settings for this widget instance.
-	 */
-	function entry_meta( $settings ) {
-
-		$postmeta = '';
-
-		if ( true === $settings['meta_date'] ) {
-
-			$postmeta .= palm_beach_meta_date();
-
-		}
-
-		if ( true === $settings['meta_author'] ) {
-
-			$postmeta .= palm_beach_meta_author();
-
-		}
-
-		if ( true === $settings['meta_category'] ) {
-
-			$postmeta .= palm_beach_meta_category();
-
-		}
-
-		if ( $postmeta ) {
-
-			echo '<div class="entry-meta">' . $postmeta . '</div>';
-
-		}
-
-	} // entry_meta()
-
-
-	/**
-	 * Returns the excerpt length in number of words
-	 *
-	 * @param int $length Length of excerpt in number of words.
-	 * @return integer $this->excerpt_length Number of Words
-	 */
-	function excerpt_length( $length ) {
-		return $this->excerpt_length;
-	}
 
 
 	/**
@@ -273,7 +204,6 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 				// Display Widget Title with link to category archive.
 				echo '<div class="widget-header">';
 				echo '<h3 class="widget-title"><a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '">'. $widget_title . '</a></h3>';
-				echo '<div class="category-description">' . category_description( $settings['category'] ) . '</div>';
 				echo '</div>';
 
 			else :
@@ -302,10 +232,8 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 		$instance['category'] = (int) $new_instance['category'];
 		$instance['layout'] = esc_attr( $new_instance['layout'] );
 		$instance['number'] = (int) $new_instance['number'];
-		$instance['excerpt_length'] = (int) $new_instance['excerpt_length'];
-		$instance['meta_date'] = ! empty( $new_instance['meta_date'] );
-		$instance['meta_author'] = ! empty( $new_instance['meta_author'] );
-		$instance['meta_category'] = ! empty( $new_instance['meta_category'] );
+		$instance['excerpt'] = ! empty( $new_instance['excerpt'] );
+		$instance['post_meta'] = ! empty( $new_instance['post_meta'] );
 
 		$this->delete_widget_cache();
 
@@ -348,9 +276,8 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id( 'layout' ); ?>"><?php esc_html_e( 'Grid Layout:', 'palm-beach' ); ?></label><br/>
 			<select id="<?php echo $this->get_field_id( 'layout' ); ?>" name="<?php echo $this->get_field_name( 'layout' ); ?>">
-				<option <?php selected( $settings['layout'], 'two-columns-grid' ); ?> value="two-columns-grid" ><?php esc_html_e( 'Two Columns', 'palm-beach' ); ?></option>
-				<option <?php selected( $settings['layout'], 'three-columns-grid' ); ?> value="three-columns-grid" ><?php esc_html_e( 'Three Columns', 'palm-beach' ); ?></option>
-				<option <?php selected( $settings['layout'], 'four-columns-grid' ); ?> value="four-columns-grid" ><?php esc_html_e( 'Four Columns', 'palm-beach' ); ?></option>
+				<option <?php selected( $settings['layout'], 'two-columns' ); ?> value="two-columns" ><?php esc_html_e( 'Two Columns Grid', 'palm-beach' ); ?></option>
+				<option <?php selected( $settings['layout'], 'three-columns' ); ?> value="three-columns" ><?php esc_html_e( 'Three Columns Grid', 'palm-beach' ); ?></option>
 			</select>
 		</p>
 
@@ -361,31 +288,20 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'excerpt_length' ); ?>"><?php esc_html_e( 'Excerpt Length:', 'palm-beach' ); ?>
-				<input id="<?php echo $this->get_field_id( 'excerpt_length' ); ?>" name="<?php echo $this->get_field_name( 'excerpt_length' ); ?>" type="text" value="<?php echo $settings['excerpt_length']; ?>" size="6" />
+			<label for="<?php echo $this->get_field_id( 'post_meta' ); ?>">
+				<input class="checkbox" type="checkbox" <?php checked( $settings['post_meta'] ); ?> id="<?php echo $this->get_field_id( 'post_meta' ); ?>" name="<?php echo $this->get_field_name( 'post_meta' ); ?>" />
+				<?php esc_html_e( 'Display post meta', 'palm-beach' ); ?>
 			</label>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'meta_date' ); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_date'] ); ?> id="<?php echo $this->get_field_id( 'meta_date' ); ?>" name="<?php echo $this->get_field_name( 'meta_date' ); ?>" />
-				<?php esc_html_e( 'Display post date', 'palm-beach' ); ?>
+			<label for="<?php echo $this->get_field_id( 'excerpt' ); ?>">
+				<input class="checkbox" type="checkbox" <?php checked( $settings['excerpt'] ); ?> id="<?php echo $this->get_field_id( 'excerpt' ); ?>" name="<?php echo $this->get_field_name( 'excerpt' ); ?>" />
+				<?php esc_html_e( 'Display post excerpt', 'palm-beach' ); ?>
 			</label>
 		</p>
 
-		<p>
-			<label for="<?php echo $this->get_field_id( 'meta_author' ); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_author'] ); ?> id="<?php echo $this->get_field_id( 'meta_author' ); ?>" name="<?php echo $this->get_field_name( 'meta_author' ); ?>" />
-				<?php esc_html_e( 'Display post author', 'palm-beach' ); ?>
-			</label>
-		</p>
 
-		<p>
-			<label for="<?php echo $this->get_field_id( 'meta_category' ); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_category'] ); ?> id="<?php echo $this->get_field_id( 'meta_category' ); ?>" name="<?php echo $this->get_field_name( 'meta_category' ); ?>" />
-				<?php esc_html_e( 'Display post categories', 'palm-beach' ); ?>
-			</label>
-		</p>
 
 		<?php
 

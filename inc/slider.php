@@ -87,7 +87,7 @@ function palm_beach_slider() {
 		or ( true === $theme_options['slider_magazine'] and is_page_template( 'template-magazine.php' ) )
 	) {
 
-		get_template_part( 'template-parts/post-slider' );
+		get_template_part( 'template-parts/slider/post-slider-container' );
 
 	}
 

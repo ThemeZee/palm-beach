@@ -36,10 +36,14 @@ function palm_beach_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Set detfault Post Thumbnail size.
-	set_post_thumbnail_size( 800, 500, true );
+	set_post_thumbnail_size( 600, 375, true );
 
 	// Add Header Image Size.
 	add_image_size( 'palm-beach-header-image', 1920, 720, true );
+
+	// Add different thumbnail sizes for Magazine Post widgets.
+	add_image_size( 'palm-beach-thumbnail-small', 120, 75, true );
+	add_image_size( 'palm-beach-thumbnail-medium', 360, 225, true );
 
 	// Register Navigation Menu.
 	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'palm-beach' ) );
@@ -204,4 +208,5 @@ require get_template_directory() . '/inc/addons.php';
 require get_template_directory() . '/inc/slider.php';
 
 // Include Widget Files.
+require get_template_directory() . '/inc/widgets/widget-magazine-posts-columns.php';
 require get_template_directory() . '/inc/widgets/widget-magazine-posts-grid.php';
