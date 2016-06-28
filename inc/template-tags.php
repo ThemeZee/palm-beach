@@ -145,7 +145,7 @@ function palm_beach_page_title() {
 
 	elseif( is_404() ) :
 
-		echo '<h1 class="page-title header-title">' . esc_html__( '404: Page not found', 'gridbox' ) . '</h1>';
+		echo '<h1 class="page-title header-title">' . esc_html__( '404: Page not found', 'palm-beach' ) . '</h1>';
 
 	endif;
 
