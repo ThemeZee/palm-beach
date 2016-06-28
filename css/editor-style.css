@@ -23,7 +23,7 @@
 --------------------------------------------------------------*/
 body {
 	margin: 1em 2em;
-	max-width: 770px;
+	max-width: 800px;
 }
 
 /*--------------------------------------------------------------
@@ -32,8 +32,8 @@ body {
 body {
 	color: #222;
 	font-family: 'Hind', Tahoma, Arial;
-	font-size: 17px;
-	font-size: 1.0625rem;
+	font-size: 18px;
+	font-size: 1.125rem;
 	line-height: 1.6;
 }
 

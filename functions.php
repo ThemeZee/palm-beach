@@ -96,7 +96,7 @@ add_action( 'after_setup_theme', 'palm_beach_setup' );
  * @global int $content_width
  */
 function palm_beach_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'palm_beach_content_width', 780 );
+	$GLOBALS['content_width'] = apply_filters( 'palm_beach_content_width', 800 );
 }
 add_action( 'after_setup_theme', 'palm_beach_content_width', 0 );
 
