@@ -17,9 +17,9 @@
 function palm_beach_slider_activated_callback( $control ) {
 
 	// Check if Slider is turned on.
-	if ( $control->manager->get_setting( 'palm_beach_theme_options[slider_blog]' )->value() == 1 ) :
+	if ( true === $control->manager->get_setting( 'palm_beach_theme_options[slider_blog]' )->value() ) :
 		return true;
-	elseif ( $control->manager->get_setting( 'palm_beach_theme_options[slider_magazine]' )->value() == 1 ) :
+	elseif ( true === $control->manager->get_setting( 'palm_beach_theme_options[slider_magazine]' )->value() ) :
 		return true;
 	else :
 		return false;
