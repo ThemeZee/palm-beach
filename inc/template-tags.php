@@ -218,7 +218,7 @@ function palm_beach_entry_meta( $single_post = false ) {
 
 	if ( $postmeta ) {
 
-		echo '<div class="entry-meta">' . $postmeta . '</div>';
+		echo '<div class="entry-meta clearfix">' . $postmeta . '</div>';
 
 	}
 
