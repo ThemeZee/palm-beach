@@ -26,6 +26,10 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.0.1 =
+* added Right-to-Left language support
+* improved styling of navigation menus
+
 = 1.0 =
 Initial Release
 
