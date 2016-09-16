@@ -7,18 +7,7 @@
  * @package Palm Beach
  */
 
-get_header();
-
-// Get Theme Options from Database.
-$theme_options = palm_beach_theme_options();
-
-// Display Featured Posts.
-if ( true === $theme_options['featured_blog'] ) :
-
-	get_template_part( 'template-parts/featured-content' );
-
-endif;
-?>
+get_header(); ?>
 
 	<section id="primary" class="content-archive content-area">
 		<main id="main" class="site-main" role="main">
