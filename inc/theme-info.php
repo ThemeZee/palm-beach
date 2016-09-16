@@ -45,9 +45,9 @@ function palm_beach_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'palm-beach' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/palm-beach/', 'palm-beach' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=palm-beach&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'palm-beach' ); ?></a>
-				<a href="<?php echo esc_url( 'http://preview.themezee.com/palm-beach/?utm_source=theme-info&utm_medium=textlink&utm_campaign=palm-beach&utm_content=demo' ); ?>" target="_blank"><?php esc_html_e( 'Theme Demo', 'palm-beach' ); ?></a>
+				<a href="http://preview.themezee.com/palm-beach/?utm_source=theme-info&utm_medium=textlink&utm_campaign=palm-beach&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'palm-beach' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/palm-beach-documentation/', 'palm-beach' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=palm-beach&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'palm-beach' ); ?></a>
-				<a href="<?php echo esc_url( 'http://wordpress.org/support/view/theme-reviews/palm-beach?filter=5' ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'palm-beach' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/palm-beach/reviews/?filter=5', 'palm-beach' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'palm-beach' ); ?></a>
 			</p>
 		</div>
 		<hr>
@@ -107,10 +107,10 @@ function palm_beach_theme_info_page() {
 				<div class="column column-half clearfix">
 
 					<div class="section">
-						<h4><?php esc_html_e( 'Pro Version', 'palm-beach' ); ?></h4>
+						<h4><?php esc_html_e( 'Pro Version Add-on', 'palm-beach' ); ?></h4>
 
 						<p class="about">
-							<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'palm-beach' ), 'Palm Beach' ); ?>
+							<?php printf( esc_html__( 'Purchase the %s Pro Add-on and get additional features and advanced customization options.', 'palm-beach' ), 'Palm Beach' ); ?>
 						</p>
 						<p>
 							<a href="<?php echo esc_url( __( 'https://themezee.com/addons/palm-beach-pro/', 'palm-beach' ) . '?utm_source=theme-info&utm_medium=button&utm_campaign=palm-beach&utm_content=pro-version' ); ?>" target="_blank" class="button button-secondary">
@@ -124,17 +124,14 @@ function palm_beach_theme_info_page() {
 				<div class="column column-half clearfix">
 
 					<div class="section">
-						<h4><?php esc_html_e( 'ThemeZee Plugins', 'palm-beach' ); ?></h4>
+						<h4><?php esc_html_e( 'Recommended Plugins', 'palm-beach' ); ?></h4>
 
 						<p class="about">
-							<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized plugins.', 'palm-beach' ); ?>
+							<?php esc_html_e( 'Extend the functionality of your WordPress website with our free and easy to use plugins.', 'palm-beach' ); ?>
 						</p>
 						<p>
-							<a href="<?php echo esc_url( __( 'https://themezee.com/plugins/', 'palm-beach' ) . '?utm_source=theme-info&utm_medium=button&utm_campaign=palm-beach&utm_content=plugins' ); ?>" target="_blank" class="button button-secondary">
-								<?php esc_html_e( 'Browse Plugins', 'palm-beach' ); ?>
-							</a>
-							<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
-								<?php esc_html_e( 'Install now', 'palm-beach' ); ?>
+							<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-secondary">
+								<?php esc_html_e( 'Install Plugins', 'palm-beach' ); ?>
 							</a>
 						</p>
 					</div>
@@ -152,7 +149,7 @@ function palm_beach_theme_info_page() {
 			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'palm-beach' ),
 				$theme->get( 'Name' ),
 				'<a target="_blank" href="' . __( 'https://themezee.com/', 'palm-beach' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=palm-beach" title="ThemeZee">ThemeZee</a>',
-			'<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/palm-beach?filter=5" title="Palm Beach Review">' . esc_html__( 'rate it', 'palm-beach' ) . '</a>'); ?>
+				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/palm-beach/reviews/?filter=5', 'palm-beach' ) . '" title="' . esc_attr__( 'Review Palm Beach', 'palm-beach' ) . '">' . esc_html__( 'rate it', 'palm-beach' ) . '</a>'); ?>
 			</p>
 
 		</div>
@@ -170,7 +167,7 @@ function palm_beach_theme_info_page() {
 function palm_beach_theme_info_page_css( $hook ) {
 
 	// Load styles and scripts only on theme info page.
-	if ( 'appearance_page_palm-beach' != $hook ) {
+	if ( 'appearance_page_palm-beach' !== $hook ) {
 		return;
 	}
 

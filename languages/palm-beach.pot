@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Palm Beach\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-06-28 14:47+0100\n"
-"PO-Revision-Date: 2016-06-28 14:47+0100\n"
+"POT-Creation-Date: 2016-09-16 11:40+0100\n"
+"PO-Revision-Date: 2016-09-16 11:40+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -158,127 +158,124 @@ msgstr ""
 msgid "Theme Info"
 msgstr ""
 
-#: inc/theme-info.php:46 inc/customizer/customizer.php:82
+#: inc/theme-info.php:46 inc/customizer/customizer.php:91
 msgid "Theme Links"
 msgstr ""
 
-#: inc/theme-info.php:47 inc/customizer/customizer.php:83
+#: inc/theme-info.php:47 inc/customizer/customizer.php:94
 msgid "https://themezee.com/themes/palm-beach/"
 msgstr ""
 
-#: inc/theme-info.php:47 inc/customizer/customizer.php:84
+#: inc/theme-info.php:47 inc/customizer/customizer.php:95
 msgid "Theme Page"
 msgstr ""
 
-#: inc/theme-info.php:48
-msgid "Changelog"
-msgstr ""
-
-#: inc/theme-info.php:49
+#: inc/theme-info.php:48 inc/customizer/customizer.php:101
 msgid "Theme Demo"
 msgstr ""
 
-#: inc/theme-info.php:50 inc/theme-info.php:71
-#: inc/customizer/customizer.php:85
+#: inc/theme-info.php:49 inc/theme-info.php:70
+#: inc/customizer/customizer.php:106
 msgid "https://themezee.com/docs/palm-beach-documentation/"
 msgstr ""
 
-#: inc/theme-info.php:50 inc/theme-info.php:65
-#: inc/customizer/customizer.php:86
+#: inc/theme-info.php:49 inc/theme-info.php:64
+#: inc/customizer/customizer.php:107
 msgid "Theme Documentation"
 msgstr ""
 
-#: inc/theme-info.php:51 inc/customizer/customizer.php:88
+#: inc/theme-info.php:50 inc/theme-info.php:152
+#: inc/customizer/customizer.php:112
+msgid "https://wordpress.org/support/theme/palm-beach/reviews/?filter=5"
+msgstr ""
+
+#: inc/theme-info.php:50 inc/customizer/customizer.php:113
 msgid "Rate this theme"
 msgstr ""
 
-#: inc/theme-info.php:58
+#: inc/theme-info.php:57
 #, php-format
 msgid "Getting Started with %s"
 msgstr ""
 
-#: inc/theme-info.php:68
+#: inc/theme-info.php:67
 msgid ""
 "You need help to setup and configure this theme? We got you covered with an "
 "extensive theme documentation on our website."
 msgstr ""
 
-#: inc/theme-info.php:72
+#: inc/theme-info.php:71
 #, php-format
 msgid "View %s Documentation"
 msgstr ""
 
-#: inc/theme-info.php:78 inc/customizer/customizer.php:31
+#: inc/theme-info.php:77 inc/customizer/customizer.php:31
 msgid "Theme Options"
 msgstr ""
 
-#: inc/theme-info.php:81
+#: inc/theme-info.php:80
 #, php-format
 msgid ""
 "%s makes use of the Customizer for all theme settings. Click on \"Customize "
 "Theme\" to open the Customizer now."
 msgstr ""
 
-#: inc/theme-info.php:84
+#: inc/theme-info.php:83
 msgid "Customize Theme"
 msgstr ""
 
-#: inc/theme-info.php:104
+#: inc/theme-info.php:103
 msgid "Get more features"
 msgstr ""
 
-#: inc/theme-info.php:111 inc/customizer/functions/custom-controls.php:99
-msgid "Pro Version"
+#: inc/theme-info.php:110 inc/customizer/functions/custom-controls.php:99
+msgid "Pro Version Add-on"
 msgstr ""
 
-#: inc/theme-info.php:114 inc/customizer/functions/custom-controls.php:102
+#: inc/theme-info.php:113 inc/customizer/functions/custom-controls.php:102
 #, php-format
 msgid ""
-"Purchase the Pro Version of %s to get additional features and advanced "
+"Purchase the %s Pro Add-on and get additional features and advanced "
 "customization options."
 msgstr ""
 
-#: inc/theme-info.php:117 inc/customizer/functions/custom-controls.php:106
+#: inc/theme-info.php:116 inc/customizer/functions/custom-controls.php:106
 msgid "https://themezee.com/addons/palm-beach-pro/"
 msgstr ""
 
-#: inc/theme-info.php:118 inc/customizer/functions/custom-controls.php:107
+#: inc/theme-info.php:117 inc/customizer/functions/custom-controls.php:107
 #, php-format
 msgid "Learn more about %s Pro"
 msgstr ""
 
-#: inc/theme-info.php:128 inc/customizer/functions/custom-controls.php:115
-msgid "ThemeZee Plugins"
+#: inc/theme-info.php:127 inc/customizer/functions/custom-controls.php:115
+msgid "Recommended Plugins"
 msgstr ""
 
-#: inc/theme-info.php:131 inc/customizer/functions/custom-controls.php:118
+#: inc/theme-info.php:130 inc/customizer/functions/custom-controls.php:118
 msgid ""
-"Extend the functionality of your WordPress website with our customized "
-"plugins."
+"Extend the functionality of your WordPress website with our free and easy to "
+"use plugins."
 msgstr ""
 
-#: inc/theme-info.php:134 inc/customizer/functions/custom-controls.php:122
-msgid "https://themezee.com/plugins/"
+#: inc/theme-info.php:134 inc/customizer/functions/custom-controls.php:123
+msgid "Install Plugins"
 msgstr ""
 
-#: inc/theme-info.php:135 inc/customizer/functions/custom-controls.php:123
-msgid "Browse Plugins"
-msgstr ""
-
-#: inc/theme-info.php:138 inc/customizer/functions/custom-controls.php:126
-msgid "Install now"
-msgstr ""
-
-#: inc/theme-info.php:153
+#: inc/theme-info.php:149
 #, php-format
 msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
 msgstr ""
 
-#: inc/theme-info.php:155
+#: inc/theme-info.php:151
 msgid "https://themezee.com/"
 msgstr ""
 
-#: inc/theme-info.php:156
+#: inc/theme-info.php:152
+msgid "Review Palm Beach"
+msgstr ""
+
+#: inc/theme-info.php:152
 msgid "rate it"
 msgstr ""
 
