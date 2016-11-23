@@ -13,7 +13,7 @@ if ( have_posts() ) : ?>
 
 	<header class="page-header clearfix">
 
-		<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'palm-beach' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
+		<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'palm-beach' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 		<p><?php get_search_form(); ?></p>
 
 	</header>

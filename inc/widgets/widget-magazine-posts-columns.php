@@ -195,7 +195,7 @@ class Palm_Beach_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 				$posts_query->the_post();
 
-				set_query_var( 'palm_beach_post_meta', (bool)$settings['post_meta'] );
+				set_query_var( 'palm_beach_post_meta', (bool) $settings['post_meta'] );
 				set_query_var( 'palm_beach_post_excerpt', true );
 
 				if ( true === $settings['highlight_post'] and ( isset( $i ) and 0 === $i ) ) :
@@ -246,7 +246,7 @@ class Palm_Beach_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 				// Display Widget Title with link to category archive.
 				echo '<div class="widget-header">';
-				echo '<h3 class="widget-title"><a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '">'. $widget_title . '</a></h3>';
+				echo '<h3 class="widget-title"><a class="category-archive-link" href="' . $link_url . '" title="' . $link_title . '">' . $widget_title . '</a></h3>';
 				echo '</div>';
 
 			else :
@@ -298,7 +298,7 @@ class Palm_Beach_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'category_one_title' ); ?>"><?php esc_html_e( 'Left Category Title:', 'palm-beach' ); ?>
-				<input class="widefat" id="<?php echo $this->get_field_id( 'category_one_title' ); ?>" name="<?php echo $this->get_field_name( 'category_one_title' ); ?>" type="text" value="<?php echo $settings['category_one_title']; ?>" />
+				<input class="widefat" id="<?php echo $this->get_field_id( 'category_one_title' ); ?>" name="<?php echo $this->get_field_name( 'category_one_title' ); ?>" type="text" value="<?php echo esc_attr( $settings['category_one_title'] ); ?>" />
 			</label>
 		</p>
 
@@ -319,7 +319,7 @@ class Palm_Beach_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'category_two_title' ); ?>"><?php esc_html_e( 'Right Category Title:', 'palm-beach' ); ?>
-				<input class="widefat" id="<?php echo $this->get_field_id( 'category_two_title' ); ?>" name="<?php echo $this->get_field_name( 'category_two_title' ); ?>" type="text" value="<?php echo $settings['category_two_title']; ?>" />
+				<input class="widefat" id="<?php echo $this->get_field_id( 'category_two_title' ); ?>" name="<?php echo $this->get_field_name( 'category_two_title' ); ?>" type="text" value="<?php echo esc_attr( $settings['category_two_title'] ); ?>" />
 			</label>
 		</p>
 
@@ -340,7 +340,7 @@ class Palm_Beach_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts:', 'palm-beach' ); ?>
-				<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo (int) $settings['number']; ?>" size="3" />
+				<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo absint( $settings['number'] ); ?>" size="3" />
 			</label>
 		</p>
 

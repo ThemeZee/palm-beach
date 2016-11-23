@@ -80,7 +80,7 @@ function palm_beach_theme_info_page() {
 							<?php printf( esc_html__( '%s makes use of the Customizer for all theme settings. Click on "Customize Theme" to open the Customizer now.', 'palm-beach' ), $theme->get( 'Name' ) ); ?>
 						</p>
 						<p>
-							<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary"><?php esc_html_e( 'Customize Theme', 'palm-beach' ); ?></a>
+							<a href="<?php echo wp_customize_url(); ?>" class="button button-primary"><?php esc_html_e( 'Customize Theme', 'palm-beach' ); ?></a>
 						</p>
 					</div>
 
@@ -146,10 +146,12 @@ function palm_beach_theme_info_page() {
 
 		<div id="theme-author">
 
-			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'palm-beach' ),
-				$theme->get( 'Name' ),
-				'<a target="_blank" href="' . __( 'https://themezee.com/', 'palm-beach' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=palm-beach" title="ThemeZee">ThemeZee</a>',
-				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/palm-beach/reviews/?filter=5', 'palm-beach' ) . '" title="' . esc_attr__( 'Review Palm Beach', 'palm-beach' ) . '">' . esc_html__( 'rate it', 'palm-beach' ) . '</a>'); ?>
+			<p>
+				<?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'palm-beach' ),
+					$theme->get( 'Name' ),
+					'<a target="_blank" href="' . __( 'https://themezee.com/', 'palm-beach' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=palm-beach" title="ThemeZee">ThemeZee</a>',
+					'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/palm-beach/reviews/?filter=5', 'palm-beach' ) . '" title="' . esc_attr__( 'Review Palm Beach', 'palm-beach' ) . '">' . esc_html__( 'rate it', 'palm-beach' ) . '</a>'
+				); ?>
 			</p>
 
 		</div>
@@ -172,7 +174,7 @@ function palm_beach_theme_info_page_css( $hook ) {
 	}
 
 	// Embed theme info css style.
-	wp_enqueue_style( 'palm-beach-theme-info-css', get_template_directory_uri() .'/css/theme-info.css' );
+	wp_enqueue_style( 'palm-beach-theme-info-css', get_template_directory_uri() . '/css/theme-info.css' );
 
 }
 add_action( 'admin_enqueue_scripts', 'palm_beach_theme_info_page_css' );

@@ -26,6 +26,9 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.0.3 =
+* improved escaping and sanitizing of widget settings and slider options
+
 = 1.0.2 =
 * fixed mobile menus on RTL language sites
 * moved Theme Links to Theme Options panel dropdown
