@@ -26,6 +26,9 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.0.4 =
+* improved escaping and sanitizing to fix theme review issues
+
 = 1.0.3 =
 * improved escaping and sanitizing of widget settings and slider options
 
@@ -72,19 +75,23 @@ Copyright: 2012-2015 Automattic, Inc., https://automattic.com/
 License: Distributed under the terms of the MIT License (http://opensource.org/licenses/MIT)
 Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
 
-4. FlexSlider - https://github.com/woothemes/FlexSlider
+4.  HTML5 Shiv - https://github.com/aFarkas/html5shiv
+License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
+Copyright: 2015 @afarkas @jdalton @jon_neal @rem
+
+5. FlexSlider - https://github.com/woothemes/FlexSlider
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 Copyright: 2015 WooThemes, http://www.woothemes.com
 
-5. Hind Font - https://www.google.com/fonts/specimen/Hind
+6. Hind Font - https://www.google.com/fonts/specimen/Hind
 License: Distributed under the terms of the Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 Copyright: 2015 Christian Robertson
 
-6. Montserrat Font - https://www.google.com/fonts/specimen/Hind+Slab
+7. Montserrat Font - https://www.google.com/fonts/specimen/Hind+Slab
 License: Distributed under the terms of the Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 Copyright: 2015 Christian Robertson
 
-7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
+8. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 
 Image 1: https://pixabay.com/en/maldives-sea-blue-palm-ocean-sky-1357020/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)

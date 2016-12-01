@@ -241,12 +241,12 @@ class Palm_Beach_Magazine_Posts_Columns_Widget extends WP_Widget {
 			if ( $category_id > 0 ) :
 
 				// Set Link URL and Title for Category.
-				$link_title = sprintf( esc_html__( 'View all posts from category %s', 'palm-beach' ), get_cat_name( $category_id ) );
-				$link_url = esc_url( get_category_link( $category_id ) );
+				$link_title = sprintf( __( 'View all posts from category %s', 'palm-beach' ), get_cat_name( $category_id ) );
+				$link_url = get_category_link( $category_id );
 
 				// Display Widget Title with link to category archive.
 				echo '<div class="widget-header">';
-				echo '<h3 class="widget-title"><a class="category-archive-link" href="' . $link_url . '" title="' . $link_title . '">' . $widget_title . '</a></h3>';
+				echo '<h3 class="widget-title"><a class="category-archive-link" href="' . esc_url( $link_url ) . '" title="' . esc_attr( $link_title ) . '">' . $widget_title . '</a></h3>';
 				echo '</div>';
 
 			else :
