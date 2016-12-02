@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-single content-area">
+	<section id="primary" class="content-fullwidth content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -38,7 +38,5 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
-
-	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

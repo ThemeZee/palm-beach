@@ -26,6 +26,12 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.0.5 =
+* added Magazine Homepage widget area to blog index
+* changed Magazine Homepage widget area to full width layout
+* removed Magazine Columns widget, which does not work with full width layout
+* fixed full width page template
+
 = 1.0.4 =
 * improved escaping and sanitizing to fix theme review issues
 

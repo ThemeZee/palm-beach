@@ -9,9 +9,9 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-full content-area">
+	<section id="primary" class="content-fullwidth content-area">
 		<main id="main" class="site-main" role="main">
-					
+
 			<?php while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/content', 'page' );
@@ -19,7 +19,7 @@ get_header(); ?>
 				comments_template();
 
 			endwhile; ?>
-		
+
 		</main><!-- #main -->
 	</section><!-- #primary -->
 

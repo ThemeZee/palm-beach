@@ -36,14 +36,14 @@ if ( ! function_exists( 'palm_beach_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// Set detfault Post Thumbnail size.
-		set_post_thumbnail_size( 600, 375, true );
+		set_post_thumbnail_size( 520, 325, true );
 
 		// Add Header Image Size.
 		add_image_size( 'palm-beach-header-image', 1920, 720, true );
 
 		// Add different thumbnail sizes for Magazine Post widgets.
 		add_image_size( 'palm-beach-thumbnail-small', 120, 75, true );
-		add_image_size( 'palm-beach-thumbnail-medium', 360, 225, true );
+		add_image_size( 'palm-beach-thumbnail-large', 600, 375, true );
 
 		// Register Navigation Menu.
 		register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'palm-beach' ) );
@@ -120,7 +120,7 @@ function palm_beach_widgets_init() {
 	register_sidebar( array(
 		'name' => esc_html__( 'Magazine Homepage', 'palm-beach' ),
 		'id' => 'magazine-homepage',
-		'description' => esc_html__( 'Appears on Magazine Homepage template only. You can use the Magazine Posts widgets here.', 'palm-beach' ),
+		'description' => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine Posts widgets here.', 'palm-beach' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
@@ -207,5 +207,4 @@ require get_template_directory() . '/inc/addons.php';
 require get_template_directory() . '/inc/slider.php';
 
 // Include Widget Files.
-require get_template_directory() . '/inc/widgets/widget-magazine-posts-columns.php';
 require get_template_directory() . '/inc/widgets/widget-magazine-posts-grid.php';

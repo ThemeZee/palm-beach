@@ -14,7 +14,7 @@ $post_excerpt = get_query_var( 'palm_beach_post_excerpt', false );
 
 	<header class="entry-header">
 
-		<?php palm_beach_post_image(); ?>
+		<?php palm_beach_post_image( 'palm-beach-thumbnail-large' ); ?>
 
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 

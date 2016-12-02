@@ -7,7 +7,20 @@
  * @package Palm Beach
  */
 
-get_header(); ?>
+get_header();
+
+// Display Magazine Homepage Widgets.
+if ( ! is_paged() && is_active_sidebar( 'magazine-homepage' ) ) : ?>
+
+	<div id="magazine-homepage-widgets" class="widget-area clearfix">
+
+		<?php dynamic_sidebar( 'magazine-homepage' ); ?>
+
+	</div><!-- #magazine-homepage-widgets -->
+
+<?php
+endif;
+?>
 
 	<section id="primary" class="content-archive content-area">
 		<main id="main" class="site-main" role="main">
