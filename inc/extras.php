@@ -6,14 +6,14 @@
  */
 
 if ( ! function_exists( 'palm_beach_default_menu' ) ) :
-/**
- * Display default page as navigation if no custom menu was set
- */
-function palm_beach_default_menu() {
+	/**
+	 * Display default page as navigation if no custom menu was set
+	 */
+	function palm_beach_default_menu() {
 
-	echo '<ul id="menu-main-navigation" class="main-navigation-menu menu">'. wp_list_pages( 'title_li=&echo=0' ) .'</ul>';
+		echo '<ul id="menu-main-navigation" class="main-navigation-menu menu">' . wp_list_pages( 'title_li=&echo=0' ) . '</ul>';
 
-}
+	}
 endif;
 
 
@@ -82,7 +82,7 @@ add_filter( 'excerpt_length', 'palm_beach_excerpt_length' );
  * @return int
  */
 function palm_beach_magazine_posts_excerpt_length( $length ) {
-	return 15;
+	return 25; // Number of words.
 }
 
 

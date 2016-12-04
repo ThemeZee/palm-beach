@@ -21,7 +21,7 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 		// Setup Widget.
 		parent::__construct(
 			'palm-beach-magazine-posts-grid', // ID.
-			sprintf( esc_html__( 'Magazine Posts: Grid (%s)', 'palm-beach' ), wp_get_theme()->Name ), // Name.
+			esc_html__( 'Magazine: Grid', 'palm-beach' ), // Name.
 			array(
 				'classname' => 'palm_beach_magazine_posts_grid',
 				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'palm-beach' ),
@@ -48,7 +48,6 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 			'layout'			=> 'three-columns',
 			'number'			=> 6,
 			'excerpt'			=> false,
-			'post_meta'			=> true,
 		);
 
 		return $defaults;
@@ -157,7 +156,6 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 				$posts_query->the_post();
 
-				set_query_var( 'palm_beach_post_meta', (bool) $settings['post_meta'] );
 				set_query_var( 'palm_beach_post_excerpt', (bool) $settings['excerpt'] );
 				?>
 
@@ -233,7 +231,6 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 		$instance['layout'] = esc_attr( $new_instance['layout'] );
 		$instance['number'] = (int) $new_instance['number'];
 		$instance['excerpt'] = ! empty( $new_instance['excerpt'] );
-		$instance['post_meta'] = ! empty( $new_instance['post_meta'] );
 
 		$this->delete_widget_cache();
 
@@ -288,20 +285,11 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'post_meta' ); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $settings['post_meta'] ); ?> id="<?php echo $this->get_field_id( 'post_meta' ); ?>" name="<?php echo $this->get_field_name( 'post_meta' ); ?>" />
-				<?php esc_html_e( 'Display post meta', 'palm-beach' ); ?>
-			</label>
-		</p>
-
-		<p>
 			<label for="<?php echo $this->get_field_id( 'excerpt' ); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $settings['excerpt'] ); ?> id="<?php echo $this->get_field_id( 'excerpt' ); ?>" name="<?php echo $this->get_field_name( 'excerpt' ); ?>" />
 				<?php esc_html_e( 'Display post excerpt', 'palm-beach' ); ?>
 			</label>
 		</p>
-
-
 
 		<?php
 

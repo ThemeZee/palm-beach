@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/palm-beach/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Palm Beach is a professional WordPress theme perfectly suited for a travel magazine. It features a stunning fullscreen slider, beautiful typography and a three-column grid-layout for posts. Head off on vacation now!
-Version: 1.0.5
+Version: 1.0.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: palm-beach
@@ -870,8 +870,6 @@ textarea {
 	min-width: 16rem;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	-webkit-transition: none;
-	transition: none;
 }
 
 .main-navigation-menu ul .menu-item-has-children > a:after {
@@ -1119,12 +1117,15 @@ textarea {
 ## 11.2 - Magazine Posts Widgets
 --------------------------------------------------------------*/
 .widget-magazine-posts {
-	margin-bottom: -1em;
+	margin-bottom: -2.5em;
 }
 
-.widget-magazine-posts .type-post {
-	margin: 0 0 2.5em 0;
-	padding: 0;
+.widget-magazine-posts .type-post .entry-meta {
+	margin-bottom: 0;
+}
+
+.widget-magazine-posts .type-post .entry-content {
+	margin-top: 1.25rem;
 }
 
 /* Large Post Styling */
@@ -1159,13 +1160,14 @@ textarea {
 
 .widget-magazine-posts .small-post .wp-post-image {
 	float: left;
-	margin: 0 1em 0 0;
-	max-width: 40%;
+	margin: 0 2em 0 0;
+	min-width: 80px;
+	max-width: 35%;
 }
 
 .widget-magazine-posts .small-post .entry-title {
-	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 18px;
+	font-size: 1.125rem;
 }
 
 .widget-magazine-posts .medium-post .entry-meta,
@@ -1175,7 +1177,7 @@ textarea {
 }
 
 /* Magazine Posts Grid Widget */
-.widget-magazine-posts-grid .magazine-grid {
+.widget-magazine-posts .magazine-grid {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1184,16 +1186,16 @@ textarea {
 	margin-right: -2.5em;
 }
 
-.widget-magazine-posts-grid .magazine-grid .post-column {
+.widget-magazine-posts .magazine-grid .post-column {
 	box-sizing: border-box;
 	padding-right: 2.5em;
 }
 
-.widget-magazine-posts-grid .magazine-grid-two-columns .post-column {
+.widget-magazine-posts .magazine-grid-two-columns .post-column {
 	width: 50%;
 }
 
-.widget-magazine-posts-grid .magazine-grid-three-columns .post-column {
+.widget-magazine-posts .magazine-grid-three-columns .post-column {
 	width: 33.3333333333333%;
 }
 
@@ -1293,7 +1295,7 @@ textarea {
 ## 12.2 - Entry Meta
 --------------------------------------------------------------*/
 .entry-meta {
-	margin: 0.5em 0 1.5em;
+	margin: 0.5em 0 1.25rem;
 	color: #646464;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -2009,6 +2011,10 @@ object {
 		margin-bottom: 2em;
 	}
 
+	.widget-magazine-posts {
+		margin-bottom: -2em;
+	}
+
 	.header-title-image,
 	.header-title-image-container {
 		height: 480px;
@@ -2035,12 +2041,12 @@ object {
 
 	/* Post Columns */
 	.post-wrapper,
-	.widget-magazine-posts-grid .magazine-grid {
+	.widget-magazine-posts .magazine-grid {
 		margin-right: -2em;
 	}
 
 	.post-wrapper .post-column,
-	.widget-magazine-posts-grid .magazine-grid .post-column {
+	.widget-magazine-posts .magazine-grid .post-column {
 		padding-right: 2em;
 	}
 
@@ -2061,17 +2067,25 @@ object {
 		font-size: 1.125rem;
 	}
 
-	.widget-magazine-posts .small-post .entry-title {
-		font-size: 13px;
-		font-size: 0.8125rem;
+	.widget-magazine-posts .small-post .wp-post-image {
+		margin: 0 1.5em 0 0;
 	}
 
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
 }
 
 /*--------------------------------------------------------------
 ## 17.3 - Desktop Small ( < 960px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 60em) {
+
+	.site-footer .site-info {
+		text-align: center;
+	}
+
 	/* Post Layout Columns */
 	.post-layout-two-columns .entry-title,
 	.post-layout-three-columns .entry-title {
@@ -2095,9 +2109,9 @@ object {
 		font-size: 1rem;
 	}
 
-	.widget-magazine-posts .medium-post .entry-content {
-		font-size: 16px;
-		font-size: 1rem;
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 15px;
+		font-size: 0.9375rem;
 	}
 
 	/*** Mobile Main Navigation ***/
@@ -2329,33 +2343,18 @@ object {
 		font-size: 1.25rem;
 	}
 
-	.post-layout-three-columns .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
-	}
-
 	/* Magazine Post Widgets */
-	.widget-magazine-posts .large-post .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
-	}
-
-	.widget-magazine-posts .medium-post .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
-	}
-
 	.widget-magazine-posts .small-post .entry-title {
 		font-size: 14px;
 		font-size: 0.875rem;
 	}
-
 }
 
 /*--------------------------------------------------------------
 ## 17.5 - Tablet Medium ( < 800px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
+
 	/* Post Columns */
 	.post-layout-three-columns .post-wrapper .post-column {
 		width: 50%;
@@ -2378,14 +2377,13 @@ object {
 		font-size: 0.9375rem;
 	}
 
-	.widget-magazine-posts .small-post .entry-title {
-		font-size: 13px;
-		font-size: 0.8125rem;
+	.widget-magazine-posts .medium-post .entry-content {
+		display: none;
 	}
-
 }
 
 @media only screen and (max-width: 45em) {
+
 	.post-layout-two-columns .entry-title,
 	.post-layout-three-columns .entry-title {
 		font-size: 16px;
@@ -2403,12 +2401,25 @@ object {
 		font-size: 0.875rem;
 	}
 
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 13px;
+		font-size: 0.8125rem;
+	}
+
+	.widget-magazine-posts .small-post .wp-post-image {
+		margin: 0 1em 0 0;
+	}
+
+	.widget-magazine-posts .small-post .entry-meta {
+		display: none;
+	}
 }
 
 /*--------------------------------------------------------------
 ## 17.7 - Mobile Extra Large ( < 640px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 40em) {
+
 	.header-title {
 		font-size: 28px;
 		font-size: 1.75rem;
@@ -2440,18 +2451,14 @@ object {
 
 	.widget-magazine-posts .medium-post .wp-post-image {
 		float: left;
-		margin: 0 1em 0 0;
-		min-width: 90px;
-		max-width: 30%;
+		margin: 0 1.5em 0 0;
+		min-width: 80px;
+		max-width: 35%;
 	}
 
 	.widget-magazine-posts .medium-post .entry-title {
 		font-size: 16px;
 		font-size: 1rem;
-	}
-
-	.widget-magazine-posts .medium-post .entry-content {
-		display: none;
 	}
 
 	/* Mega Menu Styling */
@@ -2484,16 +2491,40 @@ object {
 
 	.post-layout-two-columns .entry-title,
 	.post-layout-three-columns .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
+		font-size: 20px;
+		font-size: 1.25rem;
 	}
 
 	/* Magazine Post Widgets */
-	.widget-magazine-posts-grid .large-post .entry-title {
-		font-size: 14px;
-		font-size: 0.875rem;
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
 	}
 
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+
+	.widget-magazine-posts .small-post .wp-post-image {
+		margin: 0 1.5em 0 0;
+	}
+
+	.widget-magazine-posts .small-post .entry-meta {
+		display: block;
+	}
+
+	/* Magazine Posts Grid Widget */
+	.widget-magazine-posts .magazine-grid-two-columns {
+		display: block;
+		margin-right: 0;
+	}
+
+	.widget-magazine-posts .magazine-grid-two-columns .post-column {
+		padding-right: 0;
+		width: 100%;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -2514,6 +2545,10 @@ object {
 		margin-bottom: 1.5em;
 	}
 
+	.widget-magazine-posts {
+		margin-bottom: -1.5em;
+	}
+
 	.site-content {
 		padding-top: 1.5em;
 	}
@@ -2532,33 +2567,49 @@ object {
 		margin: 1em 0;
 	}
 
-	/* Magazine Posts Grid Widget */
-	.widget-magazine-posts-grid .magazine-grid-two-columns {
-		display: block;
-		margin-right: 0;
-	}
-
-	.widget-magazine-posts-grid .magazine-grid-two-columns .post-column {
-		padding-right: 0;
-		width: 100%;
-	}
-
-	.widget-magazine-posts-grid .large-post .entry-title {
+	.post-layout-two-columns .entry-title,
+	.post-layout-three-columns .entry-title {
 		font-size: 18px;
 		font-size: 1.125rem;
 	}
 
-	.widget-magazine-posts-grid .medium-post .entry-title {
+	/* Magazine Post Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	.widget-magazine-posts .medium-post .wp-post-image,
+	.widget-magazine-posts .small-post .wp-post-image {
+		margin: 0 1em 0 0;
+		max-width: 30%;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
 		font-size: 14px;
 		font-size: 0.875rem;
 	}
 }
 
 @media only screen and (max-width: 25em) {
+
 	.post-layout-two-columns .entry-title,
 	.post-layout-three-columns .entry-title {
 		font-size: 17px;
 		font-size: 1.0625rem;
+	}
+
+	/* Magazine Post Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 13px;
+		font-size: 0.8125rem;
 	}
 
 	.widget-magazine-posts .medium-post .entry-meta,
@@ -2587,7 +2638,8 @@ object {
 	}
 
 	.post-layout-two-columns .entry-title,
-	.post-layout-three-columns .entry-title {
+	.post-layout-three-columns .entry-title,
+	.widget-magazine-posts .large-post .entry-title {
 		font-size: 16px;
 		font-size: 1rem;
 	}
@@ -2598,18 +2650,6 @@ object {
 	.entry-meta .meta-comments {
 		display: block;
 	}
-
-	/* Magazine Post Widgets */
-	.widget-magazine-posts .large-post .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
-	}
-
-	.widget-magazine-posts .medium-post .entry-title {
-		font-size: 13px;
-		font-size: 0.8125rem;
-	}
-
 }
 
 /*--------------------------------------------------------------

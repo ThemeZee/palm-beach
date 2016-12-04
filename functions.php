@@ -42,7 +42,7 @@ if ( ! function_exists( 'palm_beach_setup' ) ) :
 		add_image_size( 'palm-beach-header-image', 1920, 720, true );
 
 		// Add different thumbnail sizes for Magazine Post widgets.
-		add_image_size( 'palm-beach-thumbnail-small', 120, 75, true );
+		add_image_size( 'palm-beach-thumbnail-small', 280, 175, true );
 		add_image_size( 'palm-beach-thumbnail-large', 600, 375, true );
 
 		// Register Navigation Menu.

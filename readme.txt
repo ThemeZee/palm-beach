@@ -26,6 +26,10 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.0.6 =
+* improved styling of Magazine Widgets
+* improved responsive design for smaller devices
+
 = 1.0.5 =
 * added Magazine Homepage widget area to blog index
 * changed Magazine Homepage widget area to full width layout
