@@ -7,13 +7,11 @@
 
 ?>
 
-<div class="post-col clearfix">
+<div class="post-column clearfix">
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<a href="<?php the_permalink(); ?>" rel="bookmark">
-			<?php the_post_thumbnail(); ?>
-		</a>
+		<?php palm_beach_post_image(); ?>
 
 		<header class="entry-header">
 

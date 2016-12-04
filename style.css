@@ -690,7 +690,7 @@ textarea {
 
 .site-title {
 	display: inline-block;
-	margin: 0.3rem 0;
+	margin: 0.35rem 0;
 	padding: 0;
 	color: #242424;
 	text-decoration: none;
@@ -776,13 +776,19 @@ textarea {
 	text-shadow: none;
 }
 
+/* Page Header with search */
+.header-title-background .page-header .search-form,
+.header-title-wrap .page-header .search-form {
+	margin: 1em auto 0;
+	max-width: 800px;
+}
+
 /* Reduce size on large screens */
 @media only screen and (min-width: 70em) {
 	.header-title-background .page-header .header-title {
 		font-size: 48px;
 		font-size: 3rem;
 	}
-
 }
 
 /*--------------------------------------------------------------
@@ -1080,7 +1086,7 @@ textarea {
 	display: inline-block;
 	box-sizing: border-box;
 	margin: 0;
-	padding: 0.6em 1.5em 0.6em 0.7em;
+	padding: 0.7em 1.5em 0.7em 1em;
 	width: 100%;
 	-webkit-appearance: none;
 }
@@ -1089,7 +1095,7 @@ textarea {
 	position: absolute;
 	top: 0;
 	right: 0;
-	padding: 0.5em 0.8em 0 0.3em;
+	padding: 0.7em 0.9em 0 0.3em;
 	cursor: pointer;
 }
 
@@ -1118,14 +1124,6 @@ textarea {
 --------------------------------------------------------------*/
 .widget-magazine-posts {
 	margin-bottom: -2.5em;
-}
-
-.widget-magazine-posts .type-post .entry-meta {
-	margin-bottom: 0;
-}
-
-.widget-magazine-posts .type-post .entry-content {
-	margin-top: 1.25rem;
 }
 
 /* Large Post Styling */
@@ -1245,10 +1243,6 @@ textarea {
 	font-size: 1.125rem;
 }
 
-.entry-content > p:first-child {
-	margin-top: 0;
-}
-
 .wp-post-image {
 	margin: 0 0 0.5em;
 }
@@ -1295,7 +1289,7 @@ textarea {
 ## 12.2 - Entry Meta
 --------------------------------------------------------------*/
 .entry-meta {
-	margin: 0.5em 0 1.25rem;
+	margin: 0.5em 0 0.25rem;
 	color: #646464;
 	font-size: 14px;
 	font-size: 0.875rem;
