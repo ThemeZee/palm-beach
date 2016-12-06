@@ -831,7 +831,6 @@ textarea {
 .main-navigation-menu > .menu-item-has-children > a:after {
 	display: inline-block;
 	margin: 0.2em 0 0 0.2em;
-	color: #242424;
 	content: '\f431';
 	vertical-align: top;
 	text-decoration: inherit;
@@ -849,7 +848,8 @@ textarea {
 	text-decoration: none;
 }
 
-.main-navigation-menu li a:hover {
+.main-navigation-menu a:hover,
+.main-navigation-menu a:active {
 	color: #57b7d7;
 }
 
@@ -881,7 +881,6 @@ textarea {
 .main-navigation-menu ul .menu-item-has-children > a:after {
 	display: inline-block;
 	margin: 0.15em 0 0 0.2em;
-	color: #242424;
 	content: '\f431';
 	vertical-align: top;
 	text-decoration: inherit;
@@ -2153,20 +2152,25 @@ object {
 		margin: 0.5em 0;
 		padding: 0.9em;
 		border: none;
+		color: #242424;
 		background: none;
 	}
 
 	.main-navigation-toggle:hover,
 	.main-navigation-toggle:focus,
 	.main-navigation-toggle:active {
+		color: #57b7d7;
 		background: none;
 		cursor: pointer;
+	}
+
+	.main-navigation-toggle:focus {
+		color: #242424;
 	}
 
 	.main-navigation-toggle:after {
 		display: inline-block;
 		float: left;
-		color: #242424;
 		content: '\f419';
 		vertical-align: middle;
 		text-decoration: inherit;
@@ -2175,12 +2179,6 @@ object {
 		line-height: 1;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-	}
-
-	.main-navigation-toggle:hover:after,
-	.main-navigation-toggle:focus:after,
-	.main-navigation-toggle:active:after {
-		color: #57b7d7;
 	}
 
 	/* Main Navigation Menu */
@@ -2205,7 +2203,7 @@ object {
 
 	.main-navigation-menu ul {
 		float: none;
-		padding: 0.75em 0;
+		padding: 0;
 		width: 100%;
 	}
 
@@ -2237,15 +2235,16 @@ object {
 		float: right;
 		margin: 0;
 		padding: 0.8em 1.2em;
+		color: #242424;
 		background: none;
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle:hover {
+		color: #57b7d7;
 		cursor: pointer;
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle:before {
-		color: #242424;
 		content: '\f431';
 		vertical-align: middle;
 		text-decoration: inherit;
@@ -2258,10 +2257,6 @@ object {
 
 	.main-navigation-menu .submenu-dropdown-toggle.active:before {
 		content: '\f432';
-	}
-
-	.main-navigation-menu .submenu-dropdown-toggle:hover:before {
-		color: #57b7d7;
 	}
 
 	.main-navigation-menu ul .submenu-dropdown-toggle {
