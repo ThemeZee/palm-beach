@@ -720,6 +720,11 @@ textarea {
 	vertical-align: top;
 }
 
+.header-image {
+	margin: -1px 0 0;
+	vertical-align: top;
+}
+
 /*  Header Title */
 .header-title-image {
 	margin: -1px 0 0;
