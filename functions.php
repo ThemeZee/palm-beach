@@ -72,6 +72,7 @@ if ( ! function_exists( 'palm_beach_setup' ) ) :
 			'header-text' => false,
 			'width'	=> 1920,
 			'height' => 360,
+			'flex-height' => true,
 		) ) );
 
 		// Add Theme Support for wooCommerce.
