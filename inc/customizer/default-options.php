@@ -34,6 +34,7 @@ function palm_beach_default_options() {
 		'site_title'						=> true,
 		'layout' 							=> 'right-sidebar',
 		'sticky_header'						=> false,
+		'blog_title'						=> '',
 		'excerpt_length' 					=> 20,
 		'meta_date'							=> true,
 		'meta_author'						=> true,

@@ -1125,6 +1125,19 @@ textarea {
 	margin-bottom: -2.5em;
 }
 
+.home .latest-posts-title,
+.widget-magazine-posts .widget-title {
+	display: block;
+	margin: 0 0 1.5em;
+	padding: 0.75em 0;
+	color: #242424;
+	text-align: center;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
 /* Large Post Styling */
 .widget-magazine-posts .large-post .entry-title {
 	font-size: 24px;
@@ -2087,6 +2100,12 @@ object {
 	}
 
 	/* Magazine Post Widgets */
+	.home .latest-posts-title,
+	.widget-magazine-posts .widget-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;
@@ -2563,6 +2582,12 @@ object {
 	}
 
 	/* Magazine Post Widgets */
+	.home .latest-posts-title,
+	.widget-magazine-posts .widget-title {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 18px;
 		font-size: 1.125rem;

@@ -9,6 +9,9 @@
 
 get_header();
 
+// Get Theme Options from Database.
+$theme_options = palm_beach_theme_options();
+
 // Display Magazine Homepage Widgets.
 if ( ! is_paged() && is_active_sidebar( 'magazine-homepage' ) ) : ?>
 
@@ -17,6 +20,18 @@ if ( ! is_paged() && is_active_sidebar( 'magazine-homepage' ) ) : ?>
 		<?php dynamic_sidebar( 'magazine-homepage' ); ?>
 
 	</div><!-- #magazine-homepage-widgets -->
+
+<?php
+endif;
+
+// Display Latest Posts Title.
+if ( '' !== $theme_options['blog_title'] ) : ?>
+
+	<header class="page-header">
+
+		<h1 class="latest-posts-title widget-title"><?php echo wp_kses_post( $theme_options['blog_title'] ); ?></h1>
+
+	</header><!-- .page-header -->
 
 <?php
 endif;

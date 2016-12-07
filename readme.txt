@@ -27,6 +27,7 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 == Changelog ==
 
 = 1.0.6 =
+* added setting to insert a custom Blog Title 
 * improved styling of Magazine Widgets
 * improved responsive design for smaller devices
 * fixed search template headings
