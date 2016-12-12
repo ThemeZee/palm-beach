@@ -74,7 +74,7 @@ add_action( 'customize_preview_init', 'palm_beach_customize_preview_js' );
  * Embed CSS styles for the theme options in the Customizer
  */
 function palm_beach_customize_preview_css() {
-	wp_enqueue_style( 'palm-beach-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20160915' );
+	wp_enqueue_style( 'palm-beach-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20161214' );
 }
 add_action( 'customize_controls_print_styles', 'palm_beach_customize_preview_css' );
 
@@ -97,7 +97,7 @@ function palm_beach_customize_theme_links() {
 			</p>
 
 			<p>
-				<a href="http://preview.themezee.com/palm-beach/?utm_source=theme-info&utm_medium=textlink&utm_campaign=palm-beach&utm_content=demo" target="_blank">
+				<a href="http://preview.themezee.com/?demo=palm-beach&utm_source=theme-info&utm_medium=textlink&utm_campaign=palm-beach&utm_content=demo" target="_blank">
 					<?php esc_html_e( 'Theme Demo', 'palm-beach' ); ?>
 				</a>
 			</p>
