@@ -35,6 +35,7 @@
 
 					<?php palm_beach_site_logo(); ?>
 					<?php palm_beach_site_title(); ?>
+					<?php palm_beach_site_description(); ?>
 
 				</div><!-- .site-branding -->
 

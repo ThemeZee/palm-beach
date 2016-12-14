@@ -720,6 +720,12 @@ textarea {
 	vertical-align: top;
 }
 
+.site-description {
+	margin: -0.4em 0 0.7em;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
 .header-image {
 	margin: -1px 0 0;
 	vertical-align: top;

@@ -29,14 +29,6 @@ if ( ! function_exists( 'palm_beach_site_title' ) ) :
 	 */
 	function palm_beach_site_title() {
 
-		// Get theme options from database.
-		$theme_options = palm_beach_theme_options();
-
-		// Return early if site title is deactivated.
-		if ( false == $theme_options['site_title'] ) {
-			return;
-		}
-
 		if ( is_home() or is_page_template( 'template-magazine.php' )  ) : ?>
 
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -46,6 +38,24 @@ if ( ! function_exists( 'palm_beach_site_title' ) ) :
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 
 		<?php endif;
+	}
+endif;
+
+
+if ( ! function_exists( 'palm_beach_site_description' ) ) :
+	/**
+	 * Displays the site description in the header area
+	 */
+	function palm_beach_site_description() {
+
+		$description = get_bloginfo( 'description', 'display' ); /* WPCS: xss ok. */
+
+		if ( $description || is_customize_preview() ) : ?>
+
+			<p class="site-description"><?php echo $description; ?></p>
+
+		<?php
+		endif;
 	}
 endif;
 
