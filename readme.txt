@@ -26,6 +26,10 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.0.8 =
+* added fullwidth page template for blog posts
+* added centered page template for posts and static pages
+
 = 1.0.7 =
 * added new theme setting to display tagline
 * added editor shortcuts and instant live preview for site title and tagline in Customizer
