@@ -33,11 +33,6 @@ function palm_beach_body_classes( $classes ) {
 		$classes[] = 'sidebar-left';
 	}
 
-	// Add sticky header class.
-	if ( true == $theme_options['sticky_header'] ) {
-		$classes[] = 'sticky-header';
-	}
-
 	// Add Post Columns classes.
 	if ( is_active_sidebar( 'sidebar' ) ) {
 		$classes[] = 'post-layout-two-columns post-layout-columns';

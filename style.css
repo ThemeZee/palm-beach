@@ -2726,29 +2726,27 @@ object {
 /*--------------------------------------------------------------
 ## 18.2 - Sticky Header
 --------------------------------------------------------------*/
-.sticky-header .fixed-header {
-	position: fixed;
-	top: 0;
-	z-index: 100;
-	width: 100%;
-}
-
-.sticky-header.admin-bar .fixed-header  {
-	top: 32px;
-}
-
-@media only screen and (max-width: 782px) {
-	.sticky-header.admin-bar .fixed-header  {
-		top: 46px;
-	}
-
-}
-
-@media only screen and (max-width: 600px) {
-	.sticky-header.admin-bar .fixed-header  {
+@media only screen and (min-width: 60.001em) {
+	.sticky-header .site-header {
+		position: fixed;
 		top: 0;
+		z-index: 100;
+		width: 100%;
 	}
 
+	.sticky-header.admin-bar .site-header  {
+		top: 32px;
+	}
+
+	.sticky-header .header-bar-wrap {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 60em) {
+	.sticky-header {
+		padding-top: 0 !important;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -2760,5 +2758,4 @@ object {
 	.main-navigation-menu {
 		display: block !important;
 	}
-
 }

@@ -137,6 +137,9 @@ add_action( 'widgets_init', 'palm_beach_widgets_init' );
  */
 function palm_beach_scripts() {
 
+	// Get theme options from database.
+	$theme_options = palm_beach_theme_options();
+
 	// Get Theme Version.
 	$theme_version = wp_get_theme()->get( 'Version' );
 
@@ -151,16 +154,20 @@ function palm_beach_scripts() {
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js.
-	wp_enqueue_script( 'palm-beach-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20160719' );
+	wp_enqueue_script( 'palm-beach-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20170127' );
 
 	// Register and Enqueue Google Fonts.
 	wp_enqueue_style( 'palm-beach-default-fonts', palm_beach_google_fonts_url(), array(), null );
+
+	// Register and enqueue sticky-header.js.
+	if ( true == $theme_options['sticky_header'] ) {
+		wp_enqueue_script( 'palm-beach-jquery-sticky-header', get_template_directory_uri() . '/js/sticky-header.js', array( 'jquery' ), '20170127' );
+	}
 
 	// Register Comment Reply Script for Threaded Comments.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
 }
 add_action( 'wp_enqueue_scripts', 'palm_beach_scripts' );
 
