@@ -194,44 +194,18 @@ if ( ! function_exists( 'palm_beach_entry_meta' ) ) :
 	 */
 	function palm_beach_entry_meta( $single_post = false ) {
 
-		// Get theme options from database.
-		$theme_options = palm_beach_theme_options();
+		$postmeta = palm_beach_meta_date();
+		$postmeta .= palm_beach_meta_author();
 
-		$postmeta = '';
-
-		// Display date unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_date'] ) {
-
-			$postmeta .= palm_beach_meta_date();
-
-		}
-
-		// Display author unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_author'] ) {
-
-			$postmeta .= palm_beach_meta_author();
-
-		}
-
-		// Display categories on single posts unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_category'] && $single_post ) {
+		// Display categories and comments only on single posts.
+		if ( $single_post ) {
 
 			$postmeta .= palm_beach_meta_category();
-
-		}
-
-		// Display comments on single posts unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_comments'] && $single_post ) {
-
 			$postmeta .= palm_beach_meta_comments();
 
 		}
 
-		if ( $postmeta ) {
-
-			echo '<div class="entry-meta clearfix">' . $postmeta . '</div>';
-
-		}
+		echo '<div class="entry-meta clearfix">' . $postmeta . '</div>';
 	}
 endif;
 
@@ -307,14 +281,12 @@ if ( ! function_exists( 'palm_beach_entry_tags' ) ) :
 	 */
 	function palm_beach_entry_tags() {
 
-		// Get theme options from database.
-		$theme_options = palm_beach_theme_options();
 
 		// Get tags.
 		$tag_list = get_the_tag_list( '<span class="tags-title">' . esc_html__( 'Tags', 'palm-beach' ) . '</span>', '' );
 
 		// Display tags.
-		if ( $tag_list && $theme_options['meta_tags'] ) : ?>
+		if ( $tag_list ) : ?>
 
 			<div class="entry-tags clearfix">
 				<span class="meta-tags">
@@ -357,7 +329,7 @@ if ( ! function_exists( 'palm_beach_post_navigation' ) ) :
 		// Get theme options from database.
 		$theme_options = palm_beach_theme_options();
 
-		if ( true === $theme_options['post_navigation'] ) {
+		if ( true === $theme_options['post_navigation'] || is_customize_preview() ) {
 
 			the_post_navigation( array(
 				'prev_text' => esc_html_x( 'Previous Post', 'post navigation', 'palm-beach' ),

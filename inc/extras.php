@@ -40,6 +40,26 @@ function palm_beach_body_classes( $classes ) {
 		$classes[] = 'post-layout-three-columns post-layout-columns no-sidebar';
 	}
 
+	// Hide Date?
+	if ( false === $theme_options['meta_date'] ) {
+		$classes[] = 'date-hidden';
+	}
+
+	// Hide Author?
+	if ( false === $theme_options['meta_author'] ) {
+		$classes[] = 'author-hidden';
+	}
+
+	// Hide Categories?
+	if ( false === $theme_options['meta_category'] ) {
+		$classes[] = 'categories-hidden';
+	}
+
+	// Hide Comments?
+	if ( false === $theme_options['meta_comments'] ) {
+		$classes[] = 'comments-hidden';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'palm_beach_body_classes' );
@@ -67,6 +87,16 @@ function palm_beach_hide_elements() {
 		$elements[] = '.site-description';
 	}
 
+	// Hide Post Tags?
+	if ( false === $theme_options['meta_tags'] ) {
+		$elements[] = '.type-post .entry-footer .entry-tags';
+	}
+
+	// Hide Post Navigation?
+	if ( false === $theme_options['post_navigation'] ) {
+		$elements[] = '.type-post .entry-footer .post-navigation';
+	}
+
 	// Return early if no elements are hidden.
 	if ( empty( $elements ) ) {
 		return;
@@ -74,10 +104,7 @@ function palm_beach_hide_elements() {
 
 	// Create CSS.
 	$classes = implode( ', ', $elements );
-	$custom_css = $classes . ' {
-	position: absolute;
-	clip: rect(1px, 1px, 1px, 1px);
-}';
+	$custom_css = $classes . ' { position: absolute; clip: rect(1px, 1px, 1px, 1px); }';
 
 	// Add Custom CSS.
 	wp_add_inline_style( 'palm-beach-stylesheet', $custom_css );

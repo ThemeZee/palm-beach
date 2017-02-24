@@ -42,7 +42,7 @@ function palm_beach_customize_register_post_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'palm_beach_theme_options[meta_date]', array(
 		'default'           => true,
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'palm_beach_sanitize_checkbox',
 		)
 	);
@@ -58,7 +58,7 @@ function palm_beach_customize_register_post_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'palm_beach_theme_options[meta_author]', array(
 		'default'           => true,
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'palm_beach_sanitize_checkbox',
 		)
 	);
@@ -108,7 +108,7 @@ function palm_beach_customize_register_post_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'palm_beach_theme_options[meta_category]', array(
 		'default'           => true,
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'palm_beach_sanitize_checkbox',
 		)
 	);
@@ -124,7 +124,7 @@ function palm_beach_customize_register_post_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'palm_beach_theme_options[meta_comments]', array(
 		'default'           => true,
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'palm_beach_sanitize_checkbox',
 		)
 	);
@@ -140,7 +140,7 @@ function palm_beach_customize_register_post_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'palm_beach_theme_options[meta_tags]', array(
 		'default'           => true,
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'palm_beach_sanitize_checkbox',
 		)
 	);
@@ -156,7 +156,7 @@ function palm_beach_customize_register_post_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'palm_beach_theme_options[post_navigation]', array(
 		'default'           => true,
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'palm_beach_sanitize_checkbox',
 		)
 	);
