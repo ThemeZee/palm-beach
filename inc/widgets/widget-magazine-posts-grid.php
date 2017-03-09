@@ -21,21 +21,14 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 		// Setup Widget.
 		parent::__construct(
 			'palm-beach-magazine-posts-grid', // ID.
-			esc_html__( 'Magazine: Grid', 'palm-beach' ), // Name.
+			esc_html__( 'Magazine Grid', 'palm-beach' ), // Name.
 			array(
-				'classname' => 'palm_beach_magazine_posts_grid',
+				'classname' => 'palm-beach-magazine-grid-widget',
 				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'palm-beach' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
-
-		// Delete Widget Cache on certain actions.
-		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
-		add_action( 'deleted_post', array( $this, 'delete_widget_cache' ) );
-		add_action( 'switch_theme', array( $this, 'delete_widget_cache' ) );
-
 	}
-
 
 	/**
 	 * Set default settings of the widget
@@ -51,9 +44,7 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 		);
 
 		return $defaults;
-
 	}
-
 
 	/**
 	 * Main Function to display the widget
@@ -64,22 +55,6 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 	 * @param array $instance / Settings for this widget instance.
 	 */
 	function widget( $args, $instance ) {
-
-		$cache = array();
-
-		// Get Widget Object Cache.
-		if ( ! $this->is_preview() ) {
-			$cache = wp_cache_get( 'widget_palm_beach_magazine_posts_grid', 'widget' );
-		}
-		if ( ! is_array( $cache ) ) {
-			$cache = array();
-		}
-
-		// Display Widget from Cache if exists.
-		if ( isset( $cache[ $this->id ] ) ) {
-			echo $cache[ $this->id ];
-			return;
-		}
 
 		// Start Output Buffering.
 		ob_start();
@@ -110,16 +85,9 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 		<?php
 		echo $args['after_widget'];
 
-		// Set Cache.
-		if ( ! $this->is_preview() ) {
-			$cache[ $this->id ] = ob_get_flush();
-			wp_cache_set( 'widget_palm_beach_magazine_posts_grid', $cache, 'widget' );
-		} else {
-			ob_end_flush();
-		}
-
-	} // widget()
-
+		// End Output Buffering.
+		ob_end_flush();
+	}
 
 	/**
 	 * Renders the Widget Content
@@ -133,14 +101,15 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 	 */
 	function render( $settings ) {
 
-		// Get latest posts from database.
+		// Get cached post ids.
+		$post_ids = palm_beach_get_magazine_post_ids( $this->id, $settings['category'], $settings['number'] );
+
+		// Fetch posts from database.
 		$query_arguments = array(
-			'posts_per_page' => (int) $settings['number'],
-			'ignore_sticky_posts' => true,
-			'cat' => (int) $settings['category'],
+			'post__in'            => $post_ids,
+			'no_found_rows'       => true,
 		);
 		$posts_query = new WP_Query( $query_arguments );
-		$i = 0;
 
 		// Set template.
 		$template = ( 'three-columns' === $settings['layout'] ) ? 'medium-post' : 'large-post';
@@ -161,7 +130,7 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 				<div class="post-column">
 
-					<?php get_template_part( 'template-parts/widgets/magazine-content', $template ); ?>
+					<?php get_template_part( 'template-parts/widgets/magazine-' . $template, 'grid' ); ?>
 
 				</div>
 
@@ -175,9 +144,7 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 		// Reset Postdata.
 		wp_reset_postdata();
-
-	} // render()
-
+	}
 
 	/**
 	 * Displays Widget Title
@@ -232,11 +199,10 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 		$instance['number'] = (int) $new_instance['number'];
 		$instance['excerpt'] = ! empty( $new_instance['excerpt'] );
 
-		$this->delete_widget_cache();
+		palm_beach_flush_magazine_post_ids();
 
 		return $instance;
 	}
-
 
 	/**
 	 * Displays Widget Settings Form in the Backend
@@ -292,17 +258,6 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 		</p>
 
 		<?php
-
-	} // form()
-
-
-	/**
-	 * Delete Widget Cache
-	 */
-	public function delete_widget_cache() {
-
-		wp_cache_delete( 'widget_palm_beach_magazine_posts_grid', 'widget' );
-
 	}
 }
 
