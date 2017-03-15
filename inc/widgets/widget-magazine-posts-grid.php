@@ -1,6 +1,6 @@
 <?php
 /**
- * Magazine Posts Grid Widget
+ * Magazine Grid Widget
  *
  * Display the latest posts from a selected category in a grid layout.
  * Intented to be used in the Magazine Homepage widget area to built a magazine layouted page.
@@ -21,7 +21,7 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 		// Setup Widget.
 		parent::__construct(
 			'palm-beach-magazine-posts-grid', // ID.
-			esc_html__( 'Magazine Grid', 'palm-beach' ), // Name.
+			esc_html__( 'Magazine (Grid)', 'palm-beach' ), // Name.
 			array(
 				'classname' => 'palm-beach-magazine-grid-widget',
 				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'palm-beach' ),
@@ -179,9 +179,7 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 			endif;
 
 		endif;
-
-	} // widget_title()
-
+	}
 
 	/**
 	 * Update Widget Settings
