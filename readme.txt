@@ -26,6 +26,14 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.2 =
+* added template files for Magazine widgets to improve child theme compatibility
+* added transient caching for Magazine widgets to increase performance
+* added pluggable template functions for Magazine widgets
+* improved implementation of post meta settings for instant live preview in Customizer
+* fixed full width layout on Magazine Homepage template
+* fixed rendering issue in Safari for Magazine Grid widget
+
 = 1.0.8 =
 * added fullwidth page template for blog posts
 * added centered page template for posts and static pages

@@ -281,7 +281,6 @@ if ( ! function_exists( 'palm_beach_entry_tags' ) ) :
 	 */
 	function palm_beach_entry_tags() {
 
-
 		// Get tags.
 		$tag_list = get_the_tag_list( '<span class="tags-title">' . esc_html__( 'Tags', 'palm-beach' ) . '</span>', '' );
 

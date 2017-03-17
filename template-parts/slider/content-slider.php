@@ -10,7 +10,7 @@
 <li id="slide-<?php the_ID(); ?>" class="zeeslide clearfix">
 
 	<?php // Check if we find an image to display in the header.
-	if( has_post_thumbnail() ) :
+	if ( has_post_thumbnail() ) :
 
 		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'palm-beach-header-image' );
 		$image_url = $image[0];
