@@ -26,6 +26,9 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.2.1 =
+* fixed number of posts setting in Magazine widgets
+
 = 1.2 =
 * added template files for Magazine widgets to improve child theme compatibility
 * added transient caching for Magazine widgets to increase performance
