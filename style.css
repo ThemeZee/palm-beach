@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/palm-beach/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Palm Beach is a professional WordPress theme perfectly suited for a travel magazine. It features a stunning fullscreen slider, beautiful typography and a three-column grid-layout for posts. Head off on vacation now!
-Version: 1.2.1
+Version: 1.2.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: palm-beach
@@ -1236,15 +1236,6 @@ textarea {
 	width: 33.3333333333333%;
 }
 
-/* Fix Render Bug for Safari */
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
-	@media {
-		.widget-magazine-posts .magazine-grid .post-column {
-			margin-right: -1px;
-		}
-	}
-}
-
 /*--------------------------------------------------------------
 # 12.0 - Content Area
 --------------------------------------------------------------*/
@@ -1594,15 +1585,6 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-w
 	float: none;
 	padding: 0;
 	width: 100%;
-}
-
-/* Fix Render Bug for Safari */
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
-	@media {
-		.post-wrapper .post-column {
-			margin-right: -1px;
-		}
-	}
 }
 
 /* Archive Posts Styling */
@@ -2788,5 +2770,29 @@ object {
 @media only screen and (min-width: 60.001em) {
 	.main-navigation-menu {
 		display: block !important;
+	}
+}
+
+/*--------------------------------------------------------------
+# 20.0 - CSS Hacks for Safari
+--------------------------------------------------------------*/
+
+/* Fix Flexbox issues for Safari 6.1-10.0 */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+	@media {
+		.post-wrapper .post-column,
+		.widget-magazine-posts .magazine-grid .post-column {
+			margin-right: -1px;
+		}
+	}
+}
+
+/* Fix Flexbox issues for Safari 10.1+ */
+@media not all and (min-resolution:.001dpcm) {
+	@media {
+		.post-wrapper .post-column,
+		.widget-magazine-posts .magazine-grid .post-column {
+			margin-right: -1px;
+		}
 	}
 }
