@@ -26,6 +26,9 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.2.3 =
+* fixed header images getting stretched when too small images are uploaded
+
 = 1.2.2 =
 * fixed flexbox layout issues appearing with the latest Safari 10.1 version
 * fixed horizontal scrolling issue on mobile devices when elements are hidden in theme options

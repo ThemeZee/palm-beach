@@ -752,7 +752,7 @@ textarea {
 	margin: -1px 0 0;
 	height: 720px;
 	background-position: center center;
-	background-size: cover;
+	background-size: auto;
 	background-repeat: no-repeat;
 	text-align: center;
 }
