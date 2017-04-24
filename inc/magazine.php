@@ -91,4 +91,5 @@ function palm_beach_flush_magazine_post_ids() {
 }
 add_action( 'save_post', 'palm_beach_flush_magazine_post_ids' );
 add_action( 'deleted_post', 'palm_beach_flush_magazine_post_ids' );
+add_action( 'customize_save_after', 'palm_beach_flush_magazine_post_ids' );
 add_action( 'switch_theme', 'palm_beach_flush_magazine_post_ids' );
