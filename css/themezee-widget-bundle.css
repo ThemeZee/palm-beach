@@ -127,7 +127,6 @@
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
 .tzwb-tabbed-content .tzwb-tabnavi li a:visited  {
 	color: #242424;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 

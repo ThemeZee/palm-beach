@@ -96,13 +96,13 @@ li > ol {
 }
 
 .search-form .search-field {
-	padding: 0.6em 0.7em 0.6em 1.5em;
+	padding: 0.7em 1em 0.7em 1.5em;
 }
 
 .search-form .search-submit {
 	right: auto;
 	left: 0;
-	padding: 0.5em 0.3em 0 0.8em;
+	padding: 0.7em 0.3em 0 0.9em;
 }
 
 .search-form .search-submit .genericon-search {
@@ -115,37 +115,17 @@ li > ol {
 
 .widget-magazine-posts .small-post .wp-post-image {
 	float: right;
-	margin: 0 0 0 1em;
+	margin: 0 0 0 2em;
 }
 
-.widget-magazine-posts-grid .magazine-grid {
+.widget-magazine-posts .magazine-grid {
 	margin-right: 0;
 	margin-left: -2.5em;
 }
 
-.widget-magazine-posts-grid .magazine-grid .post-column {
+.widget-magazine-posts .magazine-grid .post-column {
 	padding-right: 0;
 	padding-left: 2.5em;
-}
-
-.widget-magazine-posts-columns .magazine-posts-columns .magazine-posts-columns-content .magazine-posts-columns-post-list {
-	float: right;
-}
-
-.widget-magazine-posts-columns .magazine-posts-columns .magazine-posts-columns-content {
-	float: right;
-}
-
-.widget-magazine-posts-columns .magazine-posts-column-left {
-	float: right;
-	padding-right: 0;
-	padding-left: 1.25em;
-}
-
-.widget-magazine-posts-columns .magazine-posts-column-right {
-	float: left;
-	padding-right: 1.25em;
-	padding-left: 0;
 }
 
 .entry-meta .meta-date,
@@ -206,15 +186,6 @@ li > ol {
 .post-wrapper .post-column {
 	padding-right: 0;
 	padding-left: 2.5em;
-}
-
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
-	@media {
-		.post-wrapper .post-column {
-			margin-right: 0;
-			margin-left: -1px;
-		}
-	}
 }
 
 .pagination a,
@@ -288,17 +259,20 @@ li > ol {
 	}
 
 	.post-wrapper,
-	.widget-magazine-posts-grid .magazine-grid {
+	.widget-magazine-posts .magazine-grid {
 		margin-right: 0;
 		margin-left: -2em;
 	}
 
 	.post-wrapper .post-column,
-	.widget-magazine-posts-grid .magazine-grid .post-column {
+	.widget-magazine-posts .magazine-grid .post-column {
 		padding-right: 0;
 		padding-left: 2em;
 	}
 
+	.widget-magazine-posts .small-post .wp-post-image {
+		margin: 0 0 0 1.5em;
+	}
 }
 
 @media only screen and (max-width: 60em) {
@@ -322,16 +296,8 @@ li > ol {
 		float: right;
 	}
 
-	.primary-navigation {
-		width: 100%;
-	}
-
 	.main-navigation-menu {
 		float: right;
-	}
-
-	.main-navigation-menu li {
-		width: 100%;
 	}
 
 	.main-navigation-menu a {
@@ -364,6 +330,12 @@ li > ol {
 
 }
 
+@media only screen and (max-width: 45em) {
+	.widget-magazine-posts .small-post .wp-post-image {
+		margin: 0 0 0 1em;
+	}
+}
+
 @media only screen and (max-width: 40em) {
 	.widget-magazine-posts .magazine-grid-three-columns {
 		margin-right: 0;
@@ -377,19 +349,12 @@ li > ol {
 
 	.widget-magazine-posts .medium-post .wp-post-image {
 		float: right;
-		margin: 0 0 0 1em;
+		margin: 0 0 0 1.5em;
 	}
 
 }
 
-@media only screen and (max-width: 30em) {
-	.container {
-		padding-right: 0;
-		padding-right: 1.5em;
-		padding-left: 0;
-		padding-left: 1.5em;
-	}
-
+@media only screen and (max-width: 35em) {
 	.post-wrapper {
 		margin-right: 0;
 		margin-left: 0;
@@ -400,16 +365,33 @@ li > ol {
 		padding-left: 0;
 	}
 
-	.widget-magazine-posts-grid .magazine-grid-two-columns {
+	.widget-magazine-posts .small-post .wp-post-image {
+		margin: 0 0 0 1.5em;
+	}
+
+	.widget-magazine-posts .magazine-grid-two-columns {
 		margin-right: 0;
 		margin-left: 0;
 	}
 
-	.widget-magazine-posts-grid .magazine-grid-two-columns .post-column {
+	.widget-magazine-posts .magazine-grid-two-columns .post-column {
 		padding-right: 0;
 		padding-left: 0;
 	}
+}
 
+@media only screen and (max-width: 30em) {
+	.container {
+		padding-right: 0;
+		padding-right: 1.5em;
+		padding-left: 0;
+		padding-left: 1.5em;
+	}
+
+	.widget-magazine-posts .medium-post .wp-post-image,
+	.widget-magazine-posts .small-post .wp-post-image {
+		margin: 0 0 0 1em;
+	}
 }
 
 .sidebar-left .content-area {
@@ -429,6 +411,26 @@ li > ol {
 		padding-left: 0;
 	}
 
+}
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+	@media {
+		.post-wrapper .post-column,
+		.widget-magazine-posts .magazine-grid .post-column {
+			margin-right: 0;
+			margin-left: -1px;
+		}
+	}
+}
+
+@media not all and (min-resolution:.001dpcm) {
+	@media {
+		.post-wrapper .post-column,
+		.widget-magazine-posts .magazine-grid .post-column {
+			margin-right: 0;
+			margin-left: -1px;
+		}
+	}
 }
 
 .related-posts-list li .wp-post-image {

@@ -89,7 +89,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 
 .zeeflex-viewport {
 	max-height: 2000px;
-	-webkit-transition: all 1s ease;
 	transition: all 1s ease;
 }
 
@@ -105,7 +104,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 .post-slider .zeeslide .header-title a:link,
 .post-slider .zeeslide .header-title a:visited {
 	color: #fff;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 

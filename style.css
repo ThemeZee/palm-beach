@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/palm-beach/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Palm Beach is a professional WordPress theme perfectly suited for a travel magazine. It features a stunning fullscreen slider, beautiful typography and a three-column grid-layout for posts. Head off on vacation now!
-Version: 1.2.2
+Version: 1.2.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: palm-beach
@@ -504,7 +504,6 @@ input[type="submit"] {
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-family: 'Montserrat', Verdana, Arial;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -673,8 +672,8 @@ textarea {
 	float: none;
 	margin: 0;
 	padding: 0;
-	width: 100%;
 	max-width: 100%;
+	width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -1076,7 +1075,6 @@ textarea {
 .widget-title a:link,
 .widget-title a:visited  {
 	color: #242424;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -1157,10 +1155,10 @@ textarea {
 	display: block;
 	margin: 0 0 1.5em;
 	padding: 0.75em 0;
-	color: #242424;
-	text-align: center;
 	border-top: 1px solid #e5e5e5;
 	border-bottom: 1px solid #e5e5e5;
+	color: #242424;
+	text-align: center;
 	font-size: 18px;
 	font-size: 1.125rem;
 }
@@ -1268,7 +1266,6 @@ textarea {
 .entry-title a:visited {
 	color: #242424;
 	text-decoration: none;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -1301,7 +1298,6 @@ textarea {
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-family: 'Montserrat', Verdana, Arial;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -1476,7 +1472,6 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-w
 .entry-tags .meta-tags a:link,
 .entry-tags .meta-tags a:visited {
 	color: #242424;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -1524,7 +1519,6 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-w
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-family: 'Montserrat', Verdana, Arial;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -1617,7 +1611,6 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-w
 .pagination a:link,
 .pagination a:visited {
 	color: #242424;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -1656,7 +1649,6 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-w
 	font-weight: bold;
 	font-size: 14px;
 	font-size: 0.875rem;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -1844,7 +1836,6 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-w
 	font-size: 13px;
 	font-size: 0.8125rem;
 	font-family: 'Montserrat', Verdana, Arial;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -2122,7 +2113,6 @@ object {
 ## 17.3 - Desktop Small ( < 960px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 60em) {
-
 	.site-footer .site-info {
 		text-align: center;
 	}
@@ -2206,15 +2196,15 @@ object {
 		margin: 0.5em 0;
 		padding: 0.9em;
 		border: none;
-		color: #242424;
 		background: none;
+		color: #242424;
 	}
 
 	.main-navigation-toggle:hover,
 	.main-navigation-toggle:focus,
 	.main-navigation-toggle:active {
-		color: #57b7d7;
 		background: none;
+		color: #57b7d7;
 		cursor: pointer;
 	}
 
@@ -2289,8 +2279,8 @@ object {
 		float: right;
 		margin: 0;
 		padding: 0.8em 1.2em;
-		color: #242424;
 		background: none;
+		color: #242424;
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle:hover {
@@ -2397,7 +2387,6 @@ object {
 ## 17.5 - Tablet Medium ( < 800px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
-
 	/* Post Columns */
 	.post-layout-three-columns .post-wrapper .post-column {
 		width: 50%;
@@ -2426,7 +2415,6 @@ object {
 }
 
 @media only screen and (max-width: 45em) {
-
 	.post-layout-two-columns .entry-title,
 	.post-layout-three-columns .entry-title {
 		font-size: 16px;
@@ -2462,7 +2450,6 @@ object {
 ## 17.7 - Mobile Extra Large ( < 640px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 40em) {
-
 	.header-title {
 		font-size: 28px;
 		font-size: 1.75rem;
@@ -2516,7 +2503,6 @@ object {
 ## 14.8 - Mobile Large ( < 560px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 35em) {
-
 	/* Post Columns */
 	.post-wrapper {
 		display: block;
@@ -2642,7 +2628,6 @@ object {
 }
 
 @media only screen and (max-width: 25em) {
-
 	.post-layout-two-columns .entry-title,
 	.post-layout-three-columns .entry-title {
 		font-size: 17px;

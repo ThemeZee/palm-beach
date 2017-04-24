@@ -27,7 +27,9 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 == Changelog ==
 
 = 1.2.3 =
+* added transient caching to post slider
 * fixed header images getting stretched when too small images are uploaded
+* improved Right-to-Left language stylesheets
 
 = 1.2.2 =
 * fixed flexbox layout issues appearing with the latest Safari 10.1 version
