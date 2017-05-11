@@ -26,6 +26,9 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.2.4 =
+* re-added stretching feature for header images based on user feedback
+
 = 1.2.3 =
 * added transient caching to post slider
 * fixed header images getting stretched when too small images are uploaded
