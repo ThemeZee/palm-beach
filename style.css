@@ -8,7 +8,7 @@ Version: 1.2.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: palm-beach
-Tags: two-columns, custom-background, custom-header, custom-menu, editor-style, rtl-language-support, grid-layout, blog, news, featured-image-header, featured-images, flexible-header, full-width-template, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
+Tags: two-columns, custom-background, custom-header, custom-logo, custom-menu, editor-style, rtl-language-support, grid-layout, blog, news, featured-image-header, featured-images, flexible-header, full-width-template, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -2776,4 +2776,29 @@ object {
 			margin-right: -1px;
 		}
 	}
+}
+
+/*--------------------------------------------------------------
+21.0 Customizer Preview
+--------------------------------------------------------------*/
+.magazine-widgets-placeholder {
+	position: relative;
+}
+
+.magazine-widgets-placeholder .magazine-widgets-placeholder-title {
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 1em 1em 1em 55px;
+	color: #0085ba;
+	border: 2px dashed #0085ba;
+}
+
+/* Add some space around the visual edit shortcut buttons. */
+.magazine-widgets-placeholder .customize-partial-edit-shortcut button {
+	left: 15px;
+	top: 12px;
 }

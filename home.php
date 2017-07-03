@@ -13,16 +13,7 @@ get_header();
 $theme_options = palm_beach_theme_options();
 
 // Display Magazine Homepage Widgets.
-if ( ! is_paged() && is_active_sidebar( 'magazine-homepage' ) ) : ?>
-
-	<div id="magazine-homepage-widgets" class="widget-area clearfix">
-
-		<?php dynamic_sidebar( 'magazine-homepage' ); ?>
-
-	</div><!-- #magazine-homepage-widgets -->
-
-<?php
-endif;
+palm_beach_magazine_widgets();
 
 // Display Latest Posts Title.
 if ( '' !== $theme_options['blog_title'] ) : ?>
