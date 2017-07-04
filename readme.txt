@@ -26,6 +26,11 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.3 =
+* added improved Magazine Widget Customizer Control
+* added default widget titles for Magazine widgets
+* ignore sticky posts in Magazine widgets
+
 = 1.2.4 =
 * re-added stretching feature for header images based on user feedback
 

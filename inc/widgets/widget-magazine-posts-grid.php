@@ -24,7 +24,7 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 			esc_html__( 'Magazine (Grid)', 'palm-beach' ), // Name.
 			array(
 				'classname' => 'palm-beach-magazine-grid-widget',
-				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'palm-beach' ),
+				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout.', 'palm-beach' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
@@ -36,11 +36,11 @@ class Palm_Beach_Magazine_Posts_Grid_Widget extends WP_Widget {
 	private function default_settings() {
 
 		$defaults = array(
-			'title'				=> '',
-			'category'			=> 0,
-			'layout'			=> 'three-columns',
-			'number'			=> 6,
-			'excerpt'			=> false,
+			'title'    => esc_html__( 'Magazine (Grid)', 'palm-beach' ),
+			'category' => 0,
+			'layout'   => 'three-columns',
+			'number'   => 6,
+			'excerpt'  => false,
 		);
 
 		return $defaults;
