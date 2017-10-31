@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/palm-beach/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Palm Beach is a professional WordPress theme perfectly suited for a travel magazine. It features a stunning fullscreen slider, beautiful typography and a three-column grid-layout for posts. Head off on vacation now!
-Version: 1.3
+Version: 1.3.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: palm-beach
@@ -1917,8 +1917,11 @@ object {
 ## 16.1 - Captions
 --------------------------------------------------------------*/
 .wp-caption {
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 	max-width: 100%;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	color: #777;
 }
 
 .wp-caption img[class*="wp-image-"] {
@@ -1931,7 +1934,7 @@ object {
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+	margin: 0.5em 0;
 }
 
 /*--------------------------------------------------------------
@@ -1943,6 +1946,9 @@ object {
 
 .gallery-item {
 	display: inline-block;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 1em 1.5em 0 0;
 	width: 100%;
 	vertical-align: top;
 	text-align: center;
@@ -1982,6 +1988,9 @@ object {
 
 .gallery-caption {
 	display: block;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	color: #777;
 }
 
 /*--------------------------------------------------------------
@@ -2408,6 +2417,14 @@ object {
 	.widget-magazine-posts .medium-post .entry-content {
 		display: none;
 	}
+
+	/* Gallery */
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		max-width: 25%;
+	}
 }
 
 @media only screen and (max-width: 45em) {
@@ -2620,6 +2637,20 @@ object {
 	.widget-magazine-posts .small-post .entry-title {
 		font-size: 14px;
 		font-size: 0.875rem;
+	}
+
+	/* Gallery */
+	.gallery-item {
+		padding: 0.75em 1em 0 0;
+	}
+
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		max-width: 50%;
 	}
 }
 
