@@ -26,6 +26,9 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.3.2 =
+* fixed small layout issue of header image on some devices
+
 = 1.3.1 =
 * improved styling of image captions
 * improved styling of galleries
