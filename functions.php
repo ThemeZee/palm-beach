@@ -79,7 +79,7 @@ if ( ! function_exists( 'palm_beach_setup' ) ) :
 		add_theme_support( 'woocommerce' );
 
 		// Add extra theme styling to the visual editor.
-		add_editor_style( array( 'css/editor-style.css', palm_beach_google_fonts_url() ) );
+		add_editor_style( array( 'css/editor-style.css', get_template_directory_uri() . '/assets/css/custom-fonts.css' ) );
 
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -156,9 +156,6 @@ function palm_beach_scripts() {
 	// Register and enqueue navigation.js.
 	wp_enqueue_script( 'palm-beach-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20170127' );
 
-	// Register and Enqueue Google Fonts.
-	wp_enqueue_style( 'palm-beach-default-fonts', palm_beach_google_fonts_url(), array(), null );
-
 	// Register and enqueue sticky-header.js.
 	if ( true == $theme_options['sticky_header'] ) {
 		wp_enqueue_script( 'palm-beach-jquery-sticky-header', get_template_directory_uri() . '/js/sticky-header.js', array( 'jquery' ), '20170127' );
@@ -173,22 +170,15 @@ add_action( 'wp_enqueue_scripts', 'palm_beach_scripts' );
 
 
 /**
- * Retrieve Font URL to register default Google Fonts
+ * Enqueue custom fonts.
  */
-function palm_beach_google_fonts_url() {
+function palm_beach_custom_fonts() {
 
-	// Set default Fonts.
-	$font_families = array( 'Hind:400,400italic,700,700italic', 'Montserrat:400,400italic,700,700italic' );
+	// Register and Enqueue Theme Fonts.
+	wp_enqueue_style( 'palm-beach-custom-fonts', get_template_directory_uri() . '/assets/css/custom-fonts.css', array(), '20180413' );
 
-	// Build Fonts URL.
-	$query_args = array(
-		'family' => urlencode( implode( '|', $font_families ) ),
-		'subset' => urlencode( 'latin,latin-ext' ),
-	);
-	$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
-
-	return apply_filters( 'palm_beach_google_fonts_url', $fonts_url );
 }
+add_action( 'wp_enqueue_scripts', 'palm_beach_custom_fonts', 1 );
 
 
 /**
