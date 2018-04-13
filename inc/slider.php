@@ -22,13 +22,13 @@ function palm_beach_slider_scripts() {
 	if ( true === $theme_options['slider_blog'] or true === $theme_options['slider_magazine'] or is_page_template( 'template-slider.php' ) ) :
 
 		// FlexSlider JS.
-		wp_enqueue_script( 'jquery-flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
+		wp_enqueue_script( 'jquery-flexslider', get_template_directory_uri() . '/assets/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
 
 		// Register and enqueue slider setup.
-		wp_enqueue_script( 'palm-beach-slider', get_template_directory_uri() . '/js/slider.js', array( 'jquery-flexslider' ), '20170421' );
+		wp_enqueue_script( 'palm-beach-slider', get_template_directory_uri() . '/assets/js/slider.js', array( 'jquery-flexslider' ), '20170421' );
 
 		// Register and enqueue slider CSS.
-		wp_enqueue_style( 'palm-beach-slider', get_template_directory_uri() . '/css/flexslider.css', array(), '20170421' );
+		wp_enqueue_style( 'palm-beach-slider', get_template_directory_uri() . '/assets/css/flexslider.css', array(), '20170421' );
 
 	endif;
 

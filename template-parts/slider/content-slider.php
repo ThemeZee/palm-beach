@@ -17,7 +17,7 @@
 
 	else :
 
-		$image_url = get_template_directory_uri() . '/images/default-slider-image.png';
+		$image_url = get_template_directory_uri() . '/assets/images/default-slider-image.png';
 
 	endif;
 	?>

@@ -79,7 +79,7 @@ if ( ! function_exists( 'palm_beach_setup' ) ) :
 		add_theme_support( 'woocommerce' );
 
 		// Add extra theme styling to the visual editor.
-		add_editor_style( array( 'css/editor-style.css', get_template_directory_uri() . '/assets/css/custom-fonts.css' ) );
+		add_editor_style( array( 'assets/css/editor-style.css', get_template_directory_uri() . '/assets/css/custom-fonts.css' ) );
 
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -147,18 +147,18 @@ function palm_beach_scripts() {
 	wp_enqueue_style( 'palm-beach-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 
 	// Register Genericons.
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/css/genericons/genericons.css', array(), '3.4.1' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/assets/genericons/genericons.css', array(), '3.4.1' );
 
 	// Register and Enqueue HTML5shiv to support HTML5 elements in older IE versions.
-	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.min.js', array(), '3.7.3' );
+	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), '3.7.3' );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js.
-	wp_enqueue_script( 'palm-beach-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20170127' );
+	wp_enqueue_script( 'palm-beach-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20170127' );
 
 	// Register and enqueue sticky-header.js.
 	if ( true == $theme_options['sticky_header'] ) {
-		wp_enqueue_script( 'palm-beach-jquery-sticky-header', get_template_directory_uri() . '/js/sticky-header.js', array( 'jquery' ), '20170127' );
+		wp_enqueue_script( 'palm-beach-jquery-sticky-header', get_template_directory_uri() . '/assets/js/sticky-header.js', array( 'jquery' ), '20170127' );
 	}
 
 	// Register Comment Reply Script for Threaded Comments.
