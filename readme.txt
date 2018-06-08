@@ -26,6 +26,9 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.4.1 =
+* improved styling of checkbox label in comment form
+
 = 1.4 =
 * added default theme fonts as local fonts
 * use local fonts instead of Google fonts for GDPR compliance
