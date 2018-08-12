@@ -9,7 +9,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'small-post clearfix' ); ?>>
 
-	<?php palm_beach_post_image( 'palm-beach-thumbnail-small' ); ?>
+	<div class="post-image">
+		<?php palm_beach_post_image( 'palm-beach-thumbnail-small' ); ?>
+	</div>
 
 	<div class="small-post-content">
 

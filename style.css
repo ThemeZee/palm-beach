@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/palm-beach/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Palm Beach is a professional WordPress theme perfectly suited for a travel magazine. It features a stunning fullscreen slider, beautiful typography and a three-column grid-layout for posts. Head off on vacation now!
-Version: 1.4.1
+Version: 1.4.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: palm-beach
@@ -1184,17 +1184,23 @@ textarea {
 
 /* Small Post Styling */
 .widget-magazine-posts .small-post {
-	display: block;
-	float: left;
-	box-sizing: border-box;
-	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.widget-magazine-posts .small-post .post-image {
+	width: 35%;
+}
+
+.widget-magazine-posts .small-post .small-post-content {
+	width: 65%;
+	padding-left: 2em;
 }
 
 .widget-magazine-posts .small-post .wp-post-image {
-	float: left;
-	margin: 0 2em 0 0;
-	min-width: 80px;
-	max-width: 35%;
+	margin: 0 0 0.25em;
+	vertical-align: top;
 }
 
 .widget-magazine-posts .small-post .entry-title {
@@ -2110,8 +2116,8 @@ object {
 		font-size: 1.125rem;
 	}
 
-	.widget-magazine-posts .small-post .wp-post-image {
-		margin: 0 1.5em 0 0;
+	.widget-magazine-posts .small-post .small-post-content {
+		padding-left: 1.5em;
 	}
 
 	.widget-magazine-posts .small-post .entry-title {
@@ -2456,8 +2462,8 @@ object {
 		font-size: 0.8125rem;
 	}
 
-	.widget-magazine-posts .small-post .wp-post-image {
-		margin: 0 1em 0 0;
+	.widget-magazine-posts .small-post .small-post-content {
+		padding-left: 1em;
 	}
 
 	.widget-magazine-posts .small-post .entry-meta {
@@ -2555,8 +2561,8 @@ object {
 		font-size: 0.9375rem;
 	}
 
-	.widget-magazine-posts .small-post .wp-post-image {
-		margin: 0 1.5em 0 0;
+	.widget-magazine-posts .small-post .small-post-content {
+		padding-left: 1.5em;
 	}
 
 	.widget-magazine-posts .small-post .entry-meta {
@@ -2633,10 +2639,18 @@ object {
 		font-size: 1.125rem;
 	}
 
-	.widget-magazine-posts .medium-post .wp-post-image,
-	.widget-magazine-posts .small-post .wp-post-image {
+	.widget-magazine-posts .medium-post .wp-post-image {
 		margin: 0 1em 0 0;
 		max-width: 30%;
+	}
+
+	.widget-magazine-posts .small-post .post-image {
+		width: 30%;
+	}
+
+	.widget-magazine-posts .small-post .small-post-content {
+		width: 70%;
+		padding-left: 1em;
 	}
 
 	.widget-magazine-posts .medium-post .entry-title,

@@ -26,6 +26,9 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.4.2 =
+* changed small post layout to flexbox instead of floats
+
 = 1.4.1 =
 * improved styling of checkbox label in comment form
 
