@@ -34,27 +34,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 10.0 - Navigation
 11.0 - Widgets
 12.0 - Posts and pages
-13.0 - Featured Posts
-14.0 - Comments
+13.0 - Comments
+14.0 - Gutenberg Blocks
 15.0 - Footer
 16.0 - Media
-	16.1 - Captions
-	16.2 - Galleries
 17.0 - Media Queries
-	17.1 - Desktop Large ( < 1120px )
-	17.2 - Desktop Medium ( < 1040px )
-	17.3 - Desktop Small ( < 960px )
-	17.4 - Tablet Large ( < 880px )
-	17.5 - Tablet Medium ( < 800px )
-	17.6 - Tablet Small ( < 720px )
-	17.7 - Mobile Extra Large ( < 640px )
-	17.8 - Mobile Large ( < 560px )
-	17.9 - Mobile Medium ( < 480px )
-	17.10 - Mobile Small ( < 320px )
 18.0 - Theme Option Styles
-	15.1 - Sidebar Left Layout
-	15.2 - Sticky Header
 19.0 - Media Query Fixes
+20.0 - CSS Hacks for Safari
+21.0 - Customizer Preview
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -123,11 +111,6 @@ strong {
 
 dfn {
 	font-style: italic;
-}
-
-h1 {
-	margin: 0.67em 0;
-	font-size: 2em;
 }
 
 mark {
@@ -298,6 +281,38 @@ h4,
 h5,
 h6 {
 	clear: both;
+	margin: 0.75em 0;
+	line-height: 1.4;
+}
+
+h1 {
+	font-size: 36px;
+	font-size: 2.25rem;
+}
+
+h2 {
+	font-size: 28px;
+	font-size: 1.75rem;
+}
+
+h3 {
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 22px;
+	font-size: 1.375rem;
+}
+
+h5 {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+h6 {
+	font-size: 19px;
+	font-size: 1.1875rem;
 }
 
 p {
@@ -588,13 +603,11 @@ textarea {
 # 6.0 - Alignments
 --------------------------------------------------------------*/
 .alignleft {
-	display: inline;
 	float: left;
 	margin-right: 1.5em;
 }
 
 .alignright {
-	display: inline;
 	float: right;
 	margin-left: 1.5em;
 }
@@ -604,6 +617,7 @@ textarea {
 	clear: both;
 	margin-right: auto;
 	margin-left: auto;
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -1711,6 +1725,116 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-w
 }
 
 /*--------------------------------------------------------------
+# 13.0 - Gutenberg Blocks
+--------------------------------------------------------------*/
+
+/* Audio */
+.wp-block-audio audio {
+	width: 100%;
+}
+
+/* Separator */
+.wp-block-separator {
+	height: 1px;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	max-width: 100px;
+}
+
+/* Quote */
+.wp-block-quote.is-style-large {
+	border: none;
+	margin: 0 0 1.5em;
+	padding: 0;
+	font-size: 28px;
+	font-size: 1.75rem;
+}
+
+.wp-block-quote.is-style-large p {
+	margin-bottom: 0.5em;
+	font-size: inherit;
+	font-style: inherit;
+	line-height: inherit;
+}
+
+.wp-block-quote.is-style-large cite {
+	text-align: inherit;
+}
+
+/* Pullquote */
+.wp-block-pullquote {
+	margin-bottom: 1.5em;
+	padding: 1.5em 0;
+    border-bottom: 4px solid #222;
+    border-top: 4px solid #222;
+}
+
+.wp-block-pullquote blockquote {
+	border: none;
+	margin: 0;
+	padding: 0;
+	font-size: 28px;
+	font-size: 1.75rem;
+}
+
+.wp-block-pullquote blockquote p {
+	margin-bottom: 0.5em;
+}
+
+/* Cover */
+.wp-block-cover {
+	display: flex;
+}
+
+.wp-block-cover-text {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* Block Text Colors */
+.has-primary-color {
+	color: #57b7d7;
+}
+
+.has-white-color {
+	color: #ffffff;
+}
+
+.has-light-gray-color {
+	color: #f0f0f0;
+}
+
+.has-dark-gray-color {
+	color: #777777;
+}
+
+.has-black-color {
+	color: #222222;
+}
+
+/* Block Background Colors */
+.has-primary-background-color {
+	background-color: #57b7d7;
+}
+
+.has-white-background-color {
+	background-color: #ffffff;
+}
+
+.has-light-gray-background-color {
+	background-color: #f0f0f0;
+}
+
+.has-dark-gray-background-color {
+	background-color: #777777;
+}
+
+.has-black-background-color {
+	background-color: #222222;
+}
+
+/*--------------------------------------------------------------
 # 14.0 - Comments
 --------------------------------------------------------------*/
 
@@ -2525,7 +2649,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-## 14.8 - Mobile Large ( < 560px )
+## 17.8 - Mobile Large ( < 560px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 35em) {
 	/* Post Columns */
@@ -2830,7 +2954,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-21.0 Customizer Preview
+# 21.0 Customizer Preview
 --------------------------------------------------------------*/
 .magazine-widgets-placeholder {
 	position: relative;
