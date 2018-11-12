@@ -26,6 +26,10 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.5.1 =
+* fixed link color in Gutenberg Editor
+* fixed styling of Read More button
+
 = 1.5 =
 * added styling for Gutenberg blocks
 * added custom color palette for Gutenberg
