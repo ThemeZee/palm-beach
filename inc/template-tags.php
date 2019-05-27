@@ -399,10 +399,13 @@ function palm_beach_footer_text() {
 	?>
 
 	<span class="credit-link">
-		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'palm-beach' ),
-			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
-			'<a href="https://themezee.com/themes/palm-beach/" title="Palm Beach WordPress Theme">Palm Beach</a>'
-		); ?>
+		<?php
+		// translators: Theme Name and Link to ThemeZee.
+		printf( esc_html__( 'WordPress Theme: %1$s by %2$s.', 'palm-beach' ),
+			esc_html__( 'Palm Beach', 'palm-beach' ),
+			'<a href="https://themezee.com/" target="_blank" rel="nofollow">ThemeZee</a>'
+		);
+		?>
 	</span>
 
 	<?php

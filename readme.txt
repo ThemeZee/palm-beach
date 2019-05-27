@@ -26,6 +26,9 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.5.3 =
+* adjusted footer credit link with clearer wording
+
 = 1.5.2 =
 * added support for responsive embed blocks
 
