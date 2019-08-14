@@ -220,6 +220,17 @@ add_action( 'enqueue_block_editor_assets', 'palm_beach_block_editor_assets' );
 
 
 /**
+ * Make custom image sizes available in Gutenberg.
+ */
+function palm_beach_add_image_size_names( $sizes ) {
+	return array_merge( $sizes, array(
+		'post-thumbnail' => esc_html__( 'Palm Beach Single Post', 'palm-beach' ),
+	) );
+}
+add_filter( 'image_size_names_choose', 'palm_beach_add_image_size_names' );
+
+
+/**
  * Include Files
  */
 
