@@ -47,7 +47,8 @@ function palm_beach_theme_info_page() {
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/palm-beach/', 'palm-beach' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=palm-beach&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'palm-beach' ); ?></a>
 				<a href="http://preview.themezee.com/?demo=palm-beach&utm_source=theme-info&utm_campaign=palm-beach" target="_blank"><?php esc_html_e( 'Theme Demo', 'palm-beach' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/palm-beach-documentation/', 'palm-beach' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=palm-beach&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'palm-beach' ); ?></a>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/palm-beach/reviews/?filter=5', 'palm-beach' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'palm-beach' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=palm-beach', 'palm-beach' ) ); ?>" target="_blank"><?php esc_html_e( 'Theme Changelog', 'palm-beach' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/palm-beach/reviews/', 'palm-beach' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'palm-beach' ); ?></a>
 			</p>
 		</div>
 		<hr>
@@ -150,7 +151,7 @@ function palm_beach_theme_info_page() {
 				<?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'palm-beach' ),
 					$theme->display( 'Name' ),
 					'<a target="_blank" href="' . __( 'https://themezee.com/', 'palm-beach' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=palm-beach" title="ThemeZee">ThemeZee</a>',
-					'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/palm-beach/reviews/?filter=5', 'palm-beach' ) . '" title="' . esc_attr__( 'Review Palm Beach', 'palm-beach' ) . '">' . esc_html__( 'rate it', 'palm-beach' ) . '</a>'
+					'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/palm-beach/reviews/', 'palm-beach' ) . '" title="' . esc_attr__( 'Review Palm Beach', 'palm-beach' ) . '">' . esc_html__( 'rate it', 'palm-beach' ) . '</a>'
 				); ?>
 			</p>
 

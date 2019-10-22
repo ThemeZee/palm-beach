@@ -43,13 +43,13 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/palm-beach/', 'palm-beach' ) ); ?>" target="_blank">
-						<?php esc_html_e( 'Support Forum', 'palm-beach' ); ?>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=palm-beach/', 'palm-beach' ) ); ?>" target="_blank">
+						<?php esc_html_e( 'Theme Changelog', 'palm-beach' ); ?>
 					</a>
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/palm-beach/reviews/?filter=5', 'palm-beach' ) ); ?>" target="_blank">
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/palm-beach/reviews/', 'palm-beach' ) ); ?>" target="_blank">
 						<?php esc_html_e( 'Rate this theme', 'palm-beach' ); ?>
 					</a>
 				</p>
