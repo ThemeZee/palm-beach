@@ -26,6 +26,9 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.6.4 - 2019-11-13 =
+* fixed styling issue for header title on small devices
+
 = 1.6.3 - 2019-11-12 =
 * added font display swap to default theme fonts
 
