@@ -26,6 +26,10 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.6.5 - 2019-11-18 =
+* fixed styling of captions in Image and Gallery block
+* improved styling of Latest Posts and Table block
+
 = 1.6.4 - 2019-11-13 =
 * fixed styling issue for header title on small devices
 
