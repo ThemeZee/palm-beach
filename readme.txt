@@ -26,6 +26,9 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.6.6 - 2020-01-02 =
+* fixed post meta settings on single posts without featured images
+
 = 1.6.5 - 2019-11-18 =
 * fixed styling of captions in Image and Gallery block
 * improved styling of Latest Posts and Table block
