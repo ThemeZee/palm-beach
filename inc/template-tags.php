@@ -265,6 +265,11 @@ if ( ! function_exists( 'palm_beach_meta_comments' ) ) :
 	 */
 	function palm_beach_meta_comments() {
 
+		// Check if comments are open or we have at least one comment.
+		if ( ! ( comments_open() || get_comments_number() ) ) {
+			return;
+		}
+
 		ob_start();
 		comments_popup_link( esc_html__( 'No comments', 'palm-beach' ), esc_html__( 'One comment', 'palm-beach' ), esc_html__( '% comments', 'palm-beach' ) );
 		$comments_string = ob_get_contents();
