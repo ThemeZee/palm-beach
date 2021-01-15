@@ -2111,6 +2111,7 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 # 15.0 - Footer
 --------------------------------------------------------------*/
 .footer-wrap {
+	background: #fff;
 	border-top: 1px solid #e5e5e5;
 }
 
