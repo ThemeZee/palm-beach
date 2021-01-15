@@ -1,0 +1,16 @@
+/* Read more Link */
+.more-link {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	@include font-size(14);
+	@include font-family(--widget-title-font);
+	@include font-weight(--widget-title-font-weight);
+	@include text-transform(--widget-title-text-transform);
+	transition: all 0.2s ease;
+}
+
+.entry-content .more-link {
+	text-decoration: none;
+}

@@ -1,0 +1,139 @@
+.widget {
+	margin: 0 0 3em 0;
+	color: #333;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.widget-header {
+	margin: 0 0 1.5em 0;
+}
+
+.widget-title {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border-bottom: 4px solid #eee;
+	color: #404040;
+	@include font-size(18);
+	@include font-family(--widget-title-font);
+	@include font-weight(--widget-title-font-weight);
+	@include text-transform(--widget-title-text-transform);
+	@include line-height(--title-line-height);
+}
+
+.widget ul {
+	margin: 0;
+	padding: 0 0.3em;
+	list-style: circle inside;
+}
+
+.widget ul .children,
+.widget ul .sub-menu {
+	margin: 0.5em 0 0.5em 1em;
+	padding: 0;
+}
+
+.widget-title a:link,
+.widget-title a:visited {
+	color: #404040;
+	transition: all 0.2s ease;
+}
+
+.widget-title a:hover,
+.widget-title a:active {
+	color: #22aadd;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/* Tagcloud Widget */
+.widget_tag_cloud .tagcloud {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.widget_tag_cloud .tagcloud::before,
+.widget_tag_cloud .tagcloud::after {
+	display: table;
+	content: "";
+}
+
+.widget_tag_cloud .tagcloud::after {
+	clear: both;
+}
+
+.widget_tag_cloud .tagcloud a {
+	display: inline-block;
+	float: left;
+	margin: 0 2px 2px 0;
+	padding: 0.2em 0.5em 0.3em;
+	background: #eee;
+	text-decoration: none;
+	font-size: 16px !important;
+	font-size: 1rem !important;
+}
+
+.widget_tag_cloud .tagcloud a:link,
+.widget_tag_cloud .tagcloud a:visited {
+	color: #777;
+	transition: all 0.2s ease;
+}
+
+.widget_tag_cloud .tagcloud a:hover,
+.widget_tag_cloud .tagcloud a:active {
+	background: #22aadd;
+	color: #fff;
+}
+
+/* Theme Search Widget */
+.search-form {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.search-form .screen-reader-text {
+	display: none;
+}
+
+.search-form .search-field {
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0.5em 1.5em 0.5em 0.7em;
+	width: 100%;
+	-webkit-appearance: none;
+}
+
+.search-form .search-submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0.6em 0.6em 0 0;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.search-form .search-submit .genericon-search {
+	display: inline-block;
+	padding: 0.05em 0 0.55em 0.45em;
+	color: #fff;
+	content: '\f400';
+	vertical-align: middle;
+	text-decoration: inherit;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	font-family: 'Genericons';
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

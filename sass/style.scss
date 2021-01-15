@@ -1,0 +1,201 @@
+/*
+Theme Name: Poseidon
+Theme URI: https://themezee.com/themes/poseidon/
+Author: ThemeZee
+Author URI: https://themezee.com
+Description: Poseidon is an elegant designed WordPress theme featuring a splendid fullscreen image slideshow. The clean typography and spacious white layout makes it great to share your stories. You can use the theme as simple blog or easily create a news website with the widget-based Magazine Homepage template.
+Version: 2.1.1
+Requires at least: 5.2
+Tested up to: 5.5
+Requires PHP: 5.6
+AMP: true
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: poseidon
+Tags: two-columns, custom-background, custom-header, custom-logo, custom-menu, blog, news, editor-style, block-styles, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Poseidon is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# - CSS Variables
+# - Normalize
+# - Typography
+# - Elements
+# - Forms
+# - Accessibility
+# - Alignments
+# - Clearings
+# - Site Layout
+# - Header
+# - Navigation
+# - Social Icons Menu
+# - Posts and pages
+# - Archives and Blog Layouts
+# - Blocks
+# - Featured Posts
+# - Widgets
+# - Magazine Widgets
+# - Comments
+# - Media
+# - Footer
+# - Plugins
+# - Media Queries for Typography
+# - Media Queries for Layout
+# - Media Queries for Navigation
+# - Media Queries for Featured Posts
+# - Media Queries for Media
+# - Theme Options
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# - CSS Variables
+--------------------------------------------------------------*/
+@import "_mixins";
+@import "_variables";
+@import "_root";
+
+/*--------------------------------------------------------------
+# - Normalize
+--------------------------------------------------------------*/
+@import "1-setup/normalize";
+
+/*--------------------------------------------------------------
+# - Typography
+--------------------------------------------------------------*/
+@import "1-setup/typography";
+
+/*--------------------------------------------------------------
+# - Elements
+--------------------------------------------------------------*/
+@import "1-setup/elements";
+
+/*--------------------------------------------------------------
+# - Forms
+--------------------------------------------------------------*/
+@import "1-setup/forms";
+
+/*--------------------------------------------------------------
+# - Accessibility
+--------------------------------------------------------------*/
+@import "1-setup/accessibility";
+
+/*--------------------------------------------------------------
+# - Alignments
+--------------------------------------------------------------*/
+@import "1-setup/alignments";
+
+/*--------------------------------------------------------------
+# - Clearings
+--------------------------------------------------------------*/
+@import "1-setup/clearings";
+
+/*--------------------------------------------------------------
+# - Site Layout
+--------------------------------------------------------------*/
+@import "2-layout/site";
+
+/*--------------------------------------------------------------
+# - Header
+--------------------------------------------------------------*/
+@import "2-layout/header";
+
+/*--------------------------------------------------------------
+# - Navigation
+--------------------------------------------------------------*/
+@import "2-layout/navigation";
+
+/*--------------------------------------------------------------
+# - Social Icons Menu
+--------------------------------------------------------------*/
+@import "6-elements/social-icons";
+
+/*--------------------------------------------------------------
+# - Posts and pages
+--------------------------------------------------------------*/
+@import "3-content/content";
+@import "3-content/entry-meta";
+@import "3-content/more-link";
+@import "3-content/post-navigation";
+
+/*--------------------------------------------------------------
+# - Archives and Blog Layouts
+--------------------------------------------------------------*/
+@import "4-archives/archives";
+@import "4-archives/pagination";
+@import "4-archives/infinite-scroll";
+
+/*--------------------------------------------------------------
+# - Blocks
+--------------------------------------------------------------*/
+@import "5-blocks/core-blocks";
+@import "5-blocks/colors";
+
+/*--------------------------------------------------------------
+# - Widgets
+--------------------------------------------------------------*/
+@import "6-elements/widgets";
+
+/*--------------------------------------------------------------
+# - Magazine Widgets
+--------------------------------------------------------------*/
+@import "6-elements/magazine";
+
+/*--------------------------------------------------------------
+# - Comments
+--------------------------------------------------------------*/
+@import "6-elements/comments";
+
+/*--------------------------------------------------------------
+# - Media
+--------------------------------------------------------------*/
+@import "6-elements/media";
+
+/*--------------------------------------------------------------
+# - Footer
+--------------------------------------------------------------*/
+@import "2-layout/footer";
+
+/*--------------------------------------------------------------
+# - Plugins
+--------------------------------------------------------------*/
+@import "9-plugins/breadcrumbs";
+@import "9-plugins/magazine-blocks";
+
+/*--------------------------------------------------------------
+# - Media Queries for Typography
+--------------------------------------------------------------*/
+@import "7-media-queries/mq-typography";
+
+/*--------------------------------------------------------------
+# - Media Queries for Layout
+--------------------------------------------------------------*/
+@import "7-media-queries/mq-layout";
+
+/*--------------------------------------------------------------
+# - Media Queries for Navigation
+--------------------------------------------------------------*/
+@import "7-media-queries/mq-navigation";
+
+/*--------------------------------------------------------------
+# - Media Queries for Magazine widgets
+--------------------------------------------------------------*/
+@import "7-media-queries/mq-magazine";
+
+/*--------------------------------------------------------------
+# - Media Queries for Media
+--------------------------------------------------------------*/
+@import "7-media-queries/mq-media";
+
+/*--------------------------------------------------------------
+# - Theme Options
+--------------------------------------------------------------*/
+@import "6-elements/theme-options";

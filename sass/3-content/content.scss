@@ -1,0 +1,79 @@
+.type-post,
+.type-page,
+.type-attachment {
+	margin: 0 0 3em 0;
+	max-width: 100%;
+}
+
+.page-title,
+.entry-title {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	color: #404040;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	@include font-size(40);
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
+}
+
+.entry-title a:link,
+.entry-title a:visited {
+	color: #404040;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.entry-title a:hover,
+.entry-title a:active {
+	color: #22aadd;
+}
+
+.type-post .wp-post-image {
+	margin: 0 0 0.5em;
+}
+
+.entry-content {
+	font-size: 17px;
+	font-size: 1.0625rem;
+}
+
+.entry-content a {
+	text-decoration: underline;
+}
+
+/* Small Post Layout */
+.post-layout-small .post-wrapper .type-post .wp-post-image,
+.post-layout-small .infinite-wrap .type-post .wp-post-image {
+	float: left;
+	margin: 0 1.5em 1.5em 0;
+	padding: 0.3em 0 0;
+	max-width: 40%;
+}
+
+.post-layout-small .post-wrapper .type-post .entry-title,
+.post-layout-small .infinite-wrap .type-post .entry-title {
+	font-size: 28px;
+	font-size: 1.75rem;
+}
+
+.post-layout-small .post-wrapper .type-post .entry-content,
+.post-layout-small .infinite-wrap .type-post .entry-content {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.post-layout-small .post-wrapper .type-post .entry-excerpt p,
+.post-layout-small .infinite-wrap .type-post .entry-excerpt p {
+	margin-bottom: 1em;
+}
+
+/* Page Links | wp_link_pages() */
+.page-links {
+	margin: 0 0 1.5em;
+	word-spacing: 0.75em;
+	font-weight: bold;
+}

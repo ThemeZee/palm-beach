@@ -1,0 +1,189 @@
+.primary-navigation {
+	position: relative;
+	width: 100%;
+}
+
+.main-navigation ul {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	list-style: none;
+	@include font-size(15);
+	@include font-family(--navi-font);
+	@include font-weight(--navi-font-weight);
+	@include text-transform(--navi-text-transform);
+}
+
+.main-navigation > ul {
+	border-top: 4px solid #404040;
+	margin-bottom: 1.5em;
+}
+
+/* Hide the menu on small screens when JavaScript is available. */
+.main-navigation ul,
+.main-navigation .menu-item-has-children > a > .icon,
+.main-navigation ul a > .icon {
+	display: none;
+}
+
+.main-navigation.toggled-on > ul.menu {
+	display: block;
+}
+
+/* Menu Items Styling */
+.main-navigation ul li {
+	position: relative;
+	margin: 0;
+}
+
+.main-navigation ul a {
+	display: block;
+	margin: 0;
+	padding: 1.2em;
+	border-bottom: 1px dotted #ccc;
+	text-decoration: none;
+}
+
+.main-navigation ul a,
+.main-navigation ul a:link,
+.main-navigation ul a:visited {
+	color: #404040;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.main-navigation ul a:hover,
+.main-navigation ul a:active,
+.main-navigation ul a:focus,
+.main-navigation ul li.current-menu-item > a {
+	color: #22aadd;
+}
+
+/* Submenus */
+.main-navigation ul ul {
+	@include font-size(13);
+}
+
+.is-amp-page .main-navigation ul button.toggled-on + ul,
+.main-navigation ul ul.toggled-on {
+	display: block;
+}
+
+.main-navigation ul ul a {
+	padding-left: 3em;
+}
+
+.main-navigation ul ul ul a {
+	padding-left: 4.5em;
+}
+
+.main-navigation ul ul ul ul a {
+	padding-left: 6em;
+}
+
+/* Main Navigation Toggle */
+.primary-menu-toggle {
+	display: flex;
+	margin: 1em 0;
+	margin-left: auto;
+	padding: 1em;
+	border: none;
+	background: none;
+	color: #404040;
+	text-decoration: none;
+	@include font-size(15);
+	@include font-family(--navi-font);
+	@include font-weight(--navi-font-weight);
+	@include text-transform(--navi-text-transform);
+	text-align: left;
+	transition: all 0.2s ease;
+	align-items: center;
+}
+
+.primary-menu-toggle:focus {
+	outline: thin dotted;
+	color: #404040;
+	background: none;
+}
+
+.primary-menu-toggle:hover,
+.primary-menu-toggle:active {
+	color: #22aadd;
+	background: none;
+	cursor: pointer;
+}
+
+.primary-menu-toggle .icon {
+	margin: 0;
+	width: 28px;
+	height: 28px;
+	vertical-align: top;
+	fill: #404040;
+	transition: fill 0.2s ease;
+}
+
+.primary-menu-toggle:hover .icon,
+.primary-menu-toggle:active .icon {
+	fill: #22aadd;
+}
+
+.primary-menu-toggle[aria-expanded="true"] .icon-menu,
+.primary-menu-toggle[aria-expanded="false"] .icon-close {
+	display: none;
+}
+
+.primary-menu-toggle[aria-expanded="true"] .icon-close {
+	display: inline-block;
+}
+
+/* Submenu Dropdown Toggles */
+.main-navigation .dropdown-toggle {
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	padding: 1.2em 1.5em;
+	background: none;
+	border: none;
+}
+
+.main-navigation .dropdown-toggle:focus {
+	outline: thin dotted;
+	color: #404040;
+	background: none;
+}
+
+.main-navigation .dropdown-toggle:hover,
+.main-navigation .dropdown-toggle:active {
+	background: none;
+}
+
+.main-navigation .dropdown-toggle .icon {
+	margin: 0.2em 0 0;
+	width: 24px;
+	height: 24px;
+	vertical-align: top;
+	fill: #404040;
+	transition: fill 0.2s ease;
+}
+
+.main-navigation .dropdown-toggle:hover .icon,
+.main-navigation .dropdown-toggle:active .icon,
+.main-navigation .dropdown-toggle:focus .icon {
+	fill: #22aadd;
+}
+
+.main-navigation .dropdown-toggle.toggled-on .icon {
+	-ms-transform: rotate(-180deg); /* IE 9 */
+	-webkit-transform: rotate(-180deg); /* Chrome, Safari, Opera */
+	transform: rotate(-180deg);
+}
+
+.main-navigation ul ul .dropdown-toggle {
+	padding: 1.1em 1.3em;
+}
+
+.main-navigation ul ul .dropdown-toggle .icon {
+	width: 20px;
+	height: 20px;
+}
