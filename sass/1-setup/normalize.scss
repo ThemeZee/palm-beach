@@ -1,7 +1,7 @@
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
 }
 
 body {
@@ -97,7 +97,7 @@ svg:not(:root) {
 }
 
 figure {
-	margin: 0;
+	margin: 1em 0;
 }
 
 hr {
@@ -179,7 +179,7 @@ input[type="search"]::-webkit-search-decoration {
 fieldset {
 	margin: 0 2px;
 	padding: 0.35em 0.625em 0.75em;
-	border: 1px solid #c0c0c0;
+	border: 1px solid #e5e5e5;
 }
 
 legend {

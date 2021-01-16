@@ -1,9 +1,6 @@
 /* Post Navigation */
 .post-navigation {
-	margin: 1em 0 0;
-	padding: 0.6em 0;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
+	padding: 1em 0;
 }
 
 .post-navigation .nav-links .nav-previous {
@@ -14,12 +11,39 @@
 	float: right;
 }
 
-.post-navigation .nav-links .nav-previous a::before {
+.post-navigation .nav-links .nav-previous a:before {
 	margin-right: 3px;
 	content: "\00AB";
 }
 
-.post-navigation .nav-links .nav-next a::after {
+.post-navigation .nav-links .nav-next a:after {
 	margin-left: 4px;
 	content: "\00BB";
+}
+
+.post-navigation .nav-links a {
+	margin: 0 0 3px;
+	padding: 1em;
+	border: 1px solid #e5e5e5;
+	background: #f5f5f5;
+	color: #242424;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-family: 'Montserrat', Verdana, Arial;
+	transition: all 0.2s ease;
+}
+
+.post-navigation .nav-links a:link,
+.post-navigation .nav-links a:visited  {
+	color: #242424;
+}
+
+.post-navigation .nav-links a:hover,
+.post-navigation .nav-links a:active {
+	border-color: #57b7d7;
+	background: #57b7d7;
+	color: #fff;
 }

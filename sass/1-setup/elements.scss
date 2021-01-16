@@ -2,10 +2,9 @@ html {
 	box-sizing: border-box;
 }
 
-/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 *,
-*::before,
-*::after {
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
 
@@ -13,26 +12,14 @@ body {
 	background: #fff; /* Fallback for when there is no custom background color defined. */
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: "";
-}
-
-blockquote,
-q {
-	quotes: none;
-}
-
 blockquote {
 	margin: 0 0 1.5em;
-	padding-left: 1.5em;
-	border-left: 4px solid #eee;
+	padding-left: 1.25em;
+	border-left: 4px solid #222;
 	color: #777;
 	font-style: italic;
-	font-size: 19px;
-	font-size: 1.1875rem;
+	font-size: 18px;
+	font-size: 1.125rem;
 }
 
 blockquote cite,
@@ -64,13 +51,13 @@ hr {
 	margin-bottom: 1.5em;
 	height: 1px;
 	border: 0;
-	background-color: #eee;
+	background-color: #e5e5e5;
 }
 
 ul,
 ol {
-	margin: 0 0 1.5em 1.25em;
-	padding: 0;
+	margin: 0 0 1.5em;
+	padding: 0 0 0 1.25em;
 }
 
 ul {
@@ -84,7 +71,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.25em;
+	margin-left: 1.5em;
 }
 
 dt {
@@ -110,27 +97,23 @@ table {
 th,
 td {
 	padding: 0.3em 0.6em;
-	border: 1px solid #ddd;
-}
-
-th {
-	background: #eee;
+	border: 1px solid #e5e5e5;
 }
 
 a {
-	color: #22aadd;
+	color: #57b7d7;
 	text-decoration: none;
 }
 
 a:link,
 a:visited {
-	color: #22aadd;
+	color: #57b7d7;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #404040;
+	color: #242424;
 }
 
 a:focus {

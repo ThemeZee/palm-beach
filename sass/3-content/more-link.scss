@@ -1,16 +1,33 @@
 /* Read more Link */
 .more-link {
-	display: inline-block;
+	display: block;
 	margin: 0;
-	padding: 0;
+	padding: 0.5em 1em;
+	border: 1px solid #e5e5e5;
+	background: #f5f5f5;
+	color: #242424;
+	text-align: center;
 	text-decoration: none;
-	@include font-size(14);
-	@include font-family(--widget-title-font);
-	@include font-weight(--widget-title-font-weight);
-	@include text-transform(--widget-title-text-transform);
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-family: 'Montserrat', Verdana, Arial;
 	transition: all 0.2s ease;
 }
 
-.entry-content .more-link {
+.more-link:link,
+.more-link:visited  {
+	color: #242424;
+}
+
+.more-link:hover,
+.more-link:active {
+	border-color: #57b7d7;
+	background: #57b7d7;
+	color: #fff;
+}
+
+.entry-content > .more-link {
 	text-decoration: none;
 }

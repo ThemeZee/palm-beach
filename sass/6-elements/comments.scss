@@ -1,7 +1,11 @@
+.comments-area {
+	margin: 0 0 2.5em;
+}
+
 /* Comment Header */
 .comments-header,
 .comment-reply-title {
-	margin: 0 0 1.5em 0;
+	margin: 0 0 1em 0;
 }
 
 .comments-header .comments-title,
@@ -9,13 +13,12 @@
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	border-bottom: 4px solid #eee;
-	color: #404040;
-	@include font-size(18);
-	@include font-family(--widget-title-font);
-	@include font-weight(--widget-title-font-weight);
-	@include text-transform(--widget-title-text-transform);
-	@include line-height(--title-line-height);
+	color: #242424;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	font-size: 1rem;
+	font-family: 'Montserrat', Verdana, Arial;
 }
 
 /* Comment List */
@@ -27,8 +30,8 @@
 
 .comment {
 	margin: 0 0 1.5em;
-	padding: 1.5em;
-	border: 2px solid #eee;
+	padding: 0 0 1.5em;
+	border-bottom: 1px solid #e5e5e5;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -71,6 +74,13 @@
 	list-style: none;
 }
 
+.comment ol.children .comment {
+	margin: 1.5em 0 0;
+	padding: 1.5em 0 0;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: none;
+}
+
 .comment .comment-respond {
 	margin-top: 2em;
 }
@@ -78,11 +88,7 @@
 /* Comment Pagination */
 .comment-navigation {
 	margin: 0 0 1.5em;
-	padding: 0.5em 0;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	font-size: 14px;
-	font-size: 0.875rem;
+	padding: 0;
 }
 
 .comment-navigation .nav-previous {
@@ -101,6 +107,39 @@
 .comment-navigation .nav-next a:after {
 	margin-left: 4px;
 	content: "\00BB";
+}
+
+.comment-navigation a,
+.reply .comment-reply-link {
+	display: inline-block;
+	padding: 0.3em 0.6em;
+	border: 1px solid #e5e5e5;
+	background: #f5f5f5;
+	color: #242424;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-family: 'Montserrat', Verdana, Arial;
+	transition: all 0.2s ease;
+}
+
+.comment-navigation a:link,
+.comment-navigation a:visited,
+.reply .comment-reply-link:link,
+.reply .comment-reply-link:visited  {
+	color: #242424;
+}
+
+.comment-navigation a:hover,
+.comment-navigation a:active,
+.reply .comment-reply-link:hover,
+.reply .comment-reply-link:active {
+	border-color: #57b7d7;
+	background: #57b7d7;
+	color: #fff;
 }
 
 /* Comment Form */
@@ -124,8 +163,7 @@
 
 .comment-form input[type="checkbox"] + label {
 	display: inline;
-	padding-left: 0.5em;
-	font-weight: normal;
+	padding-left: 8px;
 }
 
 .comment-reply-title small a {

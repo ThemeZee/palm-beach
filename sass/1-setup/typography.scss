@@ -3,10 +3,11 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	@include font-size(16);
-	@include font-family(--text-font);
-	@include line-height(--text-line-height);
+	color: #222;
+	font-size: 16px;
+	font-size: 1rem;
+	font-family: 'Hind', Tahoma, Arial;
+	line-height: 1.6;
 }
 
 h1,
@@ -17,31 +18,37 @@ h5,
 h6 {
 	clear: both;
 	margin: 0.75em 0;
-	@include line-height(--title-line-height);
+	line-height: 1.4;
 }
 
 h1 {
-	@include font-size(36);
+	font-size: 36px;
+	font-size: 2.25rem;
 }
 
 h2 {
-	@include font-size(28);
+	font-size: 28px;
+	font-size: 1.75rem;
 }
 
 h3 {
-	@include font-size(24);
+	font-size: 24px;
+	font-size: 1.5rem;
 }
 
 h4 {
-	@include font-size(22);
+	font-size: 22px;
+	font-size: 1.375rem;
 }
 
 h5 {
-	@include font-size(20);
+	font-size: 20px;
+	font-size: 1.25rem;
 }
 
 h6 {
-	@include font-size(19);
+	font-size: 19px;
+	font-size: 1.1875rem;
 }
 
 p {
@@ -68,7 +75,8 @@ pre {
 	margin-bottom: 1.5em;
 	padding: 1.5em;
 	max-width: 100%;
-	background: #eee;
+	border: 1px solid #e5e5e5;
+	background: #f5f5f5;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	font-family: "Courier 10 Pitch", Courier, monospace;

@@ -1,91 +1,167 @@
-/* Entry Meta */
 .entry-meta {
-	margin: 0.5em 0.2em 0;
-	color: #aaa;
-	text-transform: uppercase;
-	font-size: 13px;
-	font-size: 0.8125rem;
+	margin: 0.5em 0 0.25rem;
+	color: #646464;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.entry-meta .meta-date,
+.entry-meta .meta-author,
+.entry-meta .meta-category,
+.entry-meta .meta-comments {
+	margin-right: 1.5em;
 }
 
 .entry-meta a:link,
 .entry-meta a:visited {
-	color: #aaa;
+	color: #646464;
 }
 
 .entry-meta a:hover,
 .entry-meta a:active {
-	color: #777;
+	color: #242424;
 }
 
-.entry-meta span::after {
+.entry-meta span:before {
 	display: inline-block;
-	margin-left: 0.2em;
-	color: #aaa;
-	content: '\f428';
+	margin-right: 0.2em;
+	color: #646464;
 	vertical-align: middle;
 	font: normal 16px 'Genericons';
 	-webkit-font-smoothing: antialiased;
 }
 
-.entry-meta span:last-child::after {
-	display: none;
+.entry-meta .meta-date:before{
+	content: '\f307';
+}
+
+.entry-meta .meta-author:before{
+	content: '\f304';
+}
+
+.entry-meta .meta-category:before{
+	content: '\f301';
+}
+
+.entry-meta .meta-comments:before{
+	content: '\f300';
+}
+
+/* Entry Meta in Header area */
+.page-header .entry-meta {
+	margin: 0.5em 0 0;
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+.page-header .entry-meta span:before {
+	font-size: 24px;
+}
+
+.header-title-wrap .page-header .entry-meta,
+.header-title-wrap .page-header .entry-meta span:before,
+.header-title-wrap .page-header .entry-meta a:link,
+.header-title-wrap .page-header .entry-meta a:visited {
+	color: #fff;
+	text-shadow: 0 0 5px #000;
+}
+
+.header-title-wrap .page-header .entry-meta a:hover,
+.header-title-wrap .page-header .entry-meta a:active {
+	color: #ccc;
 }
 
 /* Hide post meta if they are deactivated in settings */
 body.date-hidden .type-post .entry-meta .meta-date,
 body.author-hidden .type-post .entry-meta .meta-author,
-body.categories-hidden .type-post .entry-meta .meta-category,
-body.date-hidden .post-slider .entry-meta .meta-date,
-body.author-hidden .post-slider .entry-meta .meta-author,
-body.categories-hidden .post-slider .entry-meta .meta-category {
-	position: absolute;
-	clip: rect(1px, 1px, 1px, 1px);
+body.date-hidden .header-title-wrap .entry-meta .meta-date,
+body.author-hidden .header-title-wrap .entry-meta .meta-author,
+body.categories-hidden .header-title-wrap .entry-meta .meta-category,
+body.comments-hidden .header-title-wrap .entry-meta .meta-comments,
+body.date-hidden .header-title-background .entry-meta .meta-date,
+body.author-hidden .header-title-background .entry-meta .meta-author,
+body.categories-hidden .header-title-background .entry-meta .meta-category,
+body.comments-hidden .header-title-background .entry-meta .meta-comments {
+	 position: absolute;
+	 clip: rect(1px, 1px, 1px, 1px);
 }
 
-body.author-hidden.categories-hidden .type-post .entry-meta .meta-date::after,
-body.categories-hidden .type-post .entry-meta .meta-author::after,
-body.author-hidden .widget-magazine-posts .type-post .entry-meta .meta-date::after,
-body.author-hidden.categories-hidden .post-slider .entry-meta .meta-date::after,
-body.categories-hidden .post-slider .entry-meta .meta-author::after,
-body.author-hidden .widget-magazine-posts .post-slider .entry-meta .meta-date::after {
+body.date-hidden.author-hidden .type-post .entry-meta {
 	display: none;
 }
 
-body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry-meta,
-body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
+body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-wrap .entry-meta,
+body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-background .entry-meta {
 	display: none;
 }
 
-/* Entry Tags */
+/* Entry Tags & Tagcloud Widget */
 .entry-tags {
-	clear: both;
 	margin: 0 0 2em;
 }
 
+.entry-tags .tags-title {
+	display: inline-block;
+	float: left;
+	margin: 0 3px 0 0;
+	padding: 0.2em 0.6em;
+	border: 1px solid #57b7d7;
+	background: #57b7d7;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-family: 'Montserrat', Verdana, Arial;
+}
+
+.widget_tag_cloud .tagcloud,
 .entry-tags .meta-tags {
-	display: block;
-	margin: 0;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
 
+.widget_tag_cloud .tagcloud:before,
+.widget_tag_cloud .tagcloud:after,
+.entry-tags .meta-tags:before,
+.entry-tags .meta-tags:after {
+	display: table;
+	content: "";
+}
+
+.widget_tag_cloud .tagcloud:after,
+.entry-tags .meta-tags:after {
+	clear: both;
+}
+
+.widget_tag_cloud .tagcloud a,
 .entry-tags .meta-tags a {
 	display: inline-block;
 	float: left;
-	margin: 0 2px 2px 0;
-	padding: 0.2em 0.5em 0.3em;
-	background: #eee;
+	margin: 0 3px 3px 0;
+	padding: 0.2em 0.6em;
+	border: 1px solid #e5e5e5;
+	background: #f5f5f5;
 	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px !important;
+	font-size: 0.875rem !important;
 }
 
+.widget_tag_cloud .tagcloud a:link,
+.widget_tag_cloud .tagcloud a:visited,
 .entry-tags .meta-tags a:link,
 .entry-tags .meta-tags a:visited {
-	color: #777;
+	color: #242424;
 	transition: all 0.2s ease;
 }
 
+.widget_tag_cloud .tagcloud a:hover,
+.widget_tag_cloud .tagcloud a:active,
 .entry-tags .meta-tags a:hover,
 .entry-tags .meta-tags a:active {
-	background: #22aadd;
+	border-color: #57b7d7;
+	background: #57b7d7;
 	color: #fff;
 }

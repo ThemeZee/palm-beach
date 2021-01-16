@@ -1,22 +1,48 @@
-/* Archives and Search Heading */
-.page-header {
-	margin: 0 0 1.5em 0;
+/* Archive Description */
+.page-header .blog-description,
+.page-header .archive-description {
+	font-size: 20px;
+	font-size: 1.25rem;
 }
 
-.page-header .archive-title {
-	display: inline-block;
-	margin: 0;
+.page-header .blog-description,
+.page-header .archive-description p {
+	margin: 0.5em 0 0;
+}
+
+/* Archive Posts Columns */
+.post-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -2.5em;
+}
+
+.post-wrapper .post-column {
+	box-sizing: border-box;
+	padding-right: 2.5em;
+}
+
+/* Two Column Layout */
+.post-layout-two-columns .post-wrapper .post-column {
+	width: 50%;
+}
+
+/* Three Column Layout */
+.post-layout-three-columns .post-wrapper .post-column {
+	width: 33.3333333333333%;
+}
+
+.post-layout-three-columns .content-archive {
+	float: none;
 	padding: 0;
-	border-bottom: 4px solid #eee;
-	color: #404040;
-	@include font-size(18);
-	@include font-family(--widget-title-font);
-	@include font-weight(--widget-title-font-weight);
-	@include text-transform(--widget-title-text-transform);
-	@include line-height(--title-line-height);
+	width: 100%;
 }
 
-.blog-description,
-.archive-description p {
-	margin-bottom: 0;
+/* Archive Posts Styling */
+.post-wrapper .post-column article .entry-content {
+	font-size: 17px;
+	font-size: 1.0625rem;
 }

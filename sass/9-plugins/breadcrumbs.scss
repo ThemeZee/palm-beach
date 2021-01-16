@@ -1,11 +1,13 @@
 /* Breadcrumbs */
 .breadcrumbs {
 	margin: 0;
-	padding: 0.5em 0;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .breadcrumbs-container {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	background: #fff;
 	color: #222;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -35,33 +37,13 @@
 	content: "\00bb"; /* Raquo */
 }
 
-.trail-separator-slash .trail-items li::after {
-	content: "\002F";
-}
-
-.trail-separator-dash .trail-items li::after {
-	content: "\2013";
-}
-
-.trail-separator-bull .trail-items li::after {
-	content: "\2022";
-}
-
-.trail-separator-arrow-bracket .trail-items li::after {
-	content: "\003e";
-}
-
-.trail-separator-raquo .trail-items li::after {
-	content: "\00bb";
-}
-
-.trail-separator-single-arrow .trail-items li::after {
-	content: "\2192";
-}
-
-.trail-separator-double-arrow .trail-items li::after {
-	content: "\21D2";
-}
+.trail-separator-slash .trail-items li::after { content: "\002F"; }
+.trail-separator-dash .trail-items li::after { content: "\2013"; }
+.trail-separator-bull .trail-items li::after { content: "\2022"; }
+.trail-separator-arrow-bracket .trail-items li::after { content: "\003e"; }
+.trail-separator-raquo .trail-items li::after { content: "\00bb"; }
+.trail-separator-single-arrow .trail-items li::after { content: "\2192"; }
+.trail-separator-double-arrow .trail-items li::after { content: "\21D2"; }
 
 .breadcrumbs .trail-items li:last-of-type::after {
 	display: none;

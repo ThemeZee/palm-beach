@@ -5,6 +5,9 @@ Author: ThemeZee
 Author URI: https://themezee.com
 Description: Palm Beach is a professional WordPress theme perfectly suited for a travel magazine. It features a stunning fullscreen slider, beautiful typography and a three-column grid-layout for posts. Head off on vacation now!
 Version: 1.6.7
+Requires at least: 5.2
+Tested up to: 5.6
+Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: palm-beach
@@ -22,36 +25,47 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-1.0 - Normalize
-2.0 - Typography
-3.0 - Elements
-4.0 - Forms
-5.0 - Accessibility
-6.0 - Alignments
-7.0 - Clearings
-8.0 - Layout Structure
-9.0 - Header
-10.0 - Navigation
-11.0 - Widgets
-12.0 - Posts and pages
-13.0 - Comments
-14.0 - Gutenberg Blocks
-15.0 - Footer
-16.0 - Media
-17.0 - Media Queries
-18.0 - Theme Option Styles
-19.0 - Media Query Fixes
-20.0 - CSS Hacks for Safari
-21.0 - Customizer Preview
+# - CSS Variables
+# - Normalize
+# - Typography
+# - Elements
+# - Forms
+# - Accessibility
+# - Alignments
+# - Clearings
+# - Site Layout
+# - Header
+# - Navigation
+# - Social Icons Menu
+# - Posts and pages
+# - Archives and Blog Layouts
+# - Blocks
+# - Featured Posts
+# - Widgets
+# - Magazine Widgets
+# - Comments
+# - Media
+# - Footer
+# - Plugins
+# - Media Queries for Typography
+# - Media Queries for Layout
+# - Media Queries for Navigation
+# - Media Queries for Featured Posts
+# - Media Queries for Media
+# - Theme Options
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# 1.0 - Normalize
+# - CSS Variables
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# - Normalize
 --------------------------------------------------------------*/
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:     100%;
+	-ms-text-size-adjust: 100%;
 }
 
 body {
@@ -256,7 +270,7 @@ th {
 }
 
 /*--------------------------------------------------------------
-# 2.0 - Typography
+# - Typography
 --------------------------------------------------------------*/
 body,
 button,
@@ -368,7 +382,7 @@ big {
 }
 
 /*--------------------------------------------------------------
-# 3.0 - Elements
+# - Elements
 --------------------------------------------------------------*/
 html {
 	box-sizing: border-box;
@@ -376,7 +390,8 @@ html {
 
 *,
 *:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
 
@@ -498,7 +513,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-# 4.0 - Forms
+# - Forms
 --------------------------------------------------------------*/
 button,
 input[type="button"],
@@ -562,8 +577,9 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 5.0 - Accessibility
+# - Accessibility
 --------------------------------------------------------------*/
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	position: absolute !important;
@@ -596,7 +612,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 6.0 - Alignments
+# - Alignments
 --------------------------------------------------------------*/
 .alignleft {
 	float: left;
@@ -617,7 +633,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 7.0 - Clearings
+# - Clearings
 --------------------------------------------------------------*/
 .clearfix:before,
 .clearfix:after,
@@ -636,7 +652,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 8.0 - Layout Structure
+# - Site Layout
 --------------------------------------------------------------*/
 .site {
 	margin: 0;
@@ -687,7 +703,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 9.0 - Header
+# - Header
 --------------------------------------------------------------*/
 .site-header {
 	border-bottom: 1px solid #e5e5e5;
@@ -753,7 +769,7 @@ textarea {
 	vertical-align: top;
 }
 
-/*  Header Title */
+/*	Header Title */
 .header-title-image {
 	margin: -1px 0 0;
 	height: 720px;
@@ -767,15 +783,15 @@ textarea {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	        align-items: center;
-	        justify-content: center;
+	align-items: center;
+	justify-content: center;
 	height: 720px;
 	width: 100%;
-	background: rgba(0,0,0,0.3);
+	background: rgba(0, 0, 0, 0.3);
 	-webkit-box-align: center;
-	    -ms-flex-align: center;
+	-ms-flex-align: center;
 	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
+	-ms-flex-pack: center;
 }
 
 .header-title-image-container .header-title-wrap {
@@ -830,11 +846,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 10.0 - Navigation
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-## 10.1 - Main Navigation
+# - Navigation
 --------------------------------------------------------------*/
 .primary-navigation {
 	float: right;
@@ -877,7 +889,6 @@ textarea {
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
 }
 
 .main-navigation-menu a:link,
@@ -973,7 +984,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-## 10.2 - Social Icons Menu
+# - Social Icons Menu
 --------------------------------------------------------------*/
 .social-icons-menu {
 	margin: 0;
@@ -1013,301 +1024,123 @@ textarea {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.social-icons-menu li a:before { content: '\f408'; } /* Default Icon */
-.social-icons-menu li a[href*="codepen.io"]:before  { content: '\f216'; }
-.social-icons-menu li a[href*="digg.com"]:before { content: '\f221'; }
-.social-icons-menu li a[href*="dribbble.com"]:before { content: '\f201'; }
-.social-icons-menu li a[href*="facebook.com"]:before { content: '\f204'; }
-.social-icons-menu li a[href*="flickr.com"]:before { content: '\f211'; }
-.social-icons-menu li a[href*="plus.google.com"]:before { content: '\f218'; }
-.social-icons-menu li a[href*="github.com"]:before { content: '\f200'; }
-.social-icons-menu li a[href*="instagram.com"]:before { content: '\f215'; }
-.social-icons-menu li a[href*="linkedin.com"]:before { content: '\f207'; }
-.social-icons-menu li a[href*="pinterest.com"]:before { content: '\f209'; }
-.social-icons-menu li a[href*="polldaddy.com"]:before { content: '\f217'; }
-.social-icons-menu li a[href*="getpocket.com"]:before { content: '\f224'; }
-.social-icons-menu li a[href*="reddit.com"]:before { content: '\f222'; }
-.social-icons-menu li a[href*="spotify.com"]:before { content: '\f515'; }
+.social-icons-menu li a:before {
+	content: '\f408';
+}
+
+/* Default Icon */
+.social-icons-menu li a[href*="codepen.io"]:before {
+	content: '\f216';
+}
+
+.social-icons-menu li a[href*="digg.com"]:before {
+	content: '\f221';
+}
+
+.social-icons-menu li a[href*="dribbble.com"]:before {
+	content: '\f201';
+}
+
+.social-icons-menu li a[href*="facebook.com"]:before {
+	content: '\f204';
+}
+
+.social-icons-menu li a[href*="flickr.com"]:before {
+	content: '\f211';
+}
+
+.social-icons-menu li a[href*="plus.google.com"]:before {
+	content: '\f218';
+}
+
+.social-icons-menu li a[href*="github.com"]:before {
+	content: '\f200';
+}
+
+.social-icons-menu li a[href*="instagram.com"]:before {
+	content: '\f215';
+}
+
+.social-icons-menu li a[href*="linkedin.com"]:before {
+	content: '\f207';
+}
+
+.social-icons-menu li a[href*="pinterest.com"]:before {
+	content: '\f209';
+}
+
+.social-icons-menu li a[href*="polldaddy.com"]:before {
+	content: '\f217';
+}
+
+.social-icons-menu li a[href*="getpocket.com"]:before {
+	content: '\f224';
+}
+
+.social-icons-menu li a[href*="reddit.com"]:before {
+	content: '\f222';
+}
+
+.social-icons-menu li a[href*="spotify.com"]:before {
+	content: '\f515';
+}
+
 .social-icons-menu li a[href*="skype.com"]:before,
-.social-icons-menu li a[href*="skype:"]:before { content: '\f220'; }
-.social-icons-menu li a[href*="stumbleupon.com"]:before { content: '\f223'; }
-.social-icons-menu li a[href*="tumblr.com"]:before { content: '\f214'; }
-.social-icons-menu li a[href*="twitch.tv"]:before { content: '\f516'; }
-.social-icons-menu li a[href*="twitter.com"]:before { content: '\f202'; }
-.social-icons-menu li a[href*="vimeo.com"]:before  { content: '\f212'; }
-.social-icons-menu li a[href*="wordpress.org"]:before { content: '\f205'; }
-.social-icons-menu li a[href*="wordpress.com"]:before { content: '\f205'; }
-.social-icons-menu li a[href*="youtube.com"]:before { content: '\f213'; }
+.social-icons-menu li a[href*="skype:"]:before {
+	content: '\f220';
+}
+
+.social-icons-menu li a[href*="stumbleupon.com"]:before {
+	content: '\f223';
+}
+
+.social-icons-menu li a[href*="tumblr.com"]:before {
+	content: '\f214';
+}
+
+.social-icons-menu li a[href*="twitch.tv"]:before {
+	content: '\f516';
+}
+
+.social-icons-menu li a[href*="twitter.com"]:before {
+	content: '\f202';
+}
+
+.social-icons-menu li a[href*="vimeo.com"]:before {
+	content: '\f212';
+}
+
+.social-icons-menu li a[href*="wordpress.org"]:before {
+	content: '\f205';
+}
+
+.social-icons-menu li a[href*="wordpress.com"]:before {
+	content: '\f205';
+}
+
+.social-icons-menu li a[href*="youtube.com"]:before {
+	content: '\f213';
+}
+
 .social-icons-menu li a[href*="newsletter"]:before,
-.social-icons-menu li a[href*="mailto"]:before { content: '\f410'; }
+.social-icons-menu li a[href*="mailto"]:before {
+	content: '\f410';
+}
+
 .social-icons-menu li a[href*="/feed"]:before,
 .social-icons-menu li a[href*="/feed/"]:before,
 .social-icons-menu li a[href*="?feed=rss2"]:before,
 .social-icons-menu li a[href*="feedburner.google.com"]:before,
-.social-icons-menu li a[href*="feedburner.com"]:before { content: '\f413'; }
-
-/*--------------------------------------------------------------
-# 11.0 - Widgets
---------------------------------------------------------------*/
-.widget {
-	margin: 0 0 2.5em 0;
-	color: #333;
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
-}
-
-.widget-header {
-	margin: 0 0 1em 0;
-}
-
-.widget-title {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	color: #242424;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 16px;
-	font-size: 1rem;
-	font-family: 'Montserrat', Verdana, Arial;
-}
-
-.widget ul {
-	margin: 0;
-	padding: 0 0.3em;
-	list-style: circle inside;
-}
-
-.widget ul .children,
-.widget ul .sub-menu {
-	margin: 0.5em 0 0.5em 1em;
-	padding: 0;
-}
-
-.widget-title a:link,
-.widget-title a:visited  {
-	color: #242424;
-	transition: all 0.2s ease;
-}
-
-.widget-title a:hover,
-.widget-title a:active  {
-	color: #57b7d7;
-}
-
-/* Make sure select elements fit in widgets. */
-.widget select {
-	max-width: 100%;
+.social-icons-menu li a[href*="feedburner.com"]:before {
+	content: '\f413';
 }
 
 /*--------------------------------------------------------------
-## 11.1 - Default Widgets
---------------------------------------------------------------*/
-
-/* Theme Search Widget */
-.search-form {
-	position: relative;
-	display: block;
-	overflow: hidden;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
-
-.search-form .screen-reader-text {
-	display: none;
-}
-
-.search-form .search-field {
-	display: inline-block;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0.7em 1.5em 0.7em 1em;
-	width: 100%;
-	-webkit-appearance: none;
-}
-
-.search-form .search-submit {
-	position: absolute;
-	top: 0;
-	right: 0;
-	padding: 0.7em 0.9em 0 0.3em;
-	cursor: pointer;
-}
-
-.search-form .search-submit .genericon-search {
-	display: inline-block;
-	padding: 0.2em 0 0.4em 0.45em;
-	color: #242424;
-	content: '\f400';
-	vertical-align: middle;
-	text-decoration: inherit;
-	font-weight: normal;
-	font-style: normal;
-	font-size: 24px;
-	font-family: 'Genericons';
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.search-form .search-submit:hover .genericon-search {
-	color: #fff;
-}
-
-/*--------------------------------------------------------------
-## 11.2 - Magazine Posts Widgets
---------------------------------------------------------------*/
-.widget-magazine-posts {
-	margin-bottom: -2.5em;
-}
-
-.home .latest-posts-title,
-.widget-magazine-posts .widget-title {
-	display: block;
-	margin: 0 0 1.5em;
-	padding: 0.75em 0;
-	border-top: 1px solid #e5e5e5;
-	border-bottom: 1px solid #e5e5e5;
-	color: #242424;
-	text-align: center;
-	font-size: 18px;
-	font-size: 1.125rem;
-}
-
-/* Large Post Styling */
-.widget-magazine-posts .large-post .entry-title {
-	font-size: 24px;
-	font-size: 1.5rem;
-}
-
-.widget-magazine-posts .large-post .entry-content {
-	font-size: 18px;
-	font-size: 1.125rem;
-}
-
-/* Medium Post Styling */
-.widget-magazine-posts .medium-post .entry-title {
-	font-size: 20px;
-	font-size: 1.25rem;
-}
-
-.widget-magazine-posts .medium-post .entry-content {
-	font-size: 17px;
-	font-size: 1.0625rem;
-}
-
-/* Small Post Styling */
-.widget-magazine-posts .small-post {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-}
-
-.widget-magazine-posts .small-post .post-image {
-	width: 35%;
-}
-
-.widget-magazine-posts .small-post .small-post-content {
-	width: 65%;
-	padding-left: 2em;
-}
-
-.widget-magazine-posts .small-post .wp-post-image {
-	margin: 0 0 0.25em;
-	vertical-align: top;
-}
-
-.widget-magazine-posts .small-post .entry-title {
-	font-size: 18px;
-	font-size: 1.125rem;
-}
-
-.widget-magazine-posts .medium-post .entry-meta,
-.widget-magazine-posts .small-post .entry-meta {
-	font-size: 13px;
-	font-size: 0.8125rem;
-}
-
-/* Magazine Posts Grid Widget */
-.widget-magazine-posts .magazine-grid {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	margin-right: -2.5em;
-}
-
-.widget-magazine-posts .magazine-grid .post-column {
-	box-sizing: border-box;
-	padding-right: 2.5em;
-}
-
-.widget-magazine-posts .magazine-grid-two-columns .post-column {
-	width: 50%;
-}
-
-.widget-magazine-posts .magazine-grid-three-columns .post-column {
-	width: 33.3333333333333%;
-}
-
-/*--------------------------------------------------------------
-## 11.3 - Magazine Blocks
---------------------------------------------------------------*/
-:root {
-	--tz-column-gap: 2em;
-}
-
-.tz-magazine-block .tz-entry-title {
-    font-size: 24px;
-    font-size: 1.5rem;
-}
-
-.tz-magazine-block .tz-magazine-grid-columns-3 .tz-entry-title {
-    font-size: 20px;
-    font-size: 1.25rem;
-}
-
-.tz-magazine-block .tz-magazine-grid-columns-4 .tz-entry-title,
-.tz-magazine-block .tz-magazine-thumbnail-list .tz-entry-title {
-	font-size: 18px;
-	font-size: 1.125rem;
-}
-
-.tz-magazine-block .tz-entry-meta {
-	margin: 0.2em 0;
-    font-size: 14px;
-    font-size: 0.875rem;
-}
-
-.tz-magazine-block .tz-meta-field {
-	margin-right: 0;
-}
-
-.tz-magazine-block .tz-meta-field a {
-	text-decoration: none;
-}
-
-.tz-magazine-block .tz-entry-content {
-    font-size: 18px;
-    font-size: 1.125rem;
-}
-
-.tz-magazine-block .tz-more-link {
-	text-decoration: none;
-}
-
-/*--------------------------------------------------------------
-# 12.0 - Content Area
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-## 12.1 - Posts and Pages
+# - Posts and pages
 --------------------------------------------------------------*/
 .type-post,
 .type-page,
-.type-attachment  {
+.type-attachment {
 	margin: 0 0 2.5em 0;
 	max-width: 100%;
 }
@@ -1351,40 +1184,6 @@ textarea {
 	margin: 0 0 0.5em;
 }
 
-/* Read more Link */
-.more-link {
-	display: block;
-	margin: 0;
-	padding: 0.5em 1em;
-	border: 1px solid #e5e5e5;
-	background: #f5f5f5;
-	color: #242424;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-family: 'Montserrat', Verdana, Arial;
-	transition: all 0.2s ease;
-}
-
-.more-link:link,
-.more-link:visited  {
-	color: #242424;
-}
-
-.more-link:hover,
-.more-link:active {
-	border-color: #57b7d7;
-	background: #57b7d7;
-	color: #fff;
-}
-
-.entry-content > .more-link {
-	text-decoration: none;
-}
-
 /* Page Links */
 .page-links {
 	margin: 0;
@@ -1392,9 +1191,6 @@ textarea {
 	font-weight: bold;
 }
 
-/*--------------------------------------------------------------
-## 12.2 - Entry Meta
---------------------------------------------------------------*/
 .entry-meta {
 	margin: 0.5em 0 0.25rem;
 	color: #646464;
@@ -1428,19 +1224,19 @@ textarea {
 	-webkit-font-smoothing: antialiased;
 }
 
-.entry-meta .meta-date:before{
+.entry-meta .meta-date:before {
 	content: '\f307';
 }
 
-.entry-meta .meta-author:before{
+.entry-meta .meta-author:before {
 	content: '\f304';
 }
 
-.entry-meta .meta-category:before{
+.entry-meta .meta-category:before {
 	content: '\f301';
 }
 
-.entry-meta .meta-comments:before{
+.entry-meta .meta-comments:before {
 	content: '\f300';
 }
 
@@ -1479,8 +1275,8 @@ body.date-hidden .header-title-background .entry-meta .meta-date,
 body.author-hidden .header-title-background .entry-meta .meta-author,
 body.categories-hidden .header-title-background .entry-meta .meta-category,
 body.comments-hidden .header-title-background .entry-meta .meta-comments {
-	 position: absolute;
-	 clip: rect(1px, 1px, 1px, 1px);
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
 }
 
 body.date-hidden.author-hidden .type-post .entry-meta {
@@ -1563,6 +1359,40 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 	color: #fff;
 }
 
+/* Read more Link */
+.more-link {
+	display: block;
+	margin: 0;
+	padding: 0.5em 1em;
+	border: 1px solid #e5e5e5;
+	background: #f5f5f5;
+	color: #242424;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-family: 'Montserrat', Verdana, Arial;
+	transition: all 0.2s ease;
+}
+
+.more-link:link,
+.more-link:visited {
+	color: #242424;
+}
+
+.more-link:hover,
+.more-link:active {
+	border-color: #57b7d7;
+	background: #57b7d7;
+	color: #fff;
+}
+
+.entry-content > .more-link {
+	text-decoration: none;
+}
+
 /* Post Navigation */
 .post-navigation {
 	padding: 1em 0;
@@ -1602,7 +1432,7 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 }
 
 .post-navigation .nav-links a:link,
-.post-navigation .nav-links a:visited  {
+.post-navigation .nav-links a:visited {
 	color: #242424;
 }
 
@@ -1614,7 +1444,7 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 }
 
 /*--------------------------------------------------------------
-## 12.2 - Post Archives
+# - Archives and Blog Layouts
 --------------------------------------------------------------*/
 
 /* Archive Description */
@@ -1735,59 +1565,8 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 	background-color: #57b7d7;
 }
 
-/* Breadcrumbs */
-.breadcrumbs {
-	margin: 0;
-	border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-.breadcrumbs-container {
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-	background: #fff;
-	color: #222;
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-.breadcrumbs .trail-browse,
-.breadcrumbs .trail-items,
-.breadcrumbs .trail-items li {
-	display: inline;
-	margin: 0;
-	padding: 0;
-}
-
-.breadcrumbs .trail-browse {
-	margin-right: 0.5em;
-	font-weight: normal;
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-.breadcrumbs .trail-items {
-	list-style: none;
-}
-
-.breadcrumbs .trail-items li::after {
-	padding: 0 0.5em;
-	content: "\00bb"; /* Raquo */
-}
-
-.trail-separator-slash .trail-items li::after { content: "\002F"; }
-.trail-separator-dash .trail-items li::after { content: "\2013"; }
-.trail-separator-bull .trail-items li::after { content: "\2022"; }
-.trail-separator-arrow-bracket .trail-items li::after { content: "\003e"; }
-.trail-separator-raquo .trail-items li::after { content: "\00bb"; }
-.trail-separator-single-arrow .trail-items li::after { content: "\2192"; }
-.trail-separator-double-arrow .trail-items li::after { content: "\21D2"; }
-
-.breadcrumbs .trail-items li:last-of-type::after {
-	display: none;
-}
-
 /*--------------------------------------------------------------
-# 13.0 - Gutenberg Blocks
+# - Blocks
 --------------------------------------------------------------*/
 
 /* Audio */
@@ -1828,8 +1607,8 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 .wp-block-pullquote {
 	margin-bottom: 1.5em;
 	padding: 1.5em 0;
-    border-bottom: 4px solid #222;
-    border-top: 4px solid #222;
+	border-bottom: 4px solid #222;
+	border-top: 4px solid #222;
 }
 
 .wp-block-pullquote blockquote {
@@ -1856,11 +1635,11 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 
 /* Image */
 .wp-block-image .alignleft {
-    margin-right: 1.5em;
+	margin-right: 1.5em;
 }
 
 .wp-block-image .alignright {
-    margin-left: 1.5em;
+	margin-left: 1.5em;
 }
 
 /* Captions */
@@ -1870,8 +1649,8 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 	margin-top: 0.3em;
 	margin-bottom: 1em;
 	color: #555;
-    font-size: 14px;
-    text-align: center;
+	font-size: 14px;
+	text-align: center;
 }
 
 /* Latest Posts */
@@ -1928,9 +1707,210 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 }
 
 /*--------------------------------------------------------------
-# 14.0 - Comments
+# - Widgets
 --------------------------------------------------------------*/
+.widget {
+	margin: 0 0 2.5em 0;
+	color: #333;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
 
+.widget-header {
+	margin: 0 0 1em 0;
+}
+
+.widget-title {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	color: #242424;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	font-size: 1rem;
+	font-family: 'Montserrat', Verdana, Arial;
+}
+
+.widget ul {
+	margin: 0;
+	padding: 0 0.3em;
+	list-style: circle inside;
+}
+
+.widget ul .children,
+.widget ul .sub-menu {
+	margin: 0.5em 0 0.5em 1em;
+	padding: 0;
+}
+
+.widget-title a:link,
+.widget-title a:visited {
+	color: #242424;
+	transition: all 0.2s ease;
+}
+
+.widget-title a:hover,
+.widget-title a:active {
+	color: #57b7d7;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/* Theme Search Widget */
+.search-form {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.search-form .screen-reader-text {
+	display: none;
+}
+
+.search-form .search-field {
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0.7em 1.5em 0.7em 1em;
+	width: 100%;
+	-webkit-appearance: none;
+}
+
+.search-form .search-submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0.7em 0.9em 0 0.3em;
+	cursor: pointer;
+}
+
+.search-form .search-submit .genericon-search {
+	display: inline-block;
+	padding: 0.2em 0 0.4em 0.45em;
+	color: #242424;
+	content: '\f400';
+	vertical-align: middle;
+	text-decoration: inherit;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	font-family: 'Genericons';
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.search-form .search-submit:hover .genericon-search {
+	color: #fff;
+}
+
+/*--------------------------------------------------------------
+# - Magazine Widgets
+--------------------------------------------------------------*/
+.widget-magazine-posts {
+	margin-bottom: -2.5em;
+}
+
+.home .latest-posts-title,
+.widget-magazine-posts .widget-title {
+	display: block;
+	margin: 0 0 1.5em;
+	padding: 0.75em 0;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	color: #242424;
+	text-align: center;
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+/* Large Post Styling */
+.widget-magazine-posts .large-post .entry-title {
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+
+.widget-magazine-posts .large-post .entry-content {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+/* Medium Post Styling */
+.widget-magazine-posts .medium-post .entry-title {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+.widget-magazine-posts .medium-post .entry-content {
+	font-size: 17px;
+	font-size: 1.0625rem;
+}
+
+/* Small Post Styling */
+.widget-magazine-posts .small-post {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.widget-magazine-posts .small-post .post-image {
+	width: 35%;
+}
+
+.widget-magazine-posts .small-post .small-post-content {
+	width: 65%;
+	padding-left: 2em;
+}
+
+.widget-magazine-posts .small-post .wp-post-image {
+	margin: 0 0 0.25em;
+	vertical-align: top;
+}
+
+.widget-magazine-posts .small-post .entry-title {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+.widget-magazine-posts .medium-post .entry-meta,
+.widget-magazine-posts .small-post .entry-meta {
+	font-size: 13px;
+	font-size: 0.8125rem;
+}
+
+/* Magazine Posts Grid Widget */
+.widget-magazine-posts .magazine-grid {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -2.5em;
+}
+
+.widget-magazine-posts .magazine-grid .post-column {
+	box-sizing: border-box;
+	padding-right: 2.5em;
+}
+
+.widget-magazine-posts .magazine-grid-two-columns .post-column {
+	width: 50%;
+}
+
+.widget-magazine-posts .magazine-grid-three-columns .post-column {
+	width: 33.3333333333333%;
+}
+
+/*--------------------------------------------------------------
+# - Comments
+--------------------------------------------------------------*/
 .comments-area {
 	margin: 0 0 2.5em;
 }
@@ -2062,7 +2042,7 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 .comment-navigation a:link,
 .comment-navigation a:visited,
 .reply .comment-reply-link:link,
-.reply .comment-reply-link:visited  {
+.reply .comment-reply-link:visited {
 	color: #242424;
 }
 
@@ -2108,24 +2088,7 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 }
 
 /*--------------------------------------------------------------
-# 15.0 - Footer
---------------------------------------------------------------*/
-.footer-wrap {
-	background: #fff;
-	border-top: 1px solid #e5e5e5;
-}
-
-.site-footer {
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-.site-footer .site-info {
-	padding: 2em 0;
-}
-
-/*--------------------------------------------------------------
-# 16.0 - Media
+# - Media
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
@@ -2143,9 +2106,7 @@ object {
 	max-width: 100%;
 }
 
-/*--------------------------------------------------------------
-## 16.1 - Captions
---------------------------------------------------------------*/
+/* Captions */
 .wp-caption {
 	margin-bottom: 1em;
 	max-width: 100%;
@@ -2167,9 +2128,7 @@ object {
 	margin: 0.5em 0;
 }
 
-/*--------------------------------------------------------------
-## 16.2 - Galleries
---------------------------------------------------------------*/
+/* Galleries */
 .gallery {
 	margin-bottom: 1.5em;
 }
@@ -2224,18 +2183,144 @@ object {
 }
 
 /*--------------------------------------------------------------
-# 17.0 - Media Queries
+# - Footer
 --------------------------------------------------------------*/
+.footer-wrap {
+	background: #fff;
+	border-top: 1px solid #e5e5e5;
+}
+
+.site-footer {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.site-footer .site-info {
+	padding: 2em 0;
+}
 
 /*--------------------------------------------------------------
-## 17.1 - Desktop X-Large ( < 1200px )
+# - Plugins
+--------------------------------------------------------------*/
+
+/* Breadcrumbs */
+.breadcrumbs {
+	margin: 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.breadcrumbs-container {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	background: #fff;
+	color: #222;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.breadcrumbs .trail-browse,
+.breadcrumbs .trail-items,
+.breadcrumbs .trail-items li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+.breadcrumbs .trail-browse {
+	margin-right: 0.5em;
+	font-weight: normal;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.breadcrumbs .trail-items {
+	list-style: none;
+}
+
+.breadcrumbs .trail-items li::after {
+	padding: 0 0.5em;
+	content: "\00bb"; /* Raquo */
+}
+
+.trail-separator-slash .trail-items li::after {
+	content: "\002F";
+}
+
+.trail-separator-dash .trail-items li::after {
+	content: "\2013";
+}
+
+.trail-separator-bull .trail-items li::after {
+	content: "\2022";
+}
+
+.trail-separator-arrow-bracket .trail-items li::after {
+	content: "\003e";
+}
+
+.trail-separator-raquo .trail-items li::after {
+	content: "\00bb";
+}
+
+.trail-separator-single-arrow .trail-items li::after {
+	content: "\2192";
+}
+
+.trail-separator-double-arrow .trail-items li::after {
+	content: "\21D2";
+}
+
+.breadcrumbs .trail-items li:last-of-type::after {
+	display: none;
+}
+
+:root {
+	--tz-column-gap: 2em;
+}
+
+.tz-magazine-block .tz-entry-title {
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+
+.tz-magazine-block .tz-magazine-grid-columns-3 .tz-entry-title {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+.tz-magazine-block .tz-magazine-grid-columns-4 .tz-entry-title,
+.tz-magazine-block .tz-magazine-thumbnail-list .tz-entry-title {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+.tz-magazine-block .tz-entry-meta {
+	margin: 0.2em 0;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.tz-magazine-block .tz-meta-field {
+	margin-right: 0;
+}
+
+.tz-magazine-block .tz-meta-field a {
+	text-decoration: none;
+}
+
+.tz-magazine-block .tz-entry-content {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+.tz-magazine-block .tz-more-link {
+	text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# - Media Queries for Typography
 --------------------------------------------------------------*/
 @media only screen and (max-width: 80em) {
-	.header-title-image,
-	.header-title-image-container {
-		height: 600px;
-	}
-
 	.header-title {
 		font-size: 54px;
 		font-size: 3.375rem;
@@ -2249,12 +2334,97 @@ object {
 	.page-header .entry-meta span:before {
 		font-size: 22px;
 	}
+}
 
+@media only screen and (max-width: 70em) {
+	.header-title {
+		font-size: 44px;
+		font-size: 2.75rem;
+	}
+
+	.page-header .entry-meta {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	.page-header .entry-meta span:before {
+		font-size: 20px;
+	}
+
+	.entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+}
+
+@media only screen and (max-width: 55em) {
+	.header-title {
+		font-size: 36px;
+		font-size: 2.25rem;
+	}
+
+	.page-header .entry-meta {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+
+	.page-header .entry-meta span:before {
+		font-size: 18px;
+	}
+}
+
+@media only screen and (max-width: 40em) {
+	.header-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+
+	.page-header .entry-meta {
+		font-size: 14px;
+		font-size: 0.875rem;
+	}
+
+	.page-header .entry-meta span:before {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 30em) {
+	.header-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (max-width: 20em) {
+	.site-branding .site-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+
+	.header-title {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+
+	.post-layout-two-columns .entry-title,
+	.post-layout-three-columns .entry-title,
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
 }
 
 /*--------------------------------------------------------------
-## 17.2 - Desktop Large ( < 1120px )
+# - Media Queries for Layout
 --------------------------------------------------------------*/
+@media only screen and (max-width: 80em) {
+	.header-title-image,
+	.header-title-image-container {
+		height: 600px;
+	}
+}
+
 @media only screen and (max-width: 70em) {
 	.container {
 		padding-right: 2em;
@@ -2287,25 +2457,6 @@ object {
 		height: 480px;
 	}
 
-	.header-title {
-		font-size: 44px;
-		font-size: 2.75rem;
-	}
-
-	.page-header .entry-meta {
-		font-size: 16px;
-		font-size: 1rem;
-	}
-
-	.page-header .entry-meta span:before {
-		font-size: 20px;
-	}
-
-	.entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
-	}
-
 	/* Post Columns */
 	.post-wrapper,
 	.widget-magazine-posts .magazine-grid {
@@ -2322,31 +2473,8 @@ object {
 		font-size: 18px;
 		font-size: 1.125rem;
 	}
-
-	/* Magazine Post Widgets */
-	.widget-magazine-posts .large-post .entry-title {
-		font-size: 22px;
-		font-size: 1.375rem;
-	}
-
-	.widget-magazine-posts .medium-post .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
-	}
-
-	.widget-magazine-posts .small-post .small-post-content {
-		padding-left: 1.5em;
-	}
-
-	.widget-magazine-posts .small-post .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
-	}
 }
 
-/*--------------------------------------------------------------
-## 17.3 - Desktop Small ( < 960px )
---------------------------------------------------------------*/
 @media only screen and (max-width: 60em) {
 	.site-footer .site-info {
 		text-align: center;
@@ -2358,36 +2486,145 @@ object {
 		font-size: 16px;
 		font-size: 1rem;
 	}
+}
 
-	/* Magazine Post Widgets */
-	.home .latest-posts-title,
-	.widget-magazine-posts .widget-title {
-		font-size: 16px;
-		font-size: 1rem;
+@media only screen and (max-width: 55em) {
+	.header-title-image,
+	.header-title-image-container {
+		height: 360px;
 	}
 
-	.widget-magazine-posts .large-post .entry-title {
+	.header-title-background {
+		padding: 60px 0;
+	}
+
+	.content-area {
+		float: none;
+		padding: 0;
+		width: 100%;
+	}
+
+	.sidebar {
+		float: none;
+		margin: 0;
+		padding: 2em 0 0;
+		width: 100%;
+		border-top: 1px solid #e5e5e5;
+	}
+
+	/* Post Layout Columns */
+	.post-layout-two-columns .entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
+}
 
-	.widget-magazine-posts .large-post .entry-content {
-		font-size: 17px;
-		font-size: 1.0625rem;
+@media only screen and (max-width: 50em) {
+	/* Post Columns */
+	.post-layout-three-columns .post-wrapper .post-column {
+		width: 50%;
 	}
 
-	.widget-magazine-posts .medium-post .entry-title {
+	.post-layout-two-columns .entry-title,
+	.post-layout-three-columns .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+}
+
+@media only screen and (max-width: 45em) {
+	.post-layout-two-columns .entry-title,
+	.post-layout-three-columns .entry-title {
 		font-size: 16px;
 		font-size: 1rem;
 	}
+}
 
-	.widget-magazine-posts .small-post .entry-title {
-		font-size: 15px;
-		font-size: 0.9375rem;
+@media only screen and (max-width: 40em) {
+	.header-title-background {
+		padding: 45px 0;
+	}
+}
+
+@media only screen and (max-width: 35em) {
+	/* Post Columns */
+	.post-wrapper {
+		display: block;
+		margin-right: 0;
 	}
 
-	/*** Mobile Main Navigation ***/
+	.post-wrapper .post-column {
+		padding-right: 0;
+	}
 
+	.post-layout-two-columns .post-wrapper .post-column,
+	.post-layout-three-columns .post-wrapper .post-column {
+		width: 100%;
+	}
+
+	.post-layout-two-columns .entry-title,
+	.post-layout-three-columns .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+}
+
+@media only screen and (max-width: 30em) {
+	.container {
+		padding-right: 1.5em;
+		padding-left: 1.5em;
+	}
+
+	.widget,
+	.type-post,
+	.type-page,
+	.type-attachment,
+	.pagination,
+	.comments-area {
+		margin-bottom: 1.5em;
+	}
+
+	.widget-magazine-posts {
+		margin-bottom: -1.5em;
+	}
+
+	.site-content {
+		padding-top: 1.5em;
+	}
+
+	.header-title-background {
+		padding: 30px 0;
+	}
+
+	.post-layout-two-columns .entry-title,
+	.post-layout-three-columns .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+}
+
+@media only screen and (max-width: 25em) {
+	.post-layout-two-columns .entry-title,
+	.post-layout-three-columns .entry-title {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+}
+
+@media only screen and (max-width: 20em) {
+	.entry-meta .meta-date,
+	.entry-meta .meta-author,
+	.entry-meta .meta-category,
+	.entry-meta .meta-comments {
+		display: block;
+	}
+}
+
+/*--------------------------------------------------------------
+# - Media Queries for Navigation
+--------------------------------------------------------------*/
+@media only screen and (max-width: 60em) {
+	/*** Mobile Main Navigation ***/
 	/* Reset */
 	.primary-navigation {
 		float: none;
@@ -2542,75 +2779,79 @@ object {
 		padding: 0.6em 1em;
 	}
 
-	.main-navigation-menu ul .submenu-dropdown-toggle:before {
+	.main-navigation-menu ul .submenu-dropdown-toggle::before {
 		font-size: 24px;
 	}
+}
 
-	/* Mega Menu Styling */
-	.mega-menu-item .mega-menu-content {
-		border-bottom: 1px solid rgba(255,255,255,0.1);
+@media only screen and (max-width: 20em) {
+	.main-navigation-toggle::after {
+		font-size: 24px;
 	}
+}
 
-	.mega-menu-item .mega-menu-two-columns > li,
-	.mega-menu-item .mega-menu-three-columns > li,
-	.mega-menu-item .mega-menu-five-columns > li {
-		width: 100%;
+/* Ensure navigation is visible on desktop view */
+@media only screen and (min-width: 60.001em) {
+	.main-navigation-menu {
+		display: block !important;
 	}
-
-	.mega-menu-item .mega-menu-four-columns > li,
-	.mega-menu-item .mega-menu-six-columns > li {
-		width: 50%;
-	}
-
 }
 
 /*--------------------------------------------------------------
-## 17.4 - Tablet Large ( < 880px )
+# - Media Queries for Magazine widgets
 --------------------------------------------------------------*/
-@media only screen and (max-width: 55em) {
-	.header-title-image,
-	.header-title-image-container {
-		height: 360px;
+@media only screen and (max-width: 70em) {
+	/* Magazine Post Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 22px;
+		font-size: 1.375rem;
 	}
 
-	.header-title {
-		font-size: 36px;
-		font-size: 2.25rem;
-	}
-
-	.header-title-background {
-		padding: 60px 0;
-	}
-
-	.page-header .entry-meta {
-		font-size: 15px;
-		font-size: 0.9375rem;
-	}
-
-	.page-header .entry-meta span:before {
+	.widget-magazine-posts .medium-post .entry-title {
 		font-size: 18px;
+		font-size: 1.125rem;
 	}
 
-	.content-area {
-		float: none;
-		padding: 0;
-		width: 100%;
+	.widget-magazine-posts .small-post .small-post-content {
+		padding-left: 1.5em;
 	}
 
-	.sidebar {
-		float: none;
-		margin: 0;
-		padding: 2em 0 0;
-		width: 100%;
-		border-top: 1px solid #e5e5e5;
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-width: 60em) {
+	/* Magazine Post Widgets */
+	.home .latest-posts-title,
+	.widget-magazine-posts .widget-title {
+		font-size: 16px;
+		font-size: 1rem;
 	}
 
-	/* Post Layout Columns */
-	.post-layout-two-columns .entry-title {
+	.widget-magazine-posts .large-post .entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
 
+	.widget-magazine-posts .large-post .entry-content {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+}
+
+@media only screen and (max-width: 55em) {
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .small-post .entry-title {
 		font-size: 14px;
@@ -2618,21 +2859,7 @@ object {
 	}
 }
 
-/*--------------------------------------------------------------
-## 17.5 - Tablet Medium ( < 800px )
---------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
-	/* Post Columns */
-	.post-layout-three-columns .post-wrapper .post-column {
-		width: 50%;
-	}
-
-	.post-layout-two-columns .entry-title,
-	.post-layout-three-columns .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
-	}
-
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 18px;
@@ -2647,23 +2874,9 @@ object {
 	.widget-magazine-posts .medium-post .entry-content {
 		display: none;
 	}
-
-	/* Gallery */
-	.gallery-columns-6 .gallery-item,
-	.gallery-columns-7 .gallery-item,
-	.gallery-columns-8 .gallery-item,
-	.gallery-columns-9 .gallery-item {
-		max-width: 25%;
-	}
 }
 
 @media only screen and (max-width: 45em) {
-	.post-layout-two-columns .entry-title,
-	.post-layout-three-columns .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
-	}
-
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 16px;
@@ -2689,28 +2902,7 @@ object {
 	}
 }
 
-/*--------------------------------------------------------------
-## 17.7 - Mobile Extra Large ( < 640px )
---------------------------------------------------------------*/
 @media only screen and (max-width: 40em) {
-	.header-title {
-		font-size: 28px;
-		font-size: 1.75rem;
-	}
-
-	.header-title-background {
-		padding: 45px 0;
-	}
-
-	.page-header .entry-meta {
-		font-size: 14px;
-		font-size: 0.875rem;
-	}
-
-	.page-header .entry-meta span:before {
-		font-size: 16px;
-	}
-
 	/* Magazine Posts Grid Widget */
 	.widget-magazine-posts .magazine-grid-three-columns {
 		display: block;
@@ -2733,40 +2925,9 @@ object {
 		font-size: 16px;
 		font-size: 1rem;
 	}
-
-	/* Mega Menu Styling */
-	.mega-menu-item .mega-menu-four-columns > li,
-	.mega-menu-item .mega-menu-six-columns > li {
-		width: 100%;
-	}
-
 }
 
-/*--------------------------------------------------------------
-## 17.8 - Mobile Large ( < 560px )
---------------------------------------------------------------*/
 @media only screen and (max-width: 35em) {
-	/* Post Columns */
-	.post-wrapper {
-		display: block;
-		margin-right: 0;
-	}
-
-	.post-wrapper .post-column {
-		padding-right: 0;
-	}
-
-	.post-layout-two-columns .post-wrapper .post-column,
-	.post-layout-three-columns .post-wrapper .post-column {
-		width: 100%;
-	}
-
-	.post-layout-two-columns .entry-title,
-	.post-layout-three-columns .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
-	}
-
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 20px;
@@ -2799,52 +2960,7 @@ object {
 	}
 }
 
-/*--------------------------------------------------------------
-## 17.9 - Mobile Medium ( < 480px )
---------------------------------------------------------------*/
 @media only screen and (max-width: 30em) {
-	.container {
-		padding-right: 1.5em;
-		padding-left: 1.5em;
-	}
-
-	.widget,
-	.type-post,
-	.type-page,
-	.type-attachment,
-	.pagination,
-	.comments-area {
-		margin-bottom: 1.5em;
-	}
-
-	.widget-magazine-posts {
-		margin-bottom: -1.5em;
-	}
-
-	.site-content {
-		padding-top: 1.5em;
-	}
-
-	.header-title {
-		font-size: 24px;
-		font-size: 1.5rem;
-	}
-
-	.header-title-background {
-		padding: 30px 0;
-	}
-
-	.alignright, .alignleft {
-		float: none;
-		margin: 1em 0;
-	}
-
-	.post-layout-two-columns .entry-title,
-	.post-layout-three-columns .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
-	}
-
 	/* Magazine Post Widgets */
 	.home .latest-posts-title,
 	.widget-magazine-posts .widget-title {
@@ -2876,6 +2992,46 @@ object {
 		font-size: 14px;
 		font-size: 0.875rem;
 	}
+}
+
+@media only screen and (max-width: 25em) {
+	/* Magazine Post Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 13px;
+		font-size: 0.8125rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-meta,
+	.widget-magazine-posts .small-post .entry-meta {
+		display: none;
+	}
+}
+
+/*--------------------------------------------------------------
+# - Media Queries for Media
+--------------------------------------------------------------*/
+@media only screen and (max-width: 50em) {
+	/* Gallery */
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		max-width: 25%;
+	}
+}
+
+@media only screen and (max-width: 30em) {
+	.alignright,
+	.alignleft {
+		float: none;
+		margin: 1em 0;
+	}
 
 	/* Gallery */
 	.gallery-item {
@@ -2892,71 +3048,8 @@ object {
 	}
 }
 
-@media only screen and (max-width: 25em) {
-	.post-layout-two-columns .entry-title,
-	.post-layout-three-columns .entry-title {
-		font-size: 17px;
-		font-size: 1.0625rem;
-	}
-
-	/* Magazine Post Widgets */
-	.widget-magazine-posts .large-post .entry-title {
-		font-size: 17px;
-		font-size: 1.0625rem;
-	}
-
-	.widget-magazine-posts .medium-post .entry-title,
-	.widget-magazine-posts .small-post .entry-title {
-		font-size: 13px;
-		font-size: 0.8125rem;
-	}
-
-	.widget-magazine-posts .medium-post .entry-meta,
-	.widget-magazine-posts .small-post .entry-meta	{
-		display: none;
-	}
-
-}
-
 /*--------------------------------------------------------------
-## 17.10 - Mobile Small ( < 320px )
---------------------------------------------------------------*/
-@media only screen and (max-width: 20em) {
-	.site-branding .site-title {
-		font-size: 24px;
-		font-size: 1.5rem;
-	}
-
-	.main-navigation-toggle:after {
-		font-size: 24px;
-	}
-
-	.header-title {
-		font-size: 22px;
-		font-size: 1.375rem;
-	}
-
-	.post-layout-two-columns .entry-title,
-	.post-layout-three-columns .entry-title,
-	.widget-magazine-posts .large-post .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
-	}
-
-	.entry-meta .meta-date,
-	.entry-meta .meta-author,
-	.entry-meta .meta-category,
-	.entry-meta .meta-comments {
-		display: block;
-	}
-}
-
-/*--------------------------------------------------------------
-# 18.0 - Theme Option Styles
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-## 18.1 - Sidebar Layouts
+# - Theme Options
 --------------------------------------------------------------*/
 
 /* Sidebar Left */
@@ -2974,7 +3067,6 @@ object {
 	.sidebar-left .content-area {
 		padding-left: 2em;
 	}
-
 }
 
 @media only screen and (max-width: 55em) {
@@ -2983,12 +3075,9 @@ object {
 		padding: 0;
 		width: 100%;
 	}
-
 }
 
-/*--------------------------------------------------------------
-## 18.2 - Sticky Header
---------------------------------------------------------------*/
+/* Sticky Header */
 @media only screen and (min-width: 60.001em) {
 	.sticky-header .site-header {
 		position: fixed;
@@ -2997,7 +3086,7 @@ object {
 		width: 100%;
 	}
 
-	.sticky-header.admin-bar .site-header  {
+	.sticky-header.admin-bar .site-header {
 		top: 32px;
 	}
 
@@ -3012,44 +3101,6 @@ object {
 	}
 }
 
-/*--------------------------------------------------------------
-# 19.0 - Media Query Fixes
---------------------------------------------------------------*/
-
-/* Ensure navigation is visible on desktop view */
-@media only screen and (min-width: 60.001em) {
-	.main-navigation-menu {
-		display: block !important;
-	}
-}
-
-/*--------------------------------------------------------------
-# 20.0 - CSS Hacks for Safari
---------------------------------------------------------------*/
-
-/* Fix Flexbox issues for Safari 6.1-10.0 */
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
-	@media {
-		.post-wrapper .post-column,
-		.widget-magazine-posts .magazine-grid .post-column {
-			margin-right: -1px;
-		}
-	}
-}
-
-/* Fix Flexbox issues for Safari 10.1+ */
-@media not all and (min-resolution:.001dpcm) {
-	@media {
-		.post-wrapper .post-column,
-		.widget-magazine-posts .magazine-grid .post-column {
-			margin-right: -1px;
-		}
-	}
-}
-
-/*--------------------------------------------------------------
-# 21.0 Customizer Preview
---------------------------------------------------------------*/
 .magazine-widgets-placeholder {
 	position: relative;
 }

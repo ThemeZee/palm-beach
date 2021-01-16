@@ -1,23 +1,84 @@
 @media only screen and (max-width: 80em) {
+	.header-title-image,
+	.header-title-image-container {
+		height: 600px;
+	}
+}
+
+@media only screen and (max-width: 70em) {
+	.container {
+		padding-right: 2em;
+		padding-left: 2em;
+	}
+
+	.content-area {
+		padding-right: 2em;
+	}
+
 	.site-content {
 		padding-top: 2em;
 	}
 
-	.content-area {
-		padding-right: 3em;
+	.widget,
+	.type-post,
+	.type-page,
+	.type-attachment,
+	.pagination,
+	.comments-area {
+		margin-bottom: 2em;
+	}
+
+	.widget-magazine-posts {
+		margin-bottom: -2em;
+	}
+
+	.header-title-image,
+	.header-title-image-container {
+		height: 480px;
+	}
+
+	/* Post Columns */
+	.post-wrapper,
+	.widget-magazine-posts .magazine-grid {
+		margin-right: -2em;
+	}
+
+	.post-wrapper .post-column,
+	.widget-magazine-posts .magazine-grid .post-column {
+		padding-right: 2em;
+	}
+
+	.post-layout-two-columns .entry-title,
+	.post-layout-three-columns .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
 	}
 }
 
 @media only screen and (max-width: 60em) {
 	.site-footer .site-info {
-		float: none;
 		text-align: center;
+	}
+
+	/* Post Layout Columns */
+	.post-layout-two-columns .entry-title,
+	.post-layout-three-columns .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
 	}
 }
 
 @media only screen and (max-width: 55em) {
-	.content-area,
-	.site-content .fullwidth-content-area {
+	.header-title-image,
+	.header-title-image-container {
+		height: 360px;
+	}
+
+	.header-title-background {
+		padding: 60px 0;
+	}
+
+	.content-area {
 		float: none;
 		padding: 0;
 		width: 100%;
@@ -25,9 +86,68 @@
 
 	.sidebar {
 		float: none;
+		margin: 0;
 		padding: 2em 0 0;
 		width: 100%;
-		border-top: 4px solid #eee;
+		border-top: 1px solid #e5e5e5;
+	}
+
+	/* Post Layout Columns */
+	.post-layout-two-columns .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+}
+
+@media only screen and (max-width: 50em) {
+
+	/* Post Columns */
+	.post-layout-three-columns .post-wrapper .post-column {
+		width: 50%;
+	}
+
+	.post-layout-two-columns .entry-title,
+	.post-layout-three-columns .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+}
+
+@media only screen and (max-width: 45em) {
+	.post-layout-two-columns .entry-title,
+	.post-layout-three-columns .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-width: 40em) {
+	.header-title-background {
+		padding: 45px 0;
+	}
+}
+
+@media only screen and (max-width: 35em) {
+
+	/* Post Columns */
+	.post-wrapper {
+		display: block;
+		margin-right: 0;
+	}
+
+	.post-wrapper .post-column {
+		padding-right: 0;
+	}
+
+	.post-layout-two-columns .post-wrapper .post-column,
+	.post-layout-three-columns .post-wrapper .post-column {
+		width: 100%;
+	}
+
+	.post-layout-two-columns .entry-title,
+	.post-layout-three-columns .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
 	}
 }
 
@@ -36,24 +156,48 @@
 		padding-right: 1.5em;
 		padding-left: 1.5em;
 	}
+
+	.widget,
+	.type-post,
+	.type-page,
+	.type-attachment,
+	.pagination,
+	.comments-area {
+		margin-bottom: 1.5em;
+	}
+
+	.widget-magazine-posts {
+		margin-bottom: -1.5em;
+	}
+
+	.site-content {
+		padding-top: 1.5em;
+	}
+
+	.header-title-background {
+		padding: 30px 0;
+	}
+
+	.post-layout-two-columns .entry-title,
+	.post-layout-three-columns .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
 }
 
 @media only screen and (max-width: 25em) {
-	.post-layout-small .post-wrapper .type-post .wp-post-image,
-	.post-layout-small .infinite-wrap .type-post .wp-post-image {
-		float: none;
-		margin: 0 0 0.5em;
-		padding: 0;
-		max-width: 100%;
+	.post-layout-two-columns .entry-title,
+	.post-layout-three-columns .entry-title {
+		font-size: 17px;
+		font-size: 1.0625rem;
 	}
 }
 
 @media only screen and (max-width: 20em) {
-	.entry-meta span {
+	.entry-meta .meta-date,
+	.entry-meta .meta-author,
+	.entry-meta .meta-category,
+	.entry-meta .meta-comments {
 		display: block;
-	}
-
-	.entry-meta span::after {
-		display: none;
 	}
 }
