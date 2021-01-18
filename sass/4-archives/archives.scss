@@ -1,8 +1,7 @@
 /* Archive Description */
 .page-header .blog-description,
 .page-header .archive-description {
-	font-size: 20px;
-	font-size: 1.25rem;
+	@include font-size(20);
 }
 
 .page-header .blog-description,
@@ -43,6 +42,5 @@
 
 /* Archive Posts Styling */
 .post-wrapper .post-column article .entry-content {
-	font-size: 17px;
-	font-size: 1.0625rem;
+	@include font-size(17);
 }

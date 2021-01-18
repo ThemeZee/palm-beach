@@ -16,8 +16,7 @@
 	color: #242424;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 16px;
-	font-size: 1rem;
+	@include font-size(16);
 	font-family: 'Montserrat', Verdana, Arial;
 }
 

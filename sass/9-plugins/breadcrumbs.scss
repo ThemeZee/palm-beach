@@ -1,7 +1,7 @@
 /* Breadcrumbs */
 .breadcrumbs {
 	margin: 0;
-	border-bottom: 1px solid rgba(0,0,0,0.05);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .breadcrumbs-container {
@@ -9,8 +9,7 @@
 	padding-bottom: 0.5em;
 	background: #fff;
 	color: #222;
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 }
 
 .breadcrumbs .trail-browse,
@@ -24,8 +23,7 @@
 .breadcrumbs .trail-browse {
 	margin-right: 0.5em;
 	font-weight: normal;
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 }
 
 .breadcrumbs .trail-items {

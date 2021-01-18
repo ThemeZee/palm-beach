@@ -14,8 +14,7 @@
 	color: #242424;
 	text-decoration: none;
 	font-weight: bold;
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 	font-family: 'Montserrat', Verdana, Arial;
 }
 

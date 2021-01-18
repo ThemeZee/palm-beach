@@ -50,8 +50,7 @@
 
 	.post-layout-two-columns .entry-title,
 	.post-layout-three-columns .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
+		@include font-size(18);
 	}
 }
 
@@ -63,8 +62,7 @@
 	/* Post Layout Columns */
 	.post-layout-two-columns .entry-title,
 	.post-layout-three-columns .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
+		@include font-size(16);
 	}
 }
 
@@ -94,8 +92,7 @@
 
 	/* Post Layout Columns */
 	.post-layout-two-columns .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
+		@include font-size(20);
 	}
 }
 
@@ -108,16 +105,14 @@
 
 	.post-layout-two-columns .entry-title,
 	.post-layout-three-columns .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
+		@include font-size(18);
 	}
 }
 
 @media only screen and (max-width: 45em) {
 	.post-layout-two-columns .entry-title,
 	.post-layout-three-columns .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
+		@include font-size(16);
 	}
 }
 
@@ -146,8 +141,7 @@
 
 	.post-layout-two-columns .entry-title,
 	.post-layout-three-columns .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
+		@include font-size(20);
 	}
 }
 
@@ -180,16 +174,14 @@
 
 	.post-layout-two-columns .entry-title,
 	.post-layout-three-columns .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
+		@include font-size(18);
 	}
 }
 
 @media only screen and (max-width: 25em) {
 	.post-layout-two-columns .entry-title,
 	.post-layout-three-columns .entry-title {
-		font-size: 17px;
-		font-size: 1.0625rem;
+		@include font-size(17);
 	}
 }
 

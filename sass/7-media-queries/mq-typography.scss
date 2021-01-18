@@ -1,94 +1,81 @@
 @media only screen and (max-width: 80em) {
 	.header-title {
-		font-size: 54px;
-		font-size: 3.375rem;
+		@include font-size(54);
 	}
 
 	.page-header .entry-meta {
-		font-size: 17px;
-		font-size: 1.0625rem;
+		@include font-size(17);
 	}
 
-	.page-header .entry-meta span:before {
+	.page-header .entry-meta span::before {
 		font-size: 22px;
 	}
 }
 
 @media only screen and (max-width: 70em) {
 	.header-title {
-		font-size: 44px;
-		font-size: 2.75rem;
+		@include font-size(44);
 	}
 
 	.page-header .entry-meta {
-		font-size: 16px;
-		font-size: 1rem;
+		@include font-size(16);
 	}
 
-	.page-header .entry-meta span:before {
+	.page-header .entry-meta span::before {
 		font-size: 20px;
 	}
 
 	.entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
+		@include font-size(18);
 	}
 }
 
 @media only screen and (max-width: 55em) {
 	.header-title {
-		font-size: 36px;
-		font-size: 2.25rem;
+		@include font-size(36);
 	}
 
 	.page-header .entry-meta {
-		font-size: 15px;
-		font-size: 0.9375rem;
+		@include font-size(15);
 	}
 
-	.page-header .entry-meta span:before {
+	.page-header .entry-meta span::before {
 		font-size: 18px;
 	}
 }
 
 @media only screen and (max-width: 40em) {
 	.header-title {
-		font-size: 28px;
-		font-size: 1.75rem;
+		@include font-size(28);
 	}
 
 	.page-header .entry-meta {
-		font-size: 14px;
-		font-size: 0.875rem;
+		@include font-size(14);
 	}
 
-	.page-header .entry-meta span:before {
+	.page-header .entry-meta span::before {
 		font-size: 16px;
 	}
 }
 
 @media only screen and (max-width: 30em) {
 	.header-title {
-		font-size: 24px;
-		font-size: 1.5rem;
+		@include font-size(24);
 	}
 }
 
 @media only screen and (max-width: 20em) {
 	.site-branding .site-title {
-		font-size: 24px;
-		font-size: 1.5rem;
+		@include font-size(24);
 	}
 
 	.header-title {
-		font-size: 22px;
-		font-size: 1.375rem;
+		@include font-size(22);
 	}
 
 	.post-layout-two-columns .entry-title,
 	.post-layout-three-columns .entry-title,
 	.widget-magazine-posts .large-post .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
+		@include font-size(16);
 	}
 }

@@ -26,8 +26,7 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 24px;
-	font-size: 1.5rem;
+	@include font-size(24);
 	font-family: 'Montserrat', Verdana, Arial;
 	line-height: 1.6;
 }
@@ -53,8 +52,7 @@
 
 .site-description {
 	margin: -0.4em 0 0.7em;
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 }
 
 .header-image {
@@ -76,15 +74,11 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	        align-items: center;
-	        justify-content: center;
+	align-items: center;
+	justify-content: center;
 	height: 720px;
 	width: 100%;
-	background: rgba(0,0,0,0.3);
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
+	background: rgba(0, 0, 0, 0.3);
 }
 
 .header-title-image-container .header-title-wrap {
@@ -101,8 +95,7 @@
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-weight: bold;
-	font-size: 64px;
-	font-size: 4rem;
+	@include font-size(64);
 	font-family: 'Montserrat', Verdana, Arial;
 }
 
@@ -133,7 +126,6 @@
 /* Reduce size on large screens */
 @media only screen and (min-width: 70em) {
 	.header-title-background .page-header .header-title {
-		font-size: 48px;
-		font-size: 3rem;
+		@include font-size(48);
 	}
 }

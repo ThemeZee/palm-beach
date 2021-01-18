@@ -11,30 +11,25 @@
 	border-bottom: 1px solid #e5e5e5;
 	color: #242424;
 	text-align: center;
-	font-size: 18px;
-	font-size: 1.125rem;
+	@include font-size(18);
 }
 
 /* Large Post Styling */
 .widget-magazine-posts .large-post .entry-title {
-	font-size: 24px;
-	font-size: 1.5rem;
+	@include font-size(24);
 }
 
 .widget-magazine-posts .large-post .entry-content {
-	font-size: 18px;
-	font-size: 1.125rem;
+	@include font-size(18);
 }
 
 /* Medium Post Styling */
 .widget-magazine-posts .medium-post .entry-title {
-	font-size: 20px;
-	font-size: 1.25rem;
+	@include font-size(20);
 }
 
 .widget-magazine-posts .medium-post .entry-content {
-	font-size: 17px;
-	font-size: 1.0625rem;
+	@include font-size(17);
 }
 
 /* Small Post Styling */
@@ -59,14 +54,12 @@
 }
 
 .widget-magazine-posts .small-post .entry-title {
-	font-size: 18px;
-	font-size: 1.125rem;
+	@include font-size(18);
 }
 
 .widget-magazine-posts .medium-post .entry-meta,
 .widget-magazine-posts .small-post .entry-meta {
-	font-size: 13px;
-	font-size: 0.8125rem;
+	@include font-size(13);
 }
 
 /* Magazine Posts Grid Widget */

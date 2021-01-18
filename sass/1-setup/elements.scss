@@ -3,8 +3,8 @@ html {
 }
 
 *,
-*:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*::before,
+*::after {
 	box-sizing: inherit;
 }
 
@@ -18,8 +18,7 @@ blockquote {
 	border-left: 4px solid #222;
 	color: #777;
 	font-style: italic;
-	font-size: 18px;
-	font-size: 1.125rem;
+	@include font-size(18);
 }
 
 blockquote cite,
@@ -27,13 +26,12 @@ blockquote small {
 	display: block;
 	margin-top: 1em;
 	color: #404040;
-	font-size: 16px;
-	font-size: 1rem;
+	@include font-size(16);
 	line-height: 1.75;
 }
 
-blockquote cite:before,
-blockquote small:before {
+blockquote cite::before,
+blockquote small::before {
 	content: "\2014\00a0";
 }
 

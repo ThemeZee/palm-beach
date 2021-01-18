@@ -1,8 +1,7 @@
 .entry-meta {
 	margin: 0.5em 0 0.25rem;
 	color: #646464;
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 }
 
 .entry-meta .meta-date,
@@ -22,7 +21,7 @@
 	color: #242424;
 }
 
-.entry-meta span:before {
+.entry-meta span::before {
 	display: inline-block;
 	margin-right: 0.2em;
 	color: #646464;
@@ -31,35 +30,34 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-.entry-meta .meta-date:before{
+.entry-meta .meta-date::before {
 	content: '\f307';
 }
 
-.entry-meta .meta-author:before{
+.entry-meta .meta-author::before {
 	content: '\f304';
 }
 
-.entry-meta .meta-category:before{
+.entry-meta .meta-category::before {
 	content: '\f301';
 }
 
-.entry-meta .meta-comments:before{
+.entry-meta .meta-comments::before {
 	content: '\f300';
 }
 
 /* Entry Meta in Header area */
 .page-header .entry-meta {
 	margin: 0.5em 0 0;
-	font-size: 18px;
-	font-size: 1.125rem;
+	@include font-size(18);
 }
 
-.page-header .entry-meta span:before {
+.page-header .entry-meta span::before {
 	font-size: 24px;
 }
 
 .header-title-wrap .page-header .entry-meta,
-.header-title-wrap .page-header .entry-meta span:before,
+.header-title-wrap .page-header .entry-meta span::before,
 .header-title-wrap .page-header .entry-meta a:link,
 .header-title-wrap .page-header .entry-meta a:visited {
 	color: #fff;
@@ -82,8 +80,8 @@ body.date-hidden .header-title-background .entry-meta .meta-date,
 body.author-hidden .header-title-background .entry-meta .meta-author,
 body.categories-hidden .header-title-background .entry-meta .meta-category,
 body.comments-hidden .header-title-background .entry-meta .meta-comments {
-	 position: absolute;
-	 clip: rect(1px, 1px, 1px, 1px);
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
 }
 
 body.date-hidden.author-hidden .type-post .entry-meta {
@@ -102,7 +100,6 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 
 .entry-tags .tags-title {
 	display: inline-block;
-	float: left;
 	margin: 0 3px 0 0;
 	padding: 0.2em 0.6em;
 	border: 1px solid #57b7d7;
@@ -111,27 +108,25 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 	font-family: 'Montserrat', Verdana, Arial;
 }
 
 .widget_tag_cloud .tagcloud,
 .entry-tags .meta-tags {
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 }
 
-.widget_tag_cloud .tagcloud:before,
-.widget_tag_cloud .tagcloud:after,
-.entry-tags .meta-tags:before,
-.entry-tags .meta-tags:after {
+.widget_tag_cloud .tagcloud::before,
+.widget_tag_cloud .tagcloud::after,
+.entry-tags .meta-tags::before,
+.entry-tags .meta-tags::after {
 	display: table;
 	content: "";
 }
 
-.widget_tag_cloud .tagcloud:after,
-.entry-tags .meta-tags:after {
+.widget_tag_cloud .tagcloud::after,
+.entry-tags .meta-tags::after {
 	clear: both;
 }
 

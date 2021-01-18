@@ -55,8 +55,7 @@
 
 .magazine-widgets-placeholder .magazine-widgets-placeholder-title {
 	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 	font-weight: bold;
 	text-transform: uppercase;
 	margin: 0;

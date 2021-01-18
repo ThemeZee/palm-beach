@@ -18,8 +18,7 @@ object {
 .wp-caption {
 	margin-bottom: 1em;
 	max-width: 100%;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	@include font-size(15);
 	color: #777;
 }
 
@@ -85,7 +84,6 @@ object {
 
 .gallery-caption {
 	display: block;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	@include font-size(15);
 	color: #777;
 }

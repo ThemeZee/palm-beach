@@ -4,8 +4,7 @@
 }
 
 .site-footer {
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 }
 
 .site-footer .site-info {

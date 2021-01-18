@@ -1,6 +1,6 @@
 .type-post,
 .type-page,
-.type-attachment  {
+.type-attachment {
 	margin: 0 0 2.5em 0;
 	max-width: 100%;
 }
@@ -14,8 +14,7 @@
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-weight: bold;
-	font-size: 20px;
-	font-size: 1.25rem;
+	@include font-size(20);
 	font-family: 'Montserrat', Verdana, Arial;
 }
 
@@ -32,8 +31,7 @@
 }
 
 .entry-content {
-	font-size: 18px;
-	font-size: 1.125rem;
+	@include font-size(18);
 }
 
 .entry-content a {

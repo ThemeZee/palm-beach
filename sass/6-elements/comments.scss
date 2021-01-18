@@ -16,8 +16,7 @@
 	color: #242424;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 16px;
-	font-size: 1rem;
+	@include font-size(16);
 	font-family: 'Montserrat', Verdana, Arial;
 }
 
@@ -53,8 +52,7 @@
 
 .comment-meta .comment-metadata {
 	margin-top: 0.3em;
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 }
 
 .comment-meta .comment-metadata a {
@@ -120,8 +118,7 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 13px;
-	font-size: 0.8125rem;
+	@include font-size(13);
 	font-family: 'Montserrat', Verdana, Arial;
 	transition: all 0.2s ease;
 }
@@ -170,6 +167,5 @@
 	margin-left: 1em;
 	text-decoration: underline;
 	font-weight: normal;
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 }

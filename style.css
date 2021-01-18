@@ -174,7 +174,7 @@ kbd,
 pre,
 samp {
 	font-size: 1em;
-	font-family: monospace, monospace;
+	font-family: monospace;
 }
 
 button,
@@ -389,9 +389,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
-	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*::before,
+*::after {
 	box-sizing: inherit;
 }
 
@@ -419,8 +418,8 @@ blockquote small {
 	line-height: 1.75;
 }
 
-blockquote cite:before,
-blockquote small:before {
+blockquote cite::before,
+blockquote small::before {
 	content: "\2014\00a0";
 }
 
@@ -635,19 +634,19 @@ textarea {
 /*--------------------------------------------------------------
 # - Clearings
 --------------------------------------------------------------*/
-.clearfix:before,
-.clearfix:after,
-.post-navigation .nav-links:before,
-.post-navigation .nav-links:after,
-.comment-navigation:before,
-.comment-navigation:after {
+.clearfix::before,
+.clearfix::after,
+.post-navigation .nav-links::before,
+.post-navigation .nav-links::after,
+.comment-navigation::before,
+.comment-navigation::after {
 	display: table;
 	content: "";
 }
 
-.clearfix:after,
-.post-navigation .nav-links:after,
-.comment-navigation:after {
+.clearfix::after,
+.post-navigation .nav-links::after,
+.comment-navigation::after {
 	clear: both;
 }
 
@@ -788,10 +787,6 @@ textarea {
 	height: 720px;
 	width: 100%;
 	background: rgba(0, 0, 0, 0.3);
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 }
 
 .header-title-image-container .header-title-wrap {
@@ -878,7 +873,7 @@ textarea {
 	font-size: 1rem;
 }
 
-.main-navigation-menu > .menu-item-has-children > a:after {
+.main-navigation-menu > .menu-item-has-children > a::after {
 	display: inline-block;
 	margin: 0.2em 0 0 0.2em;
 	content: '\f431';
@@ -927,7 +922,7 @@ textarea {
 	font-size: 0.8125rem;
 }
 
-.main-navigation-menu ul .menu-item-has-children > a:after {
+.main-navigation-menu ul .menu-item-has-children > a::after {
 	display: inline-block;
 	margin: 0.15em 0 0 0.2em;
 	content: '\f431';
@@ -942,7 +937,7 @@ textarea {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.main-navigation-menu ul .menu-item-has-children > a:hover:after {
+.main-navigation-menu ul .menu-item-has-children > a:hover::after {
 	text-decoration: none;
 }
 
@@ -963,24 +958,8 @@ textarea {
 	text-decoration: underline;
 }
 
-.main-navigation-menu ul li.current-menu-item > a:after {
+.main-navigation-menu ul li.current-menu-item > a::after {
 	text-decoration: none;
-}
-
-/* Mega Menu Styling */
-.mega-menu-content .widget_meta ul li,
-.mega-menu-content .widget_pages ul li,
-.mega-menu-content .widget_categories ul li,
-.mega-menu-content .widget_archive ul li {
-	display: block;
-}
-
-.mega-menu-content .widget_meta ul li a,
-.mega-menu-content .widget_pages ul li a,
-.mega-menu-content .widget_categories ul li a,
-.mega-menu-content .widget_archive ul li a {
-	display: block;
-	padding: 0.25em 0;
 }
 
 /*--------------------------------------------------------------
@@ -1215,7 +1194,7 @@ textarea {
 	color: #242424;
 }
 
-.entry-meta span:before {
+.entry-meta span::before {
 	display: inline-block;
 	margin-right: 0.2em;
 	color: #646464;
@@ -1224,19 +1203,19 @@ textarea {
 	-webkit-font-smoothing: antialiased;
 }
 
-.entry-meta .meta-date:before {
+.entry-meta .meta-date::before {
 	content: '\f307';
 }
 
-.entry-meta .meta-author:before {
+.entry-meta .meta-author::before {
 	content: '\f304';
 }
 
-.entry-meta .meta-category:before {
+.entry-meta .meta-category::before {
 	content: '\f301';
 }
 
-.entry-meta .meta-comments:before {
+.entry-meta .meta-comments::before {
 	content: '\f300';
 }
 
@@ -1247,12 +1226,12 @@ textarea {
 	font-size: 1.125rem;
 }
 
-.page-header .entry-meta span:before {
+.page-header .entry-meta span::before {
 	font-size: 24px;
 }
 
 .header-title-wrap .page-header .entry-meta,
-.header-title-wrap .page-header .entry-meta span:before,
+.header-title-wrap .page-header .entry-meta span::before,
 .header-title-wrap .page-header .entry-meta a:link,
 .header-title-wrap .page-header .entry-meta a:visited {
 	color: #fff;
@@ -1295,7 +1274,6 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 
 .entry-tags .tags-title {
 	display: inline-block;
-	float: left;
 	margin: 0 3px 0 0;
 	padding: 0.2em 0.6em;
 	border: 1px solid #57b7d7;
@@ -1315,16 +1293,16 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 	font-size: 0.875rem;
 }
 
-.widget_tag_cloud .tagcloud:before,
-.widget_tag_cloud .tagcloud:after,
-.entry-tags .meta-tags:before,
-.entry-tags .meta-tags:after {
+.widget_tag_cloud .tagcloud::before,
+.widget_tag_cloud .tagcloud::after,
+.entry-tags .meta-tags::before,
+.entry-tags .meta-tags::after {
 	display: table;
 	content: "";
 }
 
-.widget_tag_cloud .tagcloud:after,
-.entry-tags .meta-tags:after {
+.widget_tag_cloud .tagcloud::after,
+.entry-tags .meta-tags::after {
 	clear: both;
 }
 
@@ -1406,12 +1384,12 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 	float: right;
 }
 
-.post-navigation .nav-links .nav-previous a:before {
+.post-navigation .nav-links .nav-previous a::before {
 	margin-right: 3px;
 	content: "\00AB";
 }
 
-.post-navigation .nav-links .nav-next a:after {
+.post-navigation .nav-links .nav-next a::after {
 	margin-left: 4px;
 	content: "\00BB";
 }
@@ -1650,6 +1628,7 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 	margin-bottom: 1em;
 	color: #555;
 	font-size: 14px;
+	font-size: 0.875rem;
 	text-align: center;
 }
 
@@ -2331,7 +2310,7 @@ object {
 		font-size: 1.0625rem;
 	}
 
-	.page-header .entry-meta span:before {
+	.page-header .entry-meta span::before {
 		font-size: 22px;
 	}
 }
@@ -2347,7 +2326,7 @@ object {
 		font-size: 1rem;
 	}
 
-	.page-header .entry-meta span:before {
+	.page-header .entry-meta span::before {
 		font-size: 20px;
 	}
 
@@ -2368,7 +2347,7 @@ object {
 		font-size: 0.9375rem;
 	}
 
-	.page-header .entry-meta span:before {
+	.page-header .entry-meta span::before {
 		font-size: 18px;
 	}
 }
@@ -2384,7 +2363,7 @@ object {
 		font-size: 0.875rem;
 	}
 
-	.page-header .entry-meta span:before {
+	.page-header .entry-meta span::before {
 		font-size: 16px;
 	}
 }

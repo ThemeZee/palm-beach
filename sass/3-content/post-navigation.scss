@@ -11,12 +11,12 @@
 	float: right;
 }
 
-.post-navigation .nav-links .nav-previous a:before {
+.post-navigation .nav-links .nav-previous a::before {
 	margin-right: 3px;
 	content: "\00AB";
 }
 
-.post-navigation .nav-links .nav-next a:after {
+.post-navigation .nav-links .nav-next a::after {
 	margin-left: 4px;
 	content: "\00BB";
 }
@@ -30,14 +30,13 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 	font-family: 'Montserrat', Verdana, Arial;
 	transition: all 0.2s ease;
 }
 
 .post-navigation .nav-links a:link,
-.post-navigation .nav-links a:visited  {
+.post-navigation .nav-links a:visited {
 	color: #242424;
 }
 
