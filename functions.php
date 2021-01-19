@@ -187,8 +187,16 @@ function palm_beach_scripts() {
 	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), '3.7.3' );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
-	// Register and enqueue navigation.js.
-	wp_enqueue_script( 'palm-beach-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20170127' );
+	// Register and enqueue navigation.min.js.
+	if ( ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) && ! palm_beach_is_amp() ) {
+		wp_enqueue_script( 'palm-beach-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20200822', true );
+		$palm_beach_l10n = array(
+			'expand'   => esc_html__( 'Expand child menu', 'palm-beach' ),
+			'collapse' => esc_html__( 'Collapse child menu', 'palm-beach' ),
+			'icon'     => palm_beach_get_svg( 'expand' ),
+		);
+		wp_localize_script( 'palm-beach-navigation', 'palmBeachScreenReaderText', $palm_beach_l10n );
+	}
 
 	// Register and enqueue sticky-header.js.
 	if ( true == $theme_options['sticky_header'] ) {
@@ -243,6 +251,9 @@ require get_template_directory() . '/inc/theme-info.php';
 // Include Theme Customizer Options.
 require get_template_directory() . '/inc/customizer/customizer.php';
 require get_template_directory() . '/inc/customizer/default-options.php';
+
+// Include SVG Icon Functions.
+require get_template_directory() . '/inc/icons.php';
 
 // Include Extra Functions.
 require get_template_directory() . '/inc/extras.php';

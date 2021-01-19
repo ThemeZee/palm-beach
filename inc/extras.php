@@ -60,6 +60,11 @@ function palm_beach_body_classes( $classes ) {
 		$classes[] = 'comments-hidden';
 	}
 
+	// Check for AMP pages.
+	if ( palm_beach_is_amp() ) {
+		$classes[] = 'is-amp-page';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'palm_beach_body_classes' );

@@ -40,26 +40,15 @@
 
 				</div><!-- .site-branding -->
 
-				<nav id="main-navigation" class="primary-navigation navigation clearfix" role="navigation">
-					<?php
-						// Display Main Navigation.
-						wp_nav_menu( array(
-							'theme_location' => 'primary',
-							'container' => false,
-							'menu_class' => 'main-navigation-menu',
-							'echo' => true,
-							'fallback_cb' => 'palm_beach_default_menu',
-							)
-						);
-					?>
-				</nav><!-- #main-navigation -->
+				<?php get_template_part( 'template-parts/header/site', 'navigation' ); ?>
 
 			</div><!-- .header-main -->
 
 		</header><!-- #masthead -->
 
-		<?php // Display slider or header image on homepage.
-		if ( is_home() or is_page_template( 'template-magazine.php' ) or is_page_template( 'template-slider.php' )   ) :
+		<?php
+		// Display slider or header image on homepage.
+		if ( is_home() or is_page_template( 'template-magazine.php' ) or is_page_template( 'template-slider.php' ) ) :
 
 			palm_beach_slider();
 			palm_beach_header_image();
@@ -68,7 +57,8 @@
 
 			palm_beach_header_title();
 
-		endif; ?>
+		endif;
+		?>
 
 		<?php palm_beach_breadcrumbs(); ?>
 
