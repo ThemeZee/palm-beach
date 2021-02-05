@@ -199,7 +199,7 @@ function palm_beach_scripts() {
 	}
 
 	// Register and enqueue sticky-header.js.
-	if ( true == $theme_options['sticky_header'] ) {
+	if ( true == $theme_options['sticky_header'] && ! palm_beach_is_amp() ) {
 		wp_enqueue_script( 'palm-beach-jquery-sticky-header', get_template_directory_uri() . '/assets/js/sticky-header.js', array( 'jquery' ), '20170127' );
 	}
 
