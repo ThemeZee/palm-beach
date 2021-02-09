@@ -15,8 +15,9 @@ body {
 blockquote {
 	margin: 0 0 1.5em;
 	padding-left: 1.25em;
-	border-left: 4px solid #222;
-	color: #777;
+	border-left: 4px solid;
+	@include border-color(--dark-border-color);
+	@include color(--medium-text-color);
 	font-style: italic;
 	@include font-size(18);
 }
@@ -25,7 +26,7 @@ blockquote cite,
 blockquote small {
 	display: block;
 	margin-top: 1em;
-	color: #404040;
+	@include color(--text-color);
 	@include font-size(16);
 	line-height: 1.75;
 }
@@ -49,7 +50,7 @@ hr {
 	margin-bottom: 1.5em;
 	height: 1px;
 	border: 0;
-	background-color: #e5e5e5;
+	@include background(--light-border-color);
 }
 
 ul,
@@ -95,23 +96,24 @@ table {
 th,
 td {
 	padding: 0.3em 0.6em;
-	border: 1px solid #e5e5e5;
+	border: 1px solid;
+	@include border-color(--light-border-color);
 }
 
 a {
-	color: #57b7d7;
+	@include color(--link-color);
 	text-decoration: none;
 }
 
 a:link,
 a:visited {
-	color: #57b7d7;
+	@include color(--link-color);
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #242424;
+	@include color(--link-hover-color);
 }
 
 a:focus {
