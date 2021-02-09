@@ -74,21 +74,20 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	--button-hover-color: #57b7d7;
 	--button-hover-text-color: #fff;
 	--page-background-color: #fff;
-	--header-background-color: #111133;
-	--site-title-color: #fff;
-	--site-title-hover-color: rgba(255, 255, 255, 0.6);
-	--navi-color: #fff;
-	--navi-hover-color: rgba(255, 255, 255, 0.6);
-	--navi-border-color: rgba(255, 255, 255, 0.1);
-	--title-color: #111133;
-	--title-hover-color: #4477aa;
+	--header-background-color: #fff;
+	--site-title-color: #242424;
+	--site-title-hover-color: #57b7d7;
+	--navi-color: #242424;
+	--navi-hover-color: #57b7d7;
+	--navi-border-color: #e5e5e5;
+	--navi-submenu-color: #f5f5f5;
+	--title-color: #242424;
+	--title-hover-color: #57b7d7;
 	--widget-title-color: #111133;
 	--widget-title-hover-color: #4477aa;
 	--widget-title-border-color: #111133;
-	--footer-background-color: #111133;
-	--footer-text-color: rgba(255, 255, 255, 0.6);
-	--footer-link-color: #fff;
-	--footer-link-hover-color: rgba(255, 255, 255, 0.6);
+	--footer-background-color: #fff;
+	--footer-border-color: #e5e5e5;
 	--text-font: "Hind", tahoma, arial, sans-serif;
 	--title-font: "Montserrat", verdana, arial, sans-serif;
 	--navi-font: "Hind", tahoma, arial, sans-serif;
@@ -737,7 +736,8 @@ textarea {
 
 .site-content {
 	padding-top: 2.5em;
-	background: #fff;
+	background-color: #fff;
+	background-color: var(--page-background-color);
 }
 
 .content-area {
@@ -775,8 +775,11 @@ textarea {
 # - Header
 --------------------------------------------------------------*/
 .site-header {
-	border-bottom: 1px solid #e5e5e5;
-	background: #fff;
+	border-bottom: 1px solid;
+	border-color: #e5e5e5;
+	border-color: var(--light-border-color);
+	background-color: #fff;
+	background-color: var(--header-background-color);
 }
 
 .header-main {
@@ -805,6 +808,7 @@ textarea {
 	margin: 0.35rem 0;
 	padding: 0;
 	color: #242424;
+	color: var(--site-title-color);
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -817,11 +821,13 @@ textarea {
 .site-title a:link,
 .site-title a:visited {
 	color: #242424;
+	color: var(--site-title-color);
 }
 
 .site-title a:hover,
 .site-title a:active {
 	color: #57b7d7;
+	color: var(--site-title-hover-color);
 }
 
 .site-branding .custom-logo {
@@ -898,6 +904,7 @@ textarea {
 
 .header-title-background .page-header .header-title {
 	color: #242424;
+	color: var(--title-color);
 	text-shadow: none;
 }
 
@@ -927,7 +934,8 @@ textarea {
 .main-navigation ul {
 	margin: 0;
 	padding: 0;
-	color: #fff;
+	color: #242424;
+	color: var(--navi-color);
 	list-style: none;
 	font-size: 16px;
 	font-size: 1rem;
@@ -940,7 +948,9 @@ textarea {
 }
 
 .main-navigation > ul {
-	border-top: 1px solid #e5e5e5;
+	border-top: 1px solid;
+	border-color: #e5e5e5;
+	border-color: var(--navi-border-color);
 	padding-top: 1em;
 	margin-bottom: 2em;
 }
@@ -973,6 +983,7 @@ textarea {
 .main-navigation ul a:link,
 .main-navigation ul a:visited {
 	color: #242424;
+	color: var(--navi-color);
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
@@ -981,6 +992,7 @@ textarea {
 .main-navigation ul a:active,
 .main-navigation ul a:focus {
 	color: #57b7d7;
+	color: var(--navi-hover-color);
 }
 
 .main-navigation ul li.current-menu-item > a {
@@ -994,8 +1006,11 @@ textarea {
 }
 
 .main-navigation > ul > li.menu-item-has-children > ul {
-	border: 1px solid #e5e5e5;
-	background: #f5f5f5;
+	border: 1px solid;
+	border-color: #e5e5e5;
+	border-color: var(--navi-border-color);
+	background-color: #f5f5f5;
+	background-color: var(--navi-submenu-color);
 }
 
 .is-amp-page .main-navigation ul button.toggled-on + ul,
@@ -1024,6 +1039,7 @@ textarea {
 	border: none;
 	background: none;
 	color: #242424;
+	color: var(--navi-color);
 	text-decoration: none;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -1041,12 +1057,14 @@ textarea {
 .primary-menu-toggle:focus {
 	outline: thin dotted;
 	color: #242424;
+	color: var(--navi-color);
 	background: none;
 }
 
 .primary-menu-toggle:hover,
 .primary-menu-toggle:active {
 	color: #57b7d7;
+	color: var(--navi-hover-color);
 	background: none;
 	cursor: pointer;
 }
@@ -1057,12 +1075,14 @@ textarea {
 	height: 24px;
 	vertical-align: top;
 	fill: #242424;
+	fill: var(--navi-color);
 	transition: fill 0.2s ease;
 }
 
 .primary-menu-toggle:hover .icon,
 .primary-menu-toggle:active .icon {
 	fill: #57b7d7;
+	fill: var(--navi-hover-color);
 }
 
 .primary-menu-toggle[aria-expanded="true"] .icon-menu,
@@ -1088,6 +1108,7 @@ textarea {
 .main-navigation .dropdown-toggle:focus {
 	outline: thin dotted;
 	color: #242424;
+	color: var(--navi-color);
 	background: none;
 }
 
@@ -1102,6 +1123,7 @@ textarea {
 	height: 22px;
 	vertical-align: top;
 	fill: #242424;
+	fill: var(--navi-color);
 	transition: fill 0.2s ease;
 }
 
@@ -1109,6 +1131,7 @@ textarea {
 .main-navigation .dropdown-toggle:active .icon,
 .main-navigation .dropdown-toggle:focus .icon {
 	fill: #57b7d7;
+	fill: var(--navi-hover-color);
 }
 
 .main-navigation .dropdown-toggle.toggled-on .icon {
@@ -2330,8 +2353,11 @@ object {
 # - Footer
 --------------------------------------------------------------*/
 .footer-wrap {
-	background: #fff;
-	border-top: 1px solid #e5e5e5;
+	background-color: #fff;
+	background-color: var(--footer-background-color);
+	border-top: 1px solid;
+	border-color: #e5e5e5;
+	border-color: var(--footer-border-color);
 }
 
 .site-footer {

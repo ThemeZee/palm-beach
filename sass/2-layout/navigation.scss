@@ -6,7 +6,7 @@
 .main-navigation ul {
 	margin: 0;
 	padding: 0;
-	color: #fff;
+	@include color(--navi-color);
 	list-style: none;
 	@include font-size(16);
 	@include font-family(--navi-font);
@@ -15,7 +15,8 @@
 }
 
 .main-navigation > ul {
-	border-top: 1px solid #e5e5e5;
+	border-top: 1px solid;
+	@include border-color(--navi-border-color);
 	padding-top: 1em;
 	margin-bottom: 2em;
 }
@@ -47,7 +48,7 @@
 .main-navigation ul a,
 .main-navigation ul a:link,
 .main-navigation ul a:visited {
-	color: #242424;
+	@include color(--navi-color);
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
@@ -55,7 +56,7 @@
 .main-navigation ul a:hover,
 .main-navigation ul a:active,
 .main-navigation ul a:focus {
-	color: #57b7d7;
+	@include color(--navi-hover-color);
 }
 
 .main-navigation ul li.current-menu-item > a {
@@ -68,8 +69,9 @@
 }
 
 .main-navigation > ul > li.menu-item-has-children > ul {
-	border: 1px solid #e5e5e5;
-	background: #f5f5f5;
+	border: 1px solid;
+	@include border-color(--navi-border-color);
+	@include background(--navi-submenu-color);
 }
 
 .is-amp-page .main-navigation ul button.toggled-on + ul,
@@ -97,7 +99,7 @@
 	padding: 0.9em;
 	border: none;
 	background: none;
-	color: #242424;
+	@include color(--navi-color);
 	text-decoration: none;
 	@include font-size(15);
 	@include font-family(--navi-font);
@@ -110,13 +112,13 @@
 
 .primary-menu-toggle:focus {
 	outline: thin dotted;
-	color: #242424;
+	@include color(--navi-color);
 	background: none;
 }
 
 .primary-menu-toggle:hover,
 .primary-menu-toggle:active {
-	color: #57b7d7;
+	@include color(--navi-hover-color);
 	background: none;
 	cursor: pointer;
 }
@@ -126,13 +128,13 @@
 	width: 24px;
 	height: 24px;
 	vertical-align: top;
-	fill: #242424;
+	@include fill(--navi-color);
 	transition: fill 0.2s ease;
 }
 
 .primary-menu-toggle:hover .icon,
 .primary-menu-toggle:active .icon {
-	fill: #57b7d7;
+	@include fill(--navi-hover-color);
 }
 
 .primary-menu-toggle[aria-expanded="true"] .icon-menu,
@@ -157,7 +159,7 @@
 
 .main-navigation .dropdown-toggle:focus {
 	outline: thin dotted;
-	color: #242424;
+	@include color(--navi-color);
 	background: none;
 }
 
@@ -171,14 +173,14 @@
 	width: 22px;
 	height: 22px;
 	vertical-align: top;
-	fill: #242424;
+	@include fill(--navi-color);
 	transition: fill 0.2s ease;
 }
 
 .main-navigation .dropdown-toggle:hover .icon,
 .main-navigation .dropdown-toggle:active .icon,
 .main-navigation .dropdown-toggle:focus .icon {
-	fill: #57b7d7;
+	@include fill(--navi-hover-color);
 }
 
 .main-navigation .dropdown-toggle.toggled-on .icon {

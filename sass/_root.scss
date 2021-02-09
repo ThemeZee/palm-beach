@@ -27,6 +27,7 @@
 	@include variable(--navi-color, $themeColors);
 	@include variable(--navi-hover-color, $themeColors);
 	@include variable(--navi-border-color, $themeColors);
+	@include variable(--navi-submenu-color, $themeColors);
 
 	// Titles
 	@include variable(--title-color, $themeColors);
@@ -37,9 +38,7 @@
 
 	// Footer
 	@include variable(--footer-background-color, $themeColors);
-	@include variable(--footer-text-color, $themeColors);
-	@include variable(--footer-link-color, $themeColors);
-	@include variable(--footer-link-hover-color, $themeColors);
+	@include variable(--footer-border-color, $themeColors);
 
 	// Typography Styling
 	@include variable(--text-font, $themeFonts);
