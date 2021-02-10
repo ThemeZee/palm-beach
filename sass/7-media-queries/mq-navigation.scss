@@ -41,8 +41,9 @@
 		left: -999em;
 		top: 100%;
 		z-index: 99999;
-		border: 1px solid #e5e5e5;
-		background: #f5f5f5;
+		border: 1px solid;
+		@include border-color(--navi-border-color);
+		@include background(--navi-submenu-color);
 	}
 
 	.main-navigation ul li:hover > ul,
@@ -85,7 +86,7 @@
 		top: 0.05rem;
 		width: 11px;
 		height: 11px;
-		fill: #242424;
+		@include fill(--navi-color);
 		transition: fill 0.15s ease;
 	}
 
@@ -103,6 +104,6 @@
 	}
 
 	.main-navigation ul .menu-item-has-children > a:hover > .icon {
-		fill: #57b7d7;
+		@include fill(--navi-hover-color);
 	}
 }

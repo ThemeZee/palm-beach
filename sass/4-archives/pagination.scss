@@ -9,9 +9,10 @@
 	display: inline-block;
 	margin: 0 3px 3px 0;
 	padding: 0.5em 1em;
-	border: 1px solid #e5e5e5;
-	background: #f5f5f5;
-	color: #242424;
+	border: 1px solid;
+	@include border-color(--button-border-color);
+	@include background(--button-color);
+	@include color(--button-text-color);
 	text-decoration: none;
 	font-weight: bold;
 	@include font-size(14);
@@ -20,13 +21,13 @@
 
 .pagination a:link,
 .pagination a:visited {
-	color: #242424;
+	@include color(--button-text-color);
 	transition: all 0.2s ease;
 }
 
 .pagination a:hover,
 .pagination .current {
-	border-color: #57b7d7;
-	background: #57b7d7;
-	color: #fff;
+	@include border-color(--button-hover-color);
+	@include background(--button-hover-color);
+	@include color(--button-hover-text-color);
 }

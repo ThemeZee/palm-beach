@@ -24,9 +24,10 @@
 .post-navigation .nav-links a {
 	margin: 0 0 3px;
 	padding: 1em;
-	border: 1px solid #e5e5e5;
-	background: #f5f5f5;
-	color: #242424;
+	border: 1px solid;
+	@include border-color(--button-border-color);
+	@include background(--button-color);
+	@include color(--button-text-color);
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -37,12 +38,12 @@
 
 .post-navigation .nav-links a:link,
 .post-navigation .nav-links a:visited {
-	color: #242424;
+	@include color(--button-text-color);
 }
 
 .post-navigation .nav-links a:hover,
 .post-navigation .nav-links a:active {
-	border-color: #57b7d7;
-	background: #57b7d7;
-	color: #fff;
+	@include border-color(--button-hover-color);
+	@include background(--button-hover-color);
+	@include color(--button-hover-text-color);
 }

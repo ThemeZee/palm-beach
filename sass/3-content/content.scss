@@ -9,7 +9,7 @@
 	display: inline;
 	margin: 0;
 	padding: 0;
-	color: #242424;
+	@include color(--title-color);
 	text-transform: uppercase;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
@@ -20,14 +20,14 @@
 
 .entry-title a:link,
 .entry-title a:visited {
-	color: #242424;
+	@include color(--title-color);
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
 
 .entry-title a:hover,
 .entry-title a:active {
-	color: #57b7d7;
+	@include color(--title-hover-color);
 }
 
 .entry-content {

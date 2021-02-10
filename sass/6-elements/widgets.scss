@@ -1,6 +1,5 @@
 .widget {
 	margin: 0 0 2.5em 0;
-	color: #333;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -13,7 +12,7 @@
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	color: #242424;
+	@include color(--widget-title-color);
 	text-transform: uppercase;
 	font-weight: bold;
 	@include font-size(16);
@@ -33,14 +32,14 @@
 }
 
 .widget-title a:link,
-.widget-title a:visited  {
-	color: #242424;
+.widget-title a:visited {
+	@include color(--widget-title-color);
 	transition: all 0.2s ease;
 }
 
 .widget-title a:hover,
-.widget-title a:active  {
-	color: #57b7d7;
+.widget-title a:active {
+	@include color(--widget-title-hover-color);
 }
 
 /* Make sure select elements fit in widgets. */

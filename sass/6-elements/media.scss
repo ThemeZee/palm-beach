@@ -19,7 +19,7 @@ object {
 	margin-bottom: 1em;
 	max-width: 100%;
 	@include font-size(15);
-	color: #777;
+	@include color(--medium-text-color);
 }
 
 .wp-caption img[class*="wp-image-"] {
@@ -85,5 +85,5 @@ object {
 .gallery-caption {
 	display: block;
 	@include font-size(15);
-	color: #777;
+	@include color(--medium-text-color);
 }

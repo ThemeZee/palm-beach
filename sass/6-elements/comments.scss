@@ -13,7 +13,7 @@
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	color: #242424;
+	@include color(--widget-title-color);
 	text-transform: uppercase;
 	font-weight: bold;
 	@include font-size(16);
@@ -30,7 +30,8 @@
 .comment {
 	margin: 0 0 1.5em;
 	padding: 0 0 1.5em;
-	border-bottom: 1px solid #e5e5e5;
+	border-bottom: 1px solid;
+	@include border-color(--light-border-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -75,7 +76,8 @@
 .comment ol.children .comment {
 	margin: 1.5em 0 0;
 	padding: 1.5em 0 0;
-	border-top: 1px solid #e5e5e5;
+	border-top: 1px solid;
+	@include border-color(--light-border-color);
 	border-bottom: none;
 }
 
@@ -111,9 +113,10 @@
 .reply .comment-reply-link {
 	display: inline-block;
 	padding: 0.3em 0.6em;
-	border: 1px solid #e5e5e5;
-	background: #f5f5f5;
-	color: #242424;
+	border: 1px solid;
+	@include border-color(--button-border-color);
+	@include background(--button-color);
+	@include color(--button-text-color);
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -126,17 +129,17 @@
 .comment-navigation a:link,
 .comment-navigation a:visited,
 .reply .comment-reply-link:link,
-.reply .comment-reply-link:visited  {
-	color: #242424;
+.reply .comment-reply-link:visited {
+	@include color(--button-text-color);
 }
 
 .comment-navigation a:hover,
 .comment-navigation a:active,
 .reply .comment-reply-link:hover,
 .reply .comment-reply-link:active {
-	border-color: #57b7d7;
-	background: #57b7d7;
-	color: #fff;
+	@include border-color(--button-hover-color);
+	@include background(--button-hover-color);
+	@include color(--button-hover-text-color);
 }
 
 /* Comment Form */
