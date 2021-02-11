@@ -206,15 +206,19 @@ Copyright: 2015 WooThemes, http://www.woothemes.com
 License: Licensed under MIT license (https://github.com/Keyamoon/svgxuse/blob/master/license)
 Copyright: 2017 IcoMoon.io
 
-7. Hind Font - https://www.google.com/fonts/specimen/Hind
+7. WPTT Webfont Loader - https://github.com/WPTT/webfont-loader
+License: Distributed under the terms of the MIT License (https://github.com/WPTT/webfont-loader/blob/master/LICENSE)
+Copyright: 2020 Ari Stathopoulos, WordPress Themes Team
+
+8. Hind Font - https://www.google.com/fonts/specimen/Hind
 License: Distributed under the terms of the Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 Copyright: 2015 Christian Robertson
 
-8. Montserrat Font - https://www.google.com/fonts/specimen/Hind+Slab
+9. Montserrat Font - https://www.google.com/fonts/specimen/Hind+Slab
 License: Distributed under the terms of the Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 Copyright: 2015 Christian Robertson
 
-9. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
+10. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 
 Image 1: https://pixabay.com/en/maldives-sea-blue-palm-ocean-sky-1357020/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
