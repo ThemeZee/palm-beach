@@ -14,9 +14,9 @@
 	@include background(--button-color);
 	@include color(--button-text-color);
 	text-decoration: none;
-	font-weight: bold;
 	@include font-size(14);
-	font-family: 'Montserrat', Verdana, Arial;
+	@include font-family(--widget-title-font);
+	@include font-weight(--widget-title-font-weight);
 }
 
 .pagination a:link,

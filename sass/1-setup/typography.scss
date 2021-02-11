@@ -5,8 +5,8 @@ select,
 textarea {
 	@include color(--text-color);
 	@include font-size(16);
-	font-family: 'Hind', Tahoma, Arial;
-	line-height: 1.6;
+	@include font-family(--text-font);
+	@include line-height(--text-line-height);
 }
 
 h1,

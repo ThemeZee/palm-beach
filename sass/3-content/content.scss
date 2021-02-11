@@ -10,12 +10,13 @@
 	margin: 0;
 	padding: 0;
 	@include color(--title-color);
-	text-transform: uppercase;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-weight: bold;
 	@include font-size(20);
-	font-family: 'Montserrat', Verdana, Arial;
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
 }
 
 .entry-title a:link,

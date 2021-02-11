@@ -9,10 +9,10 @@
 	@include color(--button-text-color);
 	text-align: center;
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
 	@include font-size(14);
-	font-family: 'Montserrat', Verdana, Arial;
+	@include font-family(--widget-title-font);
+	@include font-weight(--widget-title-font-weight);
+	@include text-transform(--widget-title-text-transform);
 	transition: all 0.2s ease;
 }
 

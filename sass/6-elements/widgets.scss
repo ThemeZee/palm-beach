@@ -13,10 +13,10 @@
 	margin: 0;
 	padding: 0;
 	@include color(--widget-title-color);
-	text-transform: uppercase;
-	font-weight: bold;
 	@include font-size(16);
-	font-family: 'Montserrat', Verdana, Arial;
+	@include font-family(--widget-title-font);
+	@include font-weight(--widget-title-font-weight);
+	@include text-transform(--widget-title-text-transform);
 }
 
 .widget ul {

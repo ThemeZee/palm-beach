@@ -97,8 +97,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	--title-text-transform: uppercase;
 	--navi-text-transform: none;
 	--widget-title-text-transform: uppercase;
-	--text-line-height: 1.5;
-	--title-line-height: 1.5;
+	--text-line-height: 1.6;
+	--title-line-height: 1.6;
 }
 
 /*--------------------------------------------------------------
@@ -323,8 +323,10 @@ textarea {
 	color: var(--text-color);
 	font-size: 16px;
 	font-size: 1rem;
-	font-family: 'Hind', Tahoma, Arial;
+	font-family: "Hind", tahoma, arial, sans-serif;
+	font-family: var(--text-font);
 	line-height: 1.6;
+	line-height: var(--text-line-height);
 }
 
 h1,
@@ -336,7 +338,7 @@ h6 {
 	clear: both;
 	margin-top: 0.75em;
 	margin-bottom: 0.75em;
-	line-height: 1.5;
+	line-height: 1.6;
 	line-height: var(--title-line-height);
 }
 
@@ -583,12 +585,14 @@ input[type="submit"] {
 	color: var(--button-text-color);
 	text-align: center;
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-family: 'Montserrat', Verdana, Arial;
-	transition: all 0.2s ease;
+	font-family: "Montserrat", verdana, arial, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
 }
 
 button:hover,
@@ -809,12 +813,16 @@ textarea {
 	color: #242424;
 	color: var(--site-title-color);
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 24px;
 	font-size: 1.5rem;
-	font-family: 'Montserrat', Verdana, Arial;
+	font-family: "Montserrat", verdana, arial, sans-serif;
+	font-family: var(--title-font);
+	font-weight: bold;
+	font-weight: var(--title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--title-text-transform);
 	line-height: 1.6;
+	line-height: var(--title-line-height);
 }
 
 .site-title a:link,
@@ -879,14 +887,19 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #fff;
-	text-transform: uppercase;
 	text-shadow: 0 0 5px #333;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-weight: bold;
 	font-size: 64px;
 	font-size: 4rem;
-	font-family: 'Montserrat', Verdana, Arial;
+	font-family: "Montserrat", verdana, arial, sans-serif;
+	font-family: var(--title-font);
+	font-weight: bold;
+	font-weight: var(--title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--title-text-transform);
+	line-height: 1.6;
+	line-height: var(--title-line-height);
 }
 
 .header-title-image-container .header-title {
@@ -1317,13 +1330,18 @@ textarea {
 	padding: 0;
 	color: #242424;
 	color: var(--title-color);
-	text-transform: uppercase;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-weight: bold;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: 'Montserrat', Verdana, Arial;
+	font-family: "Montserrat", verdana, arial, sans-serif;
+	font-family: var(--title-font);
+	font-weight: bold;
+	font-weight: var(--title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--title-text-transform);
+	line-height: 1.6;
+	line-height: var(--title-line-height);
 }
 
 .entry-title a:link,
@@ -1478,11 +1496,14 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 	color: #fff;
 	color: var(--button-hover-text-color);
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-family: 'Montserrat', Verdana, Arial;
+	font-family: "Montserrat", verdana, arial, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
 }
 
 .widget_tag_cloud .tagcloud,
@@ -1558,11 +1579,14 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 	color: var(--button-text-color);
 	text-align: center;
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-family: 'Montserrat', Verdana, Arial;
+	font-family: "Montserrat", verdana, arial, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
 	transition: all 0.2s ease;
 }
 
@@ -1620,11 +1644,14 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 	color: #242424;
 	color: var(--button-text-color);
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-family: 'Montserrat', Verdana, Arial;
+	font-family: "Montserrat", verdana, arial, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
 	transition: all 0.2s ease;
 }
 
@@ -1716,10 +1743,12 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 	color: #242424;
 	color: var(--button-text-color);
 	text-decoration: none;
-	font-weight: bold;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-family: 'Montserrat', Verdana, Arial;
+	font-family: "Montserrat", verdana, arial, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
 }
 
 .pagination a:link,
@@ -1946,11 +1975,14 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 	padding: 0;
 	color: #242424;
 	color: var(--widget-title-color);
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 16px;
 	font-size: 1rem;
-	font-family: 'Montserrat', Verdana, Arial;
+	font-family: "Montserrat", verdana, arial, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
 }
 
 .widget ul {
@@ -2154,11 +2186,14 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 	padding: 0;
 	color: #242424;
 	color: var(--widget-title-color);
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 16px;
 	font-size: 1rem;
-	font-family: 'Montserrat', Verdana, Arial;
+	font-family: "Montserrat", verdana, arial, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
 }
 
 /* Comment List */
@@ -2266,11 +2301,14 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 	color: var(--button-text-color);
 	text-align: center;
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	font-family: 'Montserrat', Verdana, Arial;
+	font-family: "Montserrat", verdana, arial, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
 	transition: all 0.2s ease;
 }
 

@@ -107,10 +107,10 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 	@include background(--button-hover-color);
 	@include color(--button-hover-text-color);
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
 	@include font-size(14);
-	font-family: 'Montserrat', Verdana, Arial;
+	@include font-family(--widget-title-font);
+	@include font-weight(--widget-title-font-weight);
+	@include text-transform(--widget-title-text-transform);
 }
 
 .widget_tag_cloud .tagcloud,
