@@ -26,6 +26,10 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 1.9 - 2021-02-13 =
+* added WPTT Webfont loader to host theme fonts locally
+* added CSS variables for theme colors
+
 = 1.8 - 2021-02-05 =
 * changed implementation, styles and scripts of main navigation menu. Please read https://themezee.com/2020/08/updates-for-improved-navigation-menus/
 * added support for the official AMP plugin
