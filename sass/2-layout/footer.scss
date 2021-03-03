@@ -1,4 +1,5 @@
 .footer-wrap {
+	@include color(--footer-text-color);
 	@include background(--footer-background-color);
 	border-top: 1px solid;
 	@include border-color(--footer-border-color);
@@ -6,6 +7,11 @@
 
 .site-footer {
 	@include font-size(14);
+}
+
+.site-footer a:hover,
+.site-footer a:active {
+	@include color(--footer-text-color);
 }
 
 .site-footer .site-info {

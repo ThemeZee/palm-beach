@@ -1,14 +1,15 @@
 /* Breadcrumbs */
 .breadcrumbs {
 	margin: 0;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	border-bottom: 1px solid;
+	@include border-color(--light-border-color);
 }
 
 .breadcrumbs-container {
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
-	background: #fff;
-	color: #222;
+	@include background(--page-background-color);
+	@include color(--text-color);
 	@include font-size(14);
 }
 
