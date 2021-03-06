@@ -85,35 +85,6 @@ if ( ! function_exists( 'palm_beach_setup' ) ) :
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-		// Add custom color palette for Gutenberg.
-		add_theme_support( 'editor-color-palette', array(
-			array(
-				'name'  => esc_html_x( 'Primary', 'Gutenberg Color Palette', 'palm-beach' ),
-				'slug'  => 'primary',
-				'color' => apply_filters( 'palm_beach_primary_color', '#57b7d7' ),
-			),
-			array(
-				'name'  => esc_html_x( 'White', 'Gutenberg Color Palette', 'palm-beach' ),
-				'slug'  => 'white',
-				'color' => '#ffffff',
-			),
-			array(
-				'name'  => esc_html_x( 'Light Gray', 'Gutenberg Color Palette', 'palm-beach' ),
-				'slug'  => 'light-gray',
-				'color' => '#f0f0f0',
-			),
-			array(
-				'name'  => esc_html_x( 'Dark Gray', 'Gutenberg Color Palette', 'palm-beach' ),
-				'slug'  => 'dark-gray',
-				'color' => '#777777',
-			),
-			array(
-				'name'  => esc_html_x( 'Black', 'Gutenberg Color Palette', 'palm-beach' ),
-				'slug'  => 'black',
-				'color' => '#222222',
-			),
-		) );
-
 		// Add support for responsive embed blocks.
 		add_theme_support( 'responsive-embeds' );
 	}
@@ -252,15 +223,6 @@ function palm_beach_get_fonts_url() {
 
 
 /**
- * Enqueue editor styles for the new Gutenberg Editor.
- */
-function palm_beach_block_editor_assets() {
-	wp_enqueue_style( 'palm-beach-editor-styles', get_theme_file_uri( '/assets/css/gutenberg-styles.css' ), array(), '20191118', 'all' );
-}
-add_action( 'enqueue_block_editor_assets', 'palm_beach_block_editor_assets' );
-
-
-/**
  * Make custom image sizes available in Gutenberg.
  */
 function palm_beach_add_image_size_names( $sizes ) {
@@ -290,6 +252,9 @@ require get_template_directory() . '/inc/extras.php';
 
 // Include Template Functions.
 require get_template_directory() . '/inc/template-tags.php';
+
+// Include Gutenberg Features.
+require get_template_directory() . '/inc/gutenberg.php';
 
 // Include support functions for Theme Addons.
 require get_template_directory() . '/inc/addons.php';
