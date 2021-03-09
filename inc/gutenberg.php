@@ -18,14 +18,14 @@ function palm_beach_gutenberg_support() {
 
 	// Define block color palette.
 	$color_palette = apply_filters( 'palm_beach_color_palette', array(
-		'primary_color'    => '#cc5555',
-		'secondary_color'  => '#5d7b94',
-		'tertiary_color'   => '#90aec7',
-		'accent_color'     => '#60945d',
-		'highlight_color'  => '#915d94',
-		'light_gray_color' => '#f0f0f0',
-		'gray_color'       => '#999999',
-		'dark_gray_color'  => '#303030',
+		'primary_color'    => '#57b7d7',
+		'secondary_color'  => '#3e9ebe',
+		'tertiary_color'   => '#2484a4',
+		'accent_color'     => '#57d777',
+		'highlight_color'  => '#d75f57',
+		'light_gray_color' => '#e4e4e4',
+		'gray_color'       => '#646464',
+		'dark_gray_color'  => '#242424',
 	) );
 
 	// Add theme support for block color palette.

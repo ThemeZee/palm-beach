@@ -227,7 +227,8 @@ function palm_beach_get_fonts_url() {
  */
 function palm_beach_add_image_size_names( $sizes ) {
 	return array_merge( $sizes, array(
-		'post-thumbnail' => esc_html__( 'Palm Beach Single Post', 'palm-beach' ),
+		'post-thumbnail'             => esc_html__( 'Palm Beach Single Post', 'palm-beach' ),
+		'palm-beach-thumbnail-large' => esc_html__( 'Palm Beach Magazine Post', 'palm-beach' ),
 	) );
 }
 add_filter( 'image_size_names_choose', 'palm_beach_add_image_size_names' );
