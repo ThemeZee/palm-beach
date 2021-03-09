@@ -4,9 +4,9 @@ Theme URI: https://themezee.com/themes/palm-beach/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Palm Beach is a professional WordPress theme perfectly suited for a travel magazine. It features a stunning fullscreen slider, beautiful typography and a three-column grid-layout for posts. Head off on vacation now!
-Version: 1.9
+Version: 1.9.1
 Requires at least: 5.2
-Tested up to: 5.6
+Tested up to: 5.7
 Requires PHP: 5.6
 AMP: true
 License: GNU General Public License v2 or later
@@ -60,14 +60,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
-	--primary-color: #cc5555;
-	--secondary-color: #5d7b94;
-	--tertiary-color: #90aec7;
-	--accent-color: #60945d;
-	--highlight-color: #915d94;
-	--light-gray-color: #f0f0f0;
-	--gray-color: #999;
-	--dark-gray-color: #303030;
+	--primary-color: #57b7d7;
+	--secondary-color: #3e9ebe;
+	--tertiary-color: #2484a4;
+	--accent-color: #57d777;
+	--highlight-color: #d75f57;
+	--light-gray-color: #e4e4e4;
+	--gray-color: #646464;
+	--dark-gray-color: #242424;
 	--text-color: #242424;
 	--medium-text-color: #646464;
 	--light-text-color: #949494;
@@ -1925,31 +1925,31 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 /* Block Text Colors */
 .has-primary-color,
 .wp-block-button__link.has-primary-color {
-	color: #cc5555;
+	color: #57b7d7;
 	color: var(--primary-color);
 }
 
 .has-secondary-color,
 .wp-block-button__link.has-secondary-color {
-	color: #5d7b94;
+	color: #3e9ebe;
 	color: var(--secondary-color);
 }
 
 .has-tertiary-color,
 .wp-block-button__link.has-tertiary-color {
-	color: #90aec7;
+	color: #2484a4;
 	color: var(--tertiary-color);
 }
 
 .has-accent-color,
 .wp-block-button__link.has-accent-color {
-	color: #60945d;
+	color: #57d777;
 	color: var(--accent-color);
 }
 
 .has-highlight-color,
 .wp-block-button__link.has-highlight-color {
-	color: #915d94;
+	color: #d75f57;
 	color: var(--highlight-color);
 }
 
@@ -1960,19 +1960,19 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 
 .has-light-gray-color,
 .wp-block-button__link.has-light-gray-color {
-	color: #f0f0f0;
+	color: #e4e4e4;
 	color: var(--light-gray-color);
 }
 
 .has-gray-color,
 .wp-block-button__link.has-gray-color {
-	color: #999;
+	color: #646464;
 	color: var(--gray-color);
 }
 
 .has-dark-gray-color,
 .wp-block-button__link.has-dark-gray-color {
-	color: #303030;
+	color: #242424;
 	color: var(--dark-gray-color);
 }
 
@@ -1984,31 +1984,31 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 /* Block Background Colors */
 .has-primary-background-color,
 .has-primary-background-color[class] {
-	background-color: #cc5555;
+	background-color: #57b7d7;
 	background-color: var(--primary-color);
 }
 
 .has-secondary-background-color,
 .has-secondary-background-color[class] {
-	background-color: #5d7b94;
+	background-color: #3e9ebe;
 	background-color: var(--secondary-color);
 }
 
 .has-tertiary-background-color,
 .has-tertiary-background-color[class] {
-	background-color: #90aec7;
+	background-color: #2484a4;
 	background-color: var(--tertiary-color);
 }
 
 .has-accent-background-color,
 .has-accent-background-color[class] {
-	background-color: #60945d;
+	background-color: #57d777;
 	background-color: var(--accent-color);
 }
 
 .has-highlight-background-color,
 .has-highlight-background-color[class] {
-	background-color: #915d94;
+	background-color: #d75f57;
 	background-color: var(--highlight-color);
 }
 
@@ -2019,19 +2019,19 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .header-title-b
 
 .has-light-gray-background-color,
 .has-light-gray-background-color[class] {
-	background-color: #f0f0f0;
+	background-color: #e4e4e4;
 	background-color: var(--light-gray-color);
 }
 
 .has-gray-background-color,
 .has-gray-background-color[class] {
-	background-color: #999;
+	background-color: #646464;
 	background-color: var(--gray-color);
 }
 
 .has-dark-gray-background-color,
 .has-dark-gray-background-color[class] {
-	background-color: #303030;
+	background-color: #242424;
 	background-color: var(--dark-gray-color);
 }
 
