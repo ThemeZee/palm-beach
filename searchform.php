@@ -2,6 +2,7 @@
 /**
  * Custom Markup for Search form
  *
+ * @version 1.1
  * @package Palm Beach
  */
 
@@ -16,7 +17,7 @@
 			title="<?php echo esc_attr_x( 'Search for:', 'label', 'palm-beach' ); ?>" />
 	</label>
 	<button type="submit" class="search-submit">
-		<span class="genericon-search"></span>
+		<?php echo palm_beach_get_svg( 'search' ); ?>
 		<span class="screen-reader-text"><?php echo esc_html_x( 'Search', 'submit button', 'palm-beach' ); ?></span>
 	</button>
 </form>
