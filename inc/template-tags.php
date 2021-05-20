@@ -223,7 +223,9 @@ if ( ! function_exists( 'palm_beach_meta_date' ) ) :
 			esc_html( get_the_date() )
 		);
 
-		return '<span class="meta-date">' . $time_string . '</span>';
+		$posted_on = palm_beach_get_svg( 'standard' ) . $time_string;
+
+		return '<span class="meta-date">' . $posted_on . '</span>';
 	}
 endif;
 
@@ -242,7 +244,9 @@ if ( ! function_exists( 'palm_beach_meta_author' ) ) :
 			esc_html( get_the_author_meta( 'display_name', $author_id ) )
 		);
 
-		return '<span class="meta-author"> ' . $author_string . '</span>';
+		$posted_by = palm_beach_get_svg( 'user' ) . $author_string;
+
+		return '<span class="meta-author"> ' . $posted_by . '</span>';
 	}
 endif;
 
@@ -253,8 +257,14 @@ if ( ! function_exists( 'palm_beach_meta_category' ) ) :
 	 */
 	function palm_beach_meta_category() {
 
-		return '<span class="meta-category"> ' . get_the_category_list( ', ' ) . '</span>';
+		// Return early if post has no category.
+		if ( ! has_category() ) {
+			return;
+		}
 
+		$posted_in = palm_beach_get_svg( 'category' ) . get_the_category_list( ', ' );
+
+		return '<span class="meta-category"> ' . $posted_in . '</span>';
 	}
 endif;
 
@@ -275,7 +285,7 @@ if ( ! function_exists( 'palm_beach_meta_comments' ) ) :
 		$comments_string = ob_get_contents();
 		ob_end_clean();
 
-		return '<span class="meta-comments"> ' . $comments_string . '</span>';
+		return '<span class="meta-comments"> ' . palm_beach_get_svg( 'comment' ) . $comments_string . '</span>';
 	}
 endif;
 
