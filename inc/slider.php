@@ -27,9 +27,6 @@ function palm_beach_slider_scripts() {
 		// Register and enqueue slider setup.
 		wp_enqueue_script( 'palm-beach-slider', get_template_directory_uri() . '/assets/js/slider.js', array( 'jquery-flexslider' ), '20170421' );
 
-		// Register and enqueue slider CSS.
-		wp_enqueue_style( 'palm-beach-slider', get_template_directory_uri() . '/assets/css/flexslider.css', array(), '20170421' );
-
 	endif;
 }
 add_action( 'wp_enqueue_scripts', 'palm_beach_slider_scripts' );
