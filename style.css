@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/palm-beach/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Palm Beach is a professional WordPress theme perfectly suited for a travel magazine. It features a stunning fullscreen slider, beautiful typography and a three-column grid-layout for posts. Head off on vacation now!
-Version: 2.0
+Version: 2.0.1
 Requires at least: 5.2
 Tested up to: 5.8
 Requires PHP: 5.6
@@ -2893,6 +2893,11 @@ ul.related-posts-list {
 }
 
 .tzwb-social-icons .social-icons-menu {
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0;
+	padding: 0;
+	border: none;
 	list-style: none;
 	line-height: 1;
 }
@@ -2902,6 +2907,7 @@ ul.related-posts-list {
 }
 
 .tzwb-social-icons .social-icons-menu li a {
+	display: flex;
 	padding: 0.75em;
 	background-color: #57b7d7;
 	background-color: var(--button-hover-color);
@@ -2909,15 +2915,18 @@ ul.related-posts-list {
 	color: var(--button-hover-text-color);
 }
 
-.tzwb-social-icons .social-icons-menu li a::before {
-	font-size: 24px;
-	color: currentColor;
-}
-
 .tzwb-social-icons .social-icons-menu li a:hover {
 	color: #fff;
 	background: #242424;
 	text-decoration: none;
+}
+
+.tzwb-social-icons .social-icons-menu .icon {
+	margin: 0;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	fill: currentColor;
 }
 
 /*
