@@ -26,6 +26,11 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 2.0.2 - 2021-07-20 =
+* added action hooks for additional widget areas
+* fixed broken Customizer panels caused by new block-based Widget Editor in WordPress 5.8
+* removed Magazine Widget Customizer control
+
 = 2.0.1 - 2021-06-06 =
 * fixed styling of Social Icons widget from Widget Bundle plugin
 
