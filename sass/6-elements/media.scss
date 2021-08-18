@@ -15,20 +15,34 @@ object {
 }
 
 /* Captions */
-.wp-caption {
-	margin-bottom: 1em;
-	max-width: 100%;
+figcaption,
+.wp-caption,
+.wp-block-embed figcaption,
+.wp-block-image figcaption,
+.wp-block-audio figcaption,
+.wp-block-table figcaption {
 	@include font-size(15);
 	@include color(--medium-text-color);
+}
+
+.wp-block-embed figcaption,
+.wp-block-image figcaption,
+.wp-block-audio figcaption,
+.wp-block-table figcaption,
+.wp-block-gallery > figcaption {
+	margin: 0.5rem 0 1.5rem;
+	max-width: 100%;
+	width: auto !important;
+	text-align: center;
+}
+
+.wp-block-table figcaption {
+	margin-bottom: 0;
 }
 
 .wp-caption img[class*="wp-image-"] {
 	display: block;
 	margin: 0 auto;
-}
-
-.wp-caption-text {
-	text-align: center;
 }
 
 .wp-caption .wp-caption-text {
