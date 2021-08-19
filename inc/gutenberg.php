@@ -13,9 +13,6 @@
  */
 function palm_beach_gutenberg_support() {
 
-	// Add theme support for wide and full images.
-	#add_theme_support( 'align-wide' );
-
 	// Define block color palette.
 	$color_palette = apply_filters( 'palm_beach_color_palette', array(
 		'primary_color'    => '#57b7d7',
@@ -81,6 +78,17 @@ function palm_beach_gutenberg_support() {
 			'color' => '#000000',
 		),
 	) ) );
+
+	// Check if block style functions are available.
+	if ( function_exists( 'register_block_style' ) ) {
+
+		// Register Widget Title Block style.
+		register_block_style( 'core/heading', array(
+			'name'         => 'widget-title',
+			'label'        => esc_html__( 'Widget Title', 'palm-beach' ),
+			'style_handle' => 'palm-beach-stylesheet',
+		) );
+	}
 }
 add_action( 'after_setup_theme', 'palm_beach_gutenberg_support' );
 
