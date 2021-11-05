@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/palm-beach/
 Contributors: themezee
 Tags: two-columns, custom-background, custom-header, custom-menu, editor-style, rtl-language-support, grid-layout, blog, news, featured-image-header, featured-images, flexible-header, full-width-template, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Requires at least: 4.7
-Tested up to: 5.8
+Tested up to: 5.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,9 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 2.0.5 - 2021-11-05 =
+* updated navigation.js to use vanilla js instead of jQuery
 
 = 2.0.4 - 2021-08-26 =
 * fixed table layout styling
