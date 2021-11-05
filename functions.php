@@ -157,7 +157,7 @@ function palm_beach_scripts() {
 
 	// Register and enqueue navigation.min.js.
 	if ( ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) && ! palm_beach_is_amp() ) {
-		wp_enqueue_script( 'palm-beach-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20200822', true );
+		wp_enqueue_script( 'palm-beach-navigation', get_theme_file_uri( '/assets/js/navigation.min.js' ), array(), '20211105', true );
 		$palm_beach_l10n = array(
 			'expand'   => esc_html__( 'Expand child menu', 'palm-beach' ),
 			'collapse' => esc_html__( 'Collapse child menu', 'palm-beach' ),
