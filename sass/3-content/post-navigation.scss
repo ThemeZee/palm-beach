@@ -3,12 +3,9 @@
 	padding: 1em 0;
 }
 
-.post-navigation .nav-links .nav-previous {
-	float: left;
-}
-
-.post-navigation .nav-links .nav-next {
-	float: right;
+.post-navigation .nav-links {
+	display: flex;
+	justify-content: space-between;
 }
 
 .post-navigation .nav-links .nav-previous a::before {
@@ -22,6 +19,7 @@
 }
 
 .post-navigation .nav-links a {
+	display: block;
 	margin: 0 0 3px;
 	padding: 1em;
 	border: 1px solid;

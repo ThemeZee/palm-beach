@@ -26,6 +26,10 @@ For more information about Palm Beach please go to https://themezee.com/themes/p
 
 == Changelog ==
 
+= 2.0.8 - 2022-08-23 =
+* updated footer credit link
+* improved styling of post navigation
+
 = 2.0.7 - 2022-07-12 =
 * added block support for custom spacing and line heights
 * improved styling of columns block

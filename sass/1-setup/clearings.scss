@@ -1,7 +1,5 @@
 .clearfix::before,
 .clearfix::after,
-.post-navigation .nav-links::before,
-.post-navigation .nav-links::after,
 .comment-navigation::before,
 .comment-navigation::after {
 	display: table;
@@ -9,7 +7,6 @@
 }
 
 .clearfix::after,
-.post-navigation .nav-links::after,
 .comment-navigation::after {
 	clear: both;
 }
