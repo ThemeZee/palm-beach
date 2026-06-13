@@ -193,7 +193,7 @@ function palm_beach_theme_fonts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'palm_beach_theme_fonts', 1 );
-add_action( 'enqueue_block_editor_assets', 'palm_beach_theme_fonts', 1 );
+add_action( 'enqueue_block_assets', 'palm_beach_theme_fonts', 1 );
 
 
 /**
